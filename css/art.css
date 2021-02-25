@@ -62,7 +62,7 @@ html, body, .container{height: 100%;}
     margin: 12px 20px;
     display: inline-block;
 }
-.brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .magnets, .felt, .decorated{
+.brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .magnets, .felt, .decorated, .event{
     background: white;
     width: 280px;
     height: 280px;
