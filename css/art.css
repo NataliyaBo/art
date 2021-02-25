@@ -1,0 +1,107 @@
+*{margin: 0;
+    padding: 0;
+    font-family: Arial;}
+html, body, .container{height: 100%;}
+
+.container{height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header{background: lavender;
+    height: 150px;
+}
+                                      /* верхнее меню */
+.top_menu{background: plum;
+    width: 900px;
+    height: 40px;
+    float: right;
+    margin-top: 100px;
+}
+.t_menu{background: lemonchiffon;
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    margin: 0 0 0 18px;
+}
+                                     /* основная часть */
+.main{width: 100%;
+    height: 100%;
+}
+                                    /* боковое меню */
+.vertical_menu{background: aqua;
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+.v_menu{/*background: greenyellow;*/
+    width: 80%;
+    margin: 8px 16px;
+}
+
+                                   /* контент */
+.content{background: orange;
+    width: 85%;
+    height: 100%;
+    float: right;
+}
+.content_decor, .content_hair, .content_interior, .content_magnets, .content_process, .content_other{
+    background: palegreen;
+    width: 200px;
+    height: 200px;
+    margin: 8px 12px;
+    text-align: center;
+    display: inline-block;
+}
+.foto_preview{width: 200px;
+    height: 200px;
+}
+.box{border: black solid 1px;
+    width: 280px;
+    height: 350px;
+    margin: 12px 20px;
+    display: inline-block;
+}
+.brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .magnets, .felt, .decorated{
+    background: white;
+    width: 280px;
+    height: 280px;
+}
+.gnom_foto, .doll_foto, .hunters_foto, .panel_foto, .bender_foto, .pen_foto, .bag_foto, .monster_foto, .process_amber_foto,
+.process_felt_foto, .process_pen_foto, .process_clip_foto, .inspir_foto, .material_foto, .tools_foto, .want_foto{
+    width: 350px;
+    height: 350px;
+    margin: 22px 38px;
+}
+                                    /* подвал */
+.footer{background: aquamarine;
+    width: 100%;
+    height: 100px;
+}
+.footer_home, .footer_info{display: inline-block;}
+
+.footer_home{background: yellow;
+    width: 20%;
+    height: 75px;
+    margin: 14px 0 0 10px;
+}
+
+.footer_info{background: greenyellow;
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.footer_info_f, .footer_info_e{background: aliceblue;
+    width: 45%;
+    height: 25px;
+    margin: 10px 0 0 22px;
+    display: inline-block;
+}
+.footer_info_i{background: aliceblue;
+    width: 20%;
+    height: 45px;
+    margin: 10px 29px 0 12px;
+    float: right;
+
+}
+
