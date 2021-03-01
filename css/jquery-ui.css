@@ -94,7 +94,7 @@
 	display: block;
 	cursor: pointer;
 	position: relative;
-	margin: 2px 0 0 0;
+	margin: 4px 0 0 0;                                         /* мой коммент*/
 	padding: .5em .5em .5em .7em;
 	font-size: 100%;
 }
@@ -290,7 +290,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-checkboxradio-label .ui-icon-background {
-	box-shadow: inset 1px 1px 1px #ccc;
+	box-shadow: inset 1px 1px 1px #cccccc;
 	border-radius: .12em;
 	border: none;
 }
@@ -901,7 +901,7 @@ body .ui-tooltip {
 	border: 1px solid #c5c5c5;
 }
 .ui-widget-content {
-	border: 1px solid #dddddd;
+	/*border: 1px solid #dddddd;*/                                  /* мой коммент*/
 	background: #ffffff;
 	color: #333333;
 }
