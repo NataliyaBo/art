@@ -94,7 +94,7 @@
 	display: block;
 	cursor: pointer;
 	position: relative;
-	margin: 4px 0 0 0;                                         /* мой коммент*/
+	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	font-size: 100%;
 }
@@ -901,7 +901,7 @@ body .ui-tooltip {
 	border: 1px solid #c5c5c5;
 }
 .ui-widget-content {
-	/*border: 1px solid #dddddd;*/                                  /* мой коммент*/
+	border: 1px solid #dddddd;
 	background: #ffffff;
 	color: #333333;
 }
