@@ -8,14 +8,14 @@ html, body, .container{height: 100%;}
     margin: 0 auto;
 }
 
-.header{height: 180px;
+header{height: 180px;
     margin: 0 0 10px 0;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
 }
 .header_name{height: 80px;
 }
-.header h1{padding: 8px 0 8px 28px;
+header h1{padding: 8px 0 8px 28px;
     color: black;
 }
                                                                /* верхнее меню */
@@ -36,7 +36,7 @@ html, body, .container{height: 100%;}
 .t_menu a{text-align: center;
 }
                                                                 /* основная часть */
-.main{width: 100%;
+main{width: 100%;
     height: 100%;
 }
                                                                 /* боковое меню */
