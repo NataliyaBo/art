@@ -6,6 +6,23 @@ html, body, .container{height: 100%;}
 .container{height: 100%;
     width: 75%;
     margin: 0 auto;
+
+}
+.container_ht{background: #e0dfdf;
+}
+.gallery, .website{width: 650px;
+    height: 480px;
+    border-radius: 6px;
+    border: solid 1px #c5c5c5;
+    background: #ffeee6;
+    display: inline-block;
+    margin-top: 240px;
+    margin-left: 45px;
+    text-align: center;
+}
+
+.tiles{margin-top: 200px;
+    background: #e0d4d4;
 }
 
 header{height: 180px;
