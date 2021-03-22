@@ -8,8 +8,8 @@ html, body, .container{height: 100%;}
     width: 75%;
     margin: 0 auto;
 }
-.container_ht{background: #e0dfdf;
-}
+/*.container_ht{background: #e0dfdf;
+}*/
 .gallery, .website{width: 650px;
     height: 480px;
     border-radius: 6px;
@@ -20,22 +20,23 @@ html, body, .container{height: 100%;}
     margin-left: 45px;
     text-align: center;
 }
-
+                                                                             /* шапка */
 .tiles{margin-top: 200px;
     background: #e0d4d4;
 }
 
 header{height: 180px;
-    margin: 0 0 10px 0;
+    margin-bottom: 38px;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
+    background-image: url("../img/head01.jpg");
 }
 .header_name{height: 80px;
 }
 header h1{padding: 8px 0 8px 28px;
     color: black;
 }
-                                                               /* верхнее меню */
+                                                                          /* верхнее меню */
 .header_menu{height: 100px;
 }
 .top_menu{height: 30px;
@@ -52,11 +53,12 @@ header h1{padding: 8px 0 8px 28px;
 }
 .t_menu a{text-align: center;
 }
-                                                                /* основная часть */
+                                                                       /* основная часть */
 main{width: 100%;
     height: 100%;
+    /*padding-top: 18px;*/
 }
-                                                                /* боковое меню */
+                                                                     /* боковое меню */
 .vertical_menu{width: 15%;
     /*height: 100%;*/
     float: left;
@@ -67,11 +69,12 @@ main{width: 100%;
 .v_menu{width: 80%;
     padding-right: 6px!important;
 }
+/*ul{list-style: none;}*/
 
 .vertical_menu_x{width: 100%;
 }
 .v_menu_x{background: #ffe2d4;
-    margin: 50px 0 0 0;
+    margin: 50px 0 18px 0;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
 }
@@ -85,70 +88,107 @@ main{width: 100%;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
 }
-                                                             /* контент */
+                                                                      /* контент */
 .content{width: 83%;
     /*height: auto;*/              /* ! problem */
     float: right;
     border-radius: 3px;
-    /*border: solid 1px #c5c5c5;*/
+    margin-bottom: 18px;
 }
-
-.text{padding: 0 12px 25px 20px;
+.content_box{margin-left: 26px;
 }
-.fotka{display: inline-block;
+/*.fotka{display: inline-block;
     width: 250px;
     height: 275px;
     margin: 16px 22px 16px 0;
-}
-.foto_text{width: 250px;
+}*/
+/*.foto_text{width: 250px;
     height: 250px;
     display: inline;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
-}
-.sign{font-size: small;
+}*/
+/*.sign{font-size: small;
     border: none;
-}
+}*/
 
-.content_decor, .content_hair, .content_interior, .content_magnets, .content_process, .content_other{
+/*.content_decor, .content_hair, .content_interior, .content_magnets, .content_process, .content_other{
     width: 200px;
     height: 200px;
     margin: 8px 12px;
     text-align: center;
     display: inline-block;
-}
-.foto_preview{width: 200px;
+}*/
+/*.foto_preview{width: 200px;
     height: 200px;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
-}
-.box{width: 280px;
-    height: 350px;
-    margin: 12px 20px;
+}*/
+.box{width: 270px;
+    height: 270px;
+    margin: 0 0 20px 22px;
     display: inline-block;
+    position: relative;
+    overflow: hidden;
     border-radius: 3px;
-    border: solid 1px #c5c5c5;
+    /*border: solid 1px #c5c5c5;*/
 }
+.box:after, .box:before{box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    transition: transform .4s ease-out;
+}
+.box:after{content: attr(data-title);
+    top: 0;
+    height: 40%;
+    background: rgba(131, 128, 128, 0.4);
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    transform: translateY(-100%) scale(.8);
+}
+.box:before{content: attr(data-description)"";
+    top: 40%;
+    height: 60%;
+    background: rgba(42, 42, 45, 0.5);
+    font-size: 16px;
+    transform: translateY(100%) scale(.8);
+}
+.box:hover:after, .box:hover:before{transform: translateY(0%) scale(1);}
+
+    /* класс для img с пояснениями ?? */
 .brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .ethnic,
 .magnets, .felt, .decorated, .event, .random{
-    background: white;
+    /*background: white;*/
     width: 280px;
     height: 280px;
 }
-.gnom_foto, .doll_foto, .hunters_foto, .panel_foto, .bender_foto, .pen_foto, .bag_foto, .monster_foto, .process_amber_foto,
+
+    /* класс для img 350x350 без пояснений */
+.home_foto, .hunters_foto, .panel_foto, .pen_foto, .bag_foto, .monster_foto, .process_amber_foto,
 .process_felt_foto, .process_pen_foto, .process_clip_foto, .inspir_foto, .material_foto, .tools_foto, .want_foto{
     width: 350px;
     height: 350px;
-    margin: 22px 38px;
+    margin: 0 18px 18px 12px;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+}
+   /* класс для img 310x350 без пояснений */
+.doll_foto, .gnom_foto, .bender_foto{
+    width: 300px;
+    height: 350px;
+    margin: 0 18px 18px 12px;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
 }
                                                                    /* подвал */
 .footer_panel{background: #ffad88;
     width: 100%;
-    height: 100px;
+    /*height: 100px;*/
     display: flex;
-    margin-top: 16px;
+    margin-top: 18px;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
 }
