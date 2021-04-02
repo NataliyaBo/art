@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>art_home</title>
     <link rel="stylesheet" type="text/css" href="css/art.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -12,7 +13,7 @@
 <div class="container">
     <header>
         <div class="header_name"><a href="art_home.html"><h1>Workshop Bo</h1></a></div>
-        <div class="header_menu">
+        <!--div class="header_menu">
             <ul class="top_menu">
                 <li class="t_menu"><a href="art_inspiration.html">Про вдохновение</a></li>
                 <li class="t_menu"><a href="art_materials.html">Про материалы</a></li>
@@ -20,9 +21,18 @@
                 <li class="t_menu"><a href="art_want.html">Хочухи</a></li>
                 <li class="t_menu"><a href="art_gallery_grid.html">В галерею</a></li>
             </ul>
-        </div>
+        </div-->
     </header>
-    <main>
+    <!--main-->
+    <div class="tops_menu">
+        <ul class="top_menu">
+            <li class="t_menu"><a href="art_inspiration.html">О вдохновении</a></li>
+            <li class="t_menu"><a href="art_materials.html">О материалах</a></li>
+            <li class="t_menu"><a href="art_tools.html">Об инструментах</a></li>
+            <li class="t_menu"><a href="art_want.html">Хочухи</a></li>
+            <li class="t_menu"><a href="art_gallery_grid.html">В галерею</a></li>
+        </ul>
+    </div>
         <div class="vertical_menu">
             <div id="accordion" class="vertical_menu_o">
                 <h4 class="accord">Украшения</h4>
@@ -83,9 +93,9 @@
                 <div class="v_menu_x">
                     <h4>Где была, что видела:</h4>
                     <div class="evra"><a href="art_event.html">выставки, ярмарки</a>
-                        <img src="img/zastavka.jpg" alt="#" class="foto_v_menu"></div>
+                        <!--img src="img/zastavka.jpg" alt="#" class="foto_v_menu"><p>Мастер-класс по гжели</p--></div>
                     <div class="evra"><a href="art_random.html">мимо проходила</a>
-                        <img src="img/zastavka.jpg" alt="#" class="foto_v_menu"></div>
+                        <!--img src="img/zastavka.jpg" alt="#" class="foto_v_menu"--></div>
                 </div>
             </div>
         </div>
@@ -127,15 +137,15 @@
                     culpa qui officia deserunt mollit anim id est laborum.</p><br>
             </div>
         </div>
-    </main>
+    <!--/main-->
     <footer class="footer_panel">
-        <div class="footer_home"><a href="art_home.html"><b>Workshop Bo</b></a></div>
+        <div class="footer_home"><a href="art_home.html">Workshop Bo</a></div>
         <div class="footer_info">
             <div class="footer_info_f">+7-953-920-89-48</div>
             <div class="footer_info_e">e-mail: n1talika@gmail.com</div>
-        </div>
-            <div class="footer_insta"><a href="https://www.instagram.com/boryatinskaya_hm/" target="_blank">
+            <div class="footer_info_i"><a href="https://www.instagram.com/boryatinskaya_hm/" target="_blank">
                 <img src="img/icons_inst%20100x100.png" class="foto_icons" alt="#"></a></div>
+        </div>
     </footer>
 </div>
 </body>
@@ -145,12 +155,17 @@
             collapsible: true,
             active: false
         });
+        $("#accordion").css({
+            'font-size': 15
+        });
         $('.accord').css({
             'background': '#ffe2d4',
             'color': '#000000'
         });
         $('.accord-1').css({
-            'font-size': 16
+            'font-size': 15,
+            'height': 'auto',
+            'padding-right': 6
         });
     });
 </script>

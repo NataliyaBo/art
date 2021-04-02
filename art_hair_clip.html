@@ -18,10 +18,11 @@
                 <li class="t_menu"><a href="art_materials.html">Про материалы</a></li>
                 <li class="t_menu"><a href="art_tools.html">Про инструменты</a></li>
                 <li class="t_menu"><a href="art_want.html">Хочухи</a></li>
+                <li class="t_menu"><a href="art_gallery_grid.html">В галерею</a></li>
             </ul>
         </div>
     </header>
-    <main>
+    <!--main-->
         <div class="vertical_menu">
         <div id="accordion" class="vertical_menu_o">
             <h4 class="accord">Украшения</h4>
@@ -111,7 +112,7 @@
                 <img src="img/25.jpg" alt="#" class="clip">
             </div>
         </div>
-    </main>
+    <!--/main-->
     <footer class="footer_panel">
         <div class="footer_home"><a href="art_home.html"><b>Workshop Bo</b></a></div>
         <div class="footer_info">
@@ -129,12 +130,17 @@
             collapsible: true,
             active: false
         });
+        $("#accordion").css({
+            'font-size': 15
+        });
         $('.accord').css({
             'background': '#ffe2d4',
             'color': '#000000'
         });
         $('.accord-1').css({
-            'font-size': 16
+            'font-size': 15,
+            'height': 'auto',
+            'padding-right': 6
         });
     });
 </script>
