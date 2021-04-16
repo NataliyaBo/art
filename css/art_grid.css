@@ -1,70 +1,316 @@
-body{margin: 0 auto;
-    width: 70%;
-    height: 100vh;
-    font-size: 17px;
-    font-family: Arial, "Arial Black";
-   display: grid;
-    grid-template-areas: "hdr hdr hdr hdr"
-                         "nav mn mn mn"
-                         "ftr ftr ftr ftr";
-    grid-template-rows: 140px 1fr 100px;
-    grid-template-columns: 20% 80%;
-    grid-gap: 12px;
+*{margin: 0;
+    padding: 0;
+    font-family: Arial;}
+html, body{
 }
-header{background: lightgray;
-    height: 120px;
-    text-align: center;
-    font-size: xx-large;
-    grid-area: hdr;
+
+section{height: 100vh;
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: "hd hd hd"
+                   "vm tm tm"
+                   "vm cnt cnt"
+                   "ftr ftr ftr";
+    grid-template-columns: 18% 41% 41%;
+    grid-template-rows: 180px 1fr 1fr 110px;
 }
-nav{background: lavender;
-    grid-area: nav;
-}
-.nav_top{background: lemonchiffon;
-    width: max-content;
-    height: 30px;
-    margin: 10px;
+
+.gallery, .website{width: 650px;
+    height: 480px;
+    border-radius: 6px;
+    border: solid 1px #c5c5c5;
+    background: #ffeee6;
     display: inline-block;
+    margin-top: 240px;
+    margin-left: 45px;
     text-align: center;
-    padding-top: 10px;
 }
-main{background: lightblue;
-    height: auto;
-    grid-area: mn;
-    grid-template-columns: repeat(auto-fit,minmax(20%, 1fr));
+                                                                /* шапка */
+header{height: 180px;
+    /*margin-bottom: 38px;*/
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+    background-image: url("../img/head01.jpg");
+    grid-area: hd;
 }
-.content{background: white;
+.header_name{width: 400px;
+    height: 140px;
+}
+.header_name h1{padding: 8px 0 4px 28px;
+    color: black;
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 0.5px 0.5px white, 1px 1px white,
+    -0.5px -0.5px white, -1px -1px white, -0.5px 0.5px white, 0.5px -0.5px white,
+    -1px 1px white, 1px -1px white,
+    -3px -3px 4px rgba(0,0,0,.5), -3px 3px 4px rgba(0,0,0,.5), 3px 3px 4px rgba(0,0,0,.5), 3px -3px 4px rgba(0,0,0,.5);
+}
+                                                                 /* верхнее меню */
+/*.header_menu{height: 40px;
+    margin-top: 0px;
+}*/
+.tops_menu{height: 40px;
+    margin: 16px 0 16px 0;
+    grid-area: tm;
+}
+.top_menu{height: 30px;
+    float: right;
+    font-size: 15px;
+}
+.t_menu{background: #ffe2d4;
     display: inline-block;
-    width: 260px;
-    height: 260px;
-    margin: 10px 0 10px 30px;
-    /*overflow: hidden;*/
+    width: 130px;
+    height: 100%;
+    padding-top: 4px;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+    text-align: center;
 }
-.foto{width: 260px;
-    height: 260px;
+
+.t_menu a{text-align: center;
 }
-footer{background: lightsteelblue;
-    height: 120px;
+                                                                 /* основная часть */
+/*main{width: 100%;
+    height: 100%;
+    padding-top: 18px;
+}*/
+                                                               /* боковое меню */
+.vertical_menu{/*width: 15%;*/
+    float: left;
+    margin: 16px 0 0 0;
+    grid-area: vm;
+    /*display: grid;*/
+    /*align-content: start;*/
+
+}
+.vertical_menu_o{
+    /*width: 100%;*/
+}
+
+.v_menu{/*width: 80%;
+    padding-right: 6px!important;*/}
+
+.vertical_menu_x{margin: 30px 0 18px 0;
+}
+
+.vertical_menu_x h4{text-align: center;
+    margin-top: 6px;
+}
+.v_menu_x{background: #ffe2d4;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+}
+.v_menu_x div:before{content: "\2714"}
+/*div .evra{text-align: center}*/
+.evra{margin: 14px 0 22px 5px;
+}
+
+.foto_v_menu{width: 180px;
+    height: 180px;
+    margin: 6px 11px 4px 7px;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+}
+.evra{font-size: 15px;}
+                                                                /* контент */
+.content{/*width: 83%;*/
+    /*height: auto;*/              /* ! problem */
+    float: right;
+    border-radius: 3px;
+    margin-left: 28px;
+    margin-bottom: 18px;
+    grid-area: cnt;
+
+}
+.content_box{margin-left: 26px;
+}
+
+/*.content_box p{font-size: 15px;}*/
+/*.fotka{display: inline-block;
+    width: 250px;
+    height: 275px;
+    margin: 16px 22px 16px 0;
+}*/
+/*.foto_text{width: 250px;
+    height: 250px;
+    display: inline;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+}*/
+/*.sign{font-size: small;
+    border: none;
+}*/
+
+/*.content_decor, .content_hair, .content_interior, .content_magnets, .content_process, .content_other{
+    width: 200px;
+    height: 200px;
+    margin: 8px 12px;
+    text-align: center;
+    display: inline-block;
+}*/
+/*.foto_preview{width: 200px;
+    height: 200px;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+}*/
+.box{width: 270px;
+    height: 270px;
+    margin: 0 0 20px 20px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+
+    /*border: solid 1px #c5c5c5;*/
+}
+.box:after, .box:before{box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    transition: transform .4s ease-out;
+}
+.box:after{content: attr(data-title);
+    top: 0;
+    height: 40%;
+    background: rgba(121, 118, 118, 0.4);
+    font-size: 20px;
+    text-align: center;
+    transform: translateY(-100%) scale(.8);
+}
+.box:before{content: attr(data-description)"";
+    top: 40%;
+    height: 60%;
+    background: rgba(41, 41, 43, 0.5);
+    font-size: 15px;
+    transform: translateY(100%) scale(.8);
+}
+.box:hover:after, .box:hover:before{transform: translateY(0%) scale(1);}
+
+/* класс для img с пояснениями ?? */
+.brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .ethnic,
+.magnets, .felt, .decorated, .event, .random{
+    /*background: white;*/
+    width: 280px;
+    height: 280px;
+}
+
+/* класс для img 350x350 без пояснений */
+.home_foto, .hunters_foto, .panel_foto, .pen_foto, .bag_foto, .monster_foto, .process_amber_foto,
+.process_felt_foto, .process_pen_foto, .process_clip_foto, .inspir_foto, .material_foto, .tools_foto, .want_foto{
+    width: 350px;
+    height: 350px;
+    margin: 0 18px 18px 12px;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+}
+                                                     /* класс для img 310x350 без пояснений */
+.doll_foto, .gnom_foto, .bender_foto{
+    width: 300px;
+    height: 350px;
+    margin: 0 18px 18px 12px;
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+}
+                                                                    /* подвал */
+.footer_panel{background: #ffad88;
+    width: 100%;
+    height: 100px;
+    /*display: flex;*/
+    /*margin-top: 20px;*/
+    border-radius: 3px;
+    border: solid 1px #c5c5c5;
+    display: inline-block;
     grid-area: ftr;
 }
-
-@media screen and (min-width: 320px) and (max-width: 520px){
-    body{grid-template-areas: "hdr"
-                             "nav"
-                             "mn"
-                             "ftr";
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 1fr 1fr 0.5fr;
-    }
-
-
+.footer_home, .footer_info{display: inline-block;}
+.footer_home{width: 18%;
+    /*height: 100%;*/
+    /*margin: 28px 0 0 10px;*/
+    padding-top: 40px;
+    text-align: center;
+    text-shadow: 1px 1px white, 2px 2px white,
+    -1px -1px white, -2px -2px white, -1px 1px white, 1px -1px white,
+    -2px 2px white, 2px -2px white,
+    -3px -3px 4px rgba(0,0,0,.7), -3px 3px 4px rgba(0,0,0,.7), 3px 3px 4px rgba(0,0,0,.7), 3px -3px 4px rgba(0,0,0,.7);
 }
-@media screen and (min-width: 521px) and (max-width: 768px){
-    body{grid-template-areas: "hdr hdr"
-                             "nav nav"
-                             "mn mn"
-                             "ftr ftr";
+.footer_home a{font-weight: 510;
+}
+footer .footer_home:before{content: ' \00A9';}
+.footer_info{width: 82%;
+    /*height: 100%;*/
+    padding-top: 43px;
+    float: right;
+    /*margin: 2px 0 0 520px;*/
+    text-align: end;
+}
+.footer_info_f, .footer_info_e, .footer_info_i{height: 28px;
+    margin: 0 22px 0 0;
+    text-align: right;
+    display: inline-block;
+    padding-top: 4px;
+    font-size: 15px;
+    font-variant-numeric: ordinal;
+}
+.footer_info_i{float: right;
+}
+.foto_icons {width: 45px;
+    height: 45px;
+}
+
+                                                             /* общие теги */
+a{text-decoration: none;
+    color: black;
+}
+a:hover{text-decoration: underline;}
+                                                              /* медиа запросы */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    section{
+        grid-template-areas:
+                "hd"
+                "tm"
+                "vm"
+                "cnt"
+                "ftr";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 0.5fr 0.8fr 1fr 0.4fr;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .container {width: 100%;
+        margin: 0;
+        grid-template-areas:
+                "hd hd"
+                "tm tm"
+                "vm vm"
+                "cnt cnt"
+                "ftr ftr";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 0.5fr 0.8fr 1fr 0.4fr;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {width: 96%;
+        grid-template-areas:
+                "hd hd"
+                "tm tm"
+                "vm vm"
+                "cnt cnt"
+                "ftr ftr";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.4fr 1fr 1fr 0.5fr;
+        grid-template-rows: 0.6fr 0.5fr 0.8fr 1fr 0.4fr;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .container {grid-template-areas:
+                "hd hd hd"
+                "tm tm tm"
+                "vm vm vm"
+                "cnt cnt cnt"
+                "ftr ftr ftr";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.6fr 0.5fr 0.8fr 1fr 0.4fr;
     }
 }
