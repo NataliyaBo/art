@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tiart_hair_elastictle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>art_hair_elastic</title>
     <link rel="stylesheet" type="text/css" href="css/art.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -12,132 +13,114 @@
 <div class="container">
     <header>
         <div class="header_name"><a href="art_home.html"><h1>Workshop Bo</h1></a></div>
-        <div class="header_menu">
-            <ul class="top_menu">
-                <li class="t_menu"><a href="art_inspiration.html">Про вдохновение</a></li>
-                <li class="t_menu"><a href="art_materials.html">Про материалы</a></li>
-                <li class="t_menu"><a href="art_tools.html">Про инструменты</a></li>
-                <li class="t_menu"><a href="art_want.html">Хочухи</a></li>
-                <li class="t_menu"><a href="art_gallery_grid.html">В галерею</a></li>
-            </ul>
-        </div>
     </header>
-    <main>
-        <div class="vertical_menu">
-        <div id="accordion" class="vertical_menu_o">
-            <h4 class="accord">Украшения</h4>
-            <div class="v_menu accord-1">
-                <ul>
-                    <li><a href="art_decor_brooch.html">броши</a></li>
-                    <li><a href="art_decor_ring.html">кольца</a></li>
-                    <li><a href="art_decor_earrings.html">серьги</a></li>
-                    <li><a href="art_decor_suspension.html">подвески</a></li>
-                    <li><a href="art_decor_bracelet.html">браслеты</a></li>
-                </ul>
+    <section class="vertical_menu">
+        <div id="burger">
+            <span></span>
+        </div>
+        <div id="accordion" class="menu_brg">
+            <div class="accord">
+                <input id="ac-1" name="accordion-1" type="checkbox">
+                <label for="ac-1">Украшения</label>
+                <article class="ac_small-1">
+                    <a href="art_decor_bracelet.html" class="menu_link">браслеты</a>
+                    <a href="art_decor_brooch.html" class="menu_link">броши</a>
+                    <a href="art_decor_ring.html" class="menu_link">кольца</a>
+                    <a href="art_decor_suspension.html" class="menu_link">подвески</a>
+                    <a href="art_decor_earrings.html" class="menu_link">серьги</a>
+                </article>
             </div>
-            <h4 class="accord">Для волос</h4>
-            <div class="v_menu accord-1">
-                <ul>
-                    <li><a href="art_hair_clip.html">заколки</a></li>
-                    <li><a href="art_hair_elastic.html">резинки</a></li>
-                    <li><a href="art_hair_rim.html">ободки</a></li>
-                    <li><a href="art_hair_ethnic.html">этнические заколки</a></li>
-                </ul>
+            <div class="accord">
+                <input id="ac-2" name="accordion-2" type="checkbox">
+                <label for="ac-2">Для волос</label>
+                <article class="ac_small-2">
+                    <a href="art_hair_clip.html" class="menu_link">заколки</a>
+                    <a href="art_hair_rim.html" class="menu_link">ободки</a>
+                    <a href="art_hair_elastic.html" class="menu_link">резинки</a>
+                    <a href="art_hair_ethnic.html" class="menu_link">этнические заколки</a>
+                </article>
             </div>
-            <h4 class="accord">Интерьерное</h4>
-            <div class="v_menu accord-1">
-                <ul>
-                    <li><a href="art_interior_gnom.html">гном</a></li>
-                    <li><a href="art_interior_doll.html">кукла</a></li>
-                    <li><a href="art_interior_hunterts.html">ловец снов</a></li>
-                    <li><a href="art_interior_panel.html">панно</a></li>
-                    <li><a href="art_interior_bender.html">Бендер</a></li>
-                </ul>
+            <div class="accord">
+                <input id="ac-3" name="accordion-3" type="checkbox">
+                <label for="ac-3">Интерьерное</label>
+                <article class="ac_small-3">
+                    <a href="art_interior_bender.html" class="menu_link">Бендер</a>
+                    <a href="art_interior_gnom.html" class="menu_link">гном</a>
+                    <a href="art_interior_doll.html" class="menu_link">кукла</a>
+                    <a href="art_interior_hunterts.html" class="menu_link">ловец снов</a>
+                    <a href="art_interior_panel.html" class="menu_link">панно</a>
+                </article>
             </div>
-            <h4 class="accord">Магнитики</h4>
-            <div class="v_menu accord-1">
-                <ul>
-                    <li><a href="art_magnets_felt.html">из фетра</a></li>
-                    <li><a href="art_magnets_decorated.html">декорированные</a></li>
-                </ul>
+            <div class="accord">
+                <input id="ac-4" name="accordion-4" type="checkbox">
+                <label for="ac-4">Магнитики</label>
+                <article class="ac_small-4">
+                    <a href="art_magnets_decorated.html" class="menu_link">декорированные</a>
+                    <a href="art_magnets_felt.html" class="menu_link">из фетра</a>
+                </article>
             </div>
-            <h4 class="accord">Всякое</h4>
-            <div class="v_menu accord-1">
-                <ul>
-                    <li><a href="art_other_pen.html">ручки</a></li>
-                    <li><a href="art_other_bag.html">сумки</a></li>
-                    <li><a href="art_other_monster.html">коробки</a></li>
-                </ul>
+            <div class="accord">
+                <input id="ac-5" name="accordion-5" type="checkbox">
+                <label for="ac-5">Всякое</label>
+                <article class="ac_small-5">
+                    <a href="art_other_pen.html" class="menu_link">ручки</a>
+                    <a href="art_other_monster.html" class="menu_link">коробки</a>
+                    <a href="art_other_bag.html" class="menu_link">сумки</a>
+                </article>
             </div>
-            <h4 class="accord">Подсмотреть</h4>
-            <div class="v_menu accord-1">
-                <ul>
-                    <li><a href="art_process_amberring.html">замена янтаря</a></li>
-                    <li><a href="art_process_felt.html">магнит из фетра</a></li>
-                    <li><a href="art_process_pen.html">оплетка ручки</a></li>
-                    <li><a href="art_process_clip.html">заколка</a></li>
-                </ul>
+            <div class="accord">
+                <input id="ac-6" name="accordion-6" type="checkbox">
+                <label for="ac-6">Подсмотреть</label>
+                <article class="ac_small-6">
+                    <a href="art_process_clip.html" class="menu_link">заколка</a>
+                    <a href="art_process_amberring.html" class="menu_link">замена янтаря</a>
+                    <a href="art_process_felt.html" class="menu_link">магнит из фетра</a>
+                    <a href="art_process_pen.html" class="menu_link">оплетка ручки</a>
+                </article>
             </div>
         </div>
-            <div class="vertical_menu_x">
-                <div class="v_menu_x">
-                    <h4>Где была, что видела:</h4>
-                    <div class="evra"><a href="art_event.html">выставки, ярмарки</a>
-                        <img src="img/img_0.jpg" alt="#" class="foto_v_menu"></div>
-                    <div class="evra"><a href="art_random.html">мимо проходила</a>
-                        <img src="img/img_0.jpg" alt="#" class="foto_v_menu"></div>
-                </div>
-            </div>
-        </div>
+    </section>
         <div class="content">
-            <div class="box" data-title="Р-01" data-description="Атласная лента, стразы. Резинка подходит на большой объем волос.">
-                <img src="img/01.jpg" alt="#" class="elastic">
+            <div class="box">
+                <div class="scale"><img src="img/01.jpg" alt="#" class="elastic"></div>
+                <p>Р-01. Атласная лента, стразы. Резинка подходит на большой объем волос.</p>
             </div>
-            <div class="box" data-title="Р-02" data-description="Репсовая лента.Металлическая пражка со стразами. Резинка подходит на большой объем волос.">
-                <img src="img/02.jpg" alt="#" class="elastic">
+            <div class="box">
+                <div class="scale"><img src="img/02.jpg" alt="#" class="elastic"></div>
+                <p>Р-02. Репсовая лента.Металлическая пражка со стразами. Резинка подходит на большой объем волос.</p>
             </div>
-            <div class="box" data-title="Р-03" data-description="Репсова лента. Резинка подходит на большой объем волос.">
-                <img src="img/03.jpg" alt="#" class="elastic">
+            <div class="box">
+                <div class="scale"><img src="img/03.jpg" alt="#" class="elastic"></div>
+                <p>Р-03. Репсова лента. Резинка подходит на большой объем волос.</p>
             </div>
-            <div class="box" data-title="Р-16" data-description="Атласная лента, пуговицы с эффектом кошачьего глаза. Резинка подходит на большой объем волос.">
-                <img src="img/16.jpg" alt="#" class="elastic">
+            <div class="box">
+                <div class="scale"><img src="img/16.jpg" alt="#" class="elastic"></div>
+                <p>Р-16. Атласная лента, пуговицы с отливом. Резинка подходит на большой объем волос.</p>
             </div>
-            <div class="box" data-title="Р-30" data-description="Атласная лента. Резинка подходит на большой объем волос.">
-                <img src="img/30.jpg" alt="#" class="elastic">
+            <div class="box">
+                <div class="scale"><img src="img/30.jpg" alt="#" class="elastic"></div>
+                <p>Р-30. Атласная лента. Резинка подходит на большой объем волос.</p>
             </div>
-            <div class="box" data-title="Р-36" data-description="Атласная лента. Резинка подходит на большой объем волос.">
-                <img src="img/36.jpg" alt="#" class="elastic">
+            <div class="box">
+                <div class="scale"><img src="img/36.jpg" alt="#" class="elastic"></div>
+                <p>Р-36. Атласная лента. Резинка подходит на большой объем волос.</p>
             </div>
         </div>
-    </main>
     <footer class="footer_panel">
-        <div class="footer_home"><a href="art_home.html"><b>Workshop Bo</b></a></div>
+        <div class="footer_home"><a href="art_home.html">Workshop Bo</a></div>
         <div class="footer_info">
             <div class="footer_info_f">+7-953-920-89-48</div>
             <div class="footer_info_e">e-mail: n1talika@gmail.com</div>
+            <div class="footer_info_i"><a href="https://www.instagram.com/boryatinskaya_hm/" target="_blank">
+                <img src="img/icons_inst%20100x100.png" class="foto_icons" alt="#"></a></div>
         </div>
-        <div class="footer_insta"><a href="https://www.instagram.com/boryatinskaya_hm/" target="_blank">
-            <img src="img/icons_inst%20100x100.png" class="foto_icons" alt="#"></a></div>
     </footer>
 </div>
 </body>
 <script>
     $(function () {
-        $('#accordion').accordion({
-            collapsible: true,
-            active: false
-        });
-        $("#accordion").css({
-            'font-size': 15
-        });
-        $('.accord').css({
-            'background': '#ffe2d4',
-            'color': '#000000'
-        });
-        $('.accord-1').css({
-            'font-size': 15,
-            'height': 'auto',
-            'padding-right': 6
+        $('#burger').click(function (event) {
+            $('#accordion').toggleClass('menu_brg')
         });
     });
 </script>

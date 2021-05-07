@@ -10,7 +10,7 @@ html, body{}
     grid-template: "hd hd hd hd"
                    "vm cnt cnt cnt"
                    "ftr ftr ftr ftr";
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: /*repeat(4, 1fr)*/ 0.8fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 100px;
 }
 
@@ -46,17 +46,16 @@ header{height: 180px;
     -1px 1px white, 1px -1px white,
     -3px -3px 4px rgba(255, 226, 212, 2), -3px 3px 4px rgba(0,0,0,.5), 3px 3px 4px rgba(255, 226, 212, 2), 3px -3px 4px rgba(255, 226, 212, 2);
 }
-                                                          /* бургер */
-/*.burger{
-    line-height: 30px;
+                                                          /* бургер НЕ УДАЛЯТЬ!*/
+#burger{line-height: 30px;
     font-size: 15px;
-    justify-content: right;
-    align-items: center;
+    /*justify-content: right;
+    align-items: center;*/
     margin-top: -10px;
     float: right;
     display: none;
-}*/
-/*.burger_btn{display: block;
+}
+.burger_btn{display: block;
     position: relative;
     width: 30px;
     height: 30px;
@@ -82,7 +81,7 @@ header{height: 180px;
 }
 .brg_line::after{
     transform: translateY(10px);
-}*/
+}
 
                                                           /* боковое меню */
 section{margin: 16px 0 18px 0;
@@ -104,7 +103,6 @@ section{margin: 16px 0 18px 0;
 .vertical_menu label{
     padding: 5px 20px;
     position: relative;
-    /*z-index: 15;*/
     display: block;
     height: 24px;
     cursor: pointer;
@@ -145,7 +143,7 @@ article a{
 }
 
                                                                       /* контент */
-.content{margin-top: 16px;
+.content{margin-top: 18px;
     float: right;
     border-radius: 3px;
     margin-left: 28px;
@@ -157,7 +155,8 @@ article a{
 }
 .content_box p{margin: 0}
 figure{text-align: center;
-    margin: 12px 0 0 0;
+    margin: 10px 0 0 0;
+    display: inline-block;
 }
 .home_foto{margin: 16px;
     width: 350px;
@@ -166,15 +165,32 @@ figure{text-align: center;
 }
 span{color: blue}
 
-.box{width: 250px;
-    height: 250px;
-    margin: 0 0 20px 20px;
+.box{width: 265px;
+    height: 290px;
+    /*margin: 0 0 20px 20px;*/
     display: inline-block;
     position: relative;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 4px;
 }
-.box:after, .box:before{box-sizing: border-box;
+.scale{display: inline-block;
+    overflow: hidden;
+    width: 230px;
+    height: 230px;
+    border-radius: 4px;
+    margin-left: 15px;
+}
+.scale img{
+    transition: 1s;
+}
+.scale img:hover{
+    transform: scale(1.7)
+}
+.box p{
+    margin: 3px 0 0 15px;
+    font-size: 13px;
+}
+/*.box:after, .box:before{box-sizing: border-box;
     position: absolute;
     width: 100%;
     padding: 10px;
@@ -196,31 +212,58 @@ span{color: blue}
     font-size: 14px;
     transform: translateY(100%) scale(.5);
 }
-.box:hover:after, .box:hover:before{transform: translateY(0%) scale(1);}
+.box:hover:after, .box:hover:before{transform: translateY(0%) scale(1);}*/
 
                                                                               /* класс для img с пояснениями ?? */
 .brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .ethnic,
 .magnets, .felt, .decorated, .event, .random{
     width: 260px;
     height: 260px;
+    border-radius: 4px;
 }
 
-                                                                           /* класс для img 350x350 без пояснений */
+                                                                           /* класс для img 350x350 с текстом */
 .hunters_foto, .panel_foto, .pen_foto, .bag_foto, .monster_foto, .process_amber_foto,
-.process_felt_foto, .process_pen_foto, .process_clip_foto, .inspir_foto, .material_foto, .tools_foto, .want_foto{
+.process_felt_foto, .process_pen_foto, .process_clip_foto, .inspir_foto, .material_foto, .tools_foto, .want_foto,
+.doll_foto, .gnom_foto, .bender_foto{
     width: 350px;
     height: 350px;
-    margin: 0 18px 18px 12px;
+    margin: 18px;
     border-radius: 3px;
     overflow: auto;
 }
                                                                             /* класс для img 310x350 без пояснений */
-.doll_foto, .gnom_foto, .bender_foto{
+/*.doll_foto, .gnom_foto, .bender_foto{
     width: 300px;
     height: 350px;
     margin: 0 18px 18px 12px;
     border-radius: 3px;
+}*/
+                                                                 /* кнопка наверх */
+#scroll_up{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+    width: 35px;
+    height: 35px;
+    z-index: 1000;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 0 3px 3px rgba(255, 226, 212, 1);
 }
+#scroll_up:before{
+    position: fixed;
+    content: '\21EA';
+    margin-top: -4px;
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 1000;
+}
+#scroll_up:hover{
+    opacity: 1;
+}
+
                                                                    /* подвал */
 .footer_panel{background: #ffad88;
     width: 100%;           /*! не соответсвует ширине контейнера*/
@@ -329,7 +372,7 @@ ul li{list-style: none;}
     }
 
     /* */
-    section{margin: 0 10px;}
+    section{margin: 0 0 10px 0;}
     .vertical_menu{/*margin-top: 20px;*/
         margin-bottom: 10px;
         width: auto;
@@ -339,14 +382,22 @@ ul li{list-style: none;}
     .content{margin: 0 6px 8px 6px;}
     .content_box{margin-left: 0}
     p{padding: 8px}
-    .home_foto, .inspir_foto{width: 80%;
+    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .inspir_foto{width: 80%;
         height: auto;
         margin: 0 0 16px 0;}
     .box{width: 100%;
         height: auto;
         margin: 16px 0;
     }
-    .bracelet{width: 100%;
+    .scale{width: 90%;
+        height: auto;
+        margin-left: 15px;
+    }
+    .box p{margin-left: 15px;
+        padding: 0 0 8px 0;
+    }
+    .bracelet, .brooch, .earring, .ring, .suspension, .clip, .rim, .elastic, .ethnic, .decorated, .felt{width: 100%;
         height: auto;
     }
     .footer_home{margin: 48px 0 0 12px;
@@ -423,7 +474,8 @@ ul li{list-style: none;}
     .content, .content_box, .home_foto{margin-left: 0}
     .content_box{margin-top: 10px}
     p{padding: 8px}
-    .home_foto, .inspir_foto{width: 80%;
+    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .inspir_foto{width: 80%;
         height: auto;
         margin: 0 0 16px 0;}
     .box{width: 100%;
@@ -469,7 +521,7 @@ ul li{list-style: none;}
         margin-top: 0}
     .content, .content_box, .home_foto{margin-left: 0;}
     .content_box{margin: 10px 0 0 26px;}
-    .home_foto, .inspir_foto{width: 80%;
+    .home_foto, .bender_foto, .inspir_foto{width: 80%;
         height: auto;
         margin: 0 0 16px 0;}
     .box{margin: 16px 0 16px 34px;}
