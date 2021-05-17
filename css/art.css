@@ -11,7 +11,8 @@ html, body{}
                    "vm cnt cnt cnt"
                    "ftr ftr ftr ftr";
     grid-template-columns: /*repeat(4, 1fr)*/ 0.8fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 100px;
+    grid-template-rows: 0.5fr 1fr 100px;
+
 }
 
 .gallery, .website{width: 650px;
@@ -104,11 +105,11 @@ section{margin: 16px 0 18px 0;
     padding: 5px 20px;
     position: relative;
     display: block;
-    height: 24px;
+    height: max-content;
     cursor: pointer;
     color: black;
     line-height: 24px;
-    font-size: 16px;
+    font-size: 15px;
 }
 .vertical_menu input:checked{
     content: '';
@@ -125,6 +126,11 @@ article a{
     display: block;
     margin: 4px 0 4px 0;
     padding-left: 18px;
+    font-size: 15px;
+}
+article a:before{
+    /*content: '\1F782';*/
+    margin-right: 2px;
 }
 .vertical_menu article{
     background: white;
@@ -138,7 +144,9 @@ article a{
 .vertical_menu input:checked ~ article.ac_small-3,
 .vertical_menu input:checked ~ article.ac_small-4,
 .vertical_menu input:checked ~ article.ac_small-5,
-.vertical_menu input:checked ~ article.ac_small-6{
+.vertical_menu input:checked ~ article.ac_small-6,
+.vertical_menu input:checked ~ article.ac_small-7,
+.vertical_menu input:checked ~ article.ac_small-8{
     height: max-content;
 }
 
@@ -149,7 +157,6 @@ article a{
     margin-left: 28px;
     margin-bottom: 18px;
     grid-area: cnt;
-
 }
 .content_box{margin-left: 26px;
 }
@@ -166,30 +173,37 @@ figure{text-align: center;
 span{color: blue}
 
 .box{width: 265px;
-    height: 290px;
+    height: 265px;
     /*margin: 0 0 20px 20px;*/
     display: inline-block;
     position: relative;
     overflow: hidden;
     border-radius: 4px;
+    margin-bottom: 8px;
 }
-.scale{display: inline-block;
+.imageSizeUp{margin-left: 22px;
+
+}
+.imag_txt{
+    margin: 0 9px 15px 20px;
+    font-size: 12px;
+}
+/*.scale{display: inline-block;
     overflow: hidden;
-    width: 230px;
-    height: 230px;
+    width: 220px;
+    height: 220px;
     border-radius: 4px;
     margin-left: 15px;
+    transition: 1s;
+    cursor: crosshair;
 }
 .scale img{
     transition: 1s;
 }
 .scale img:hover{
-    transform: scale(1.7)
-}
-.box p{
-    margin: 3px 0 0 15px;
-    font-size: 13px;
-}
+    transform: scale(1.7);
+}*/
+
 /*.box:after, .box:before{box-sizing: border-box;
     position: absolute;
     width: 100%;
@@ -214,11 +228,11 @@ span{color: blue}
 }
 .box:hover:after, .box:hover:before{transform: translateY(0%) scale(1);}*/
 
-                                                                              /* класс для img с пояснениями ?? */
+                                                                              /* класс для img с пояснениями */
 .brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .ethnic,
-.magnets, .felt, .decorated, .event, .random{
-    width: 260px;
-    height: 260px;
+.magnets, .felt, .decorated, .event, .random {
+    width: 220px;
+    height: 220px;
     border-radius: 4px;
 }
 
@@ -243,22 +257,21 @@ span{color: blue}
 #scroll_up{
     display: none;
     position: fixed;
-    right: 20px;
+    right: 14px;
     bottom: 120px;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     z-index: 1000;
-    border-radius: 3px;
-    background-color: white;
-    box-shadow: 0 0 3px 3px rgba(255, 226, 212, 1);
+    border-radius: 50px;
+    background: #ffe2d4;
+    /*box-shadow: 0 0 3px 3px rgba(255, 226, 212, 1);*/
 }
 #scroll_up:before{
     position: fixed;
-    content: '\21EA';
-    margin-top: -4px;
-    margin-left: 10px;
+    content: '\2191';
+    margin-top: -1px;
+    margin-left: 14px;
     font-size: 30px;
-    font-weight: 1000;
 }
 #scroll_up:hover{
     opacity: 1;
@@ -383,22 +396,34 @@ ul li{list-style: none;}
     .content_box{margin-left: 0}
     p{padding: 8px}
     .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .inspir_foto{width: 80%;
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .inspir_foto
+    {width: 80%;
         height: auto;
-        margin: 0 0 16px 0;}
+        margin: 0 0 16px 0;
+    }
     .box{width: 100%;
         height: auto;
         margin: 16px 0;
     }
-    .scale{width: 90%;
+    .imageSizeUp{
+        margin-left: 0;
+    }
+    /*.scale{width: 90%;
         height: auto;
         margin-left: 15px;
-    }
+    }*/
     .box p{margin-left: 15px;
         padding: 0 0 8px 0;
     }
     .bracelet, .brooch, .earring, .ring, .suspension, .clip, .rim, .elastic, .ethnic, .decorated, .felt{width: 100%;
         height: auto;
+    }
+    #scroll_up{width: 35px;
+        height: 35px;
+    }
+    #scroll_up:before{margin-top: -3px;
+        margin-left: 11px;
+        font-size: 26px;
     }
     .footer_home{margin: 48px 0 0 12px;
         padding-top: 0;
