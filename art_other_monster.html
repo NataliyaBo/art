@@ -26,7 +26,7 @@
                     <a href="art_decor_bracelet.html" class="menu_link">браслеты</a>
                     <a href="art_decor_brooch.html" class="menu_link">броши</a>
                     <a href="art_decor_ring.html" class="menu_link">кольца</a>
-                    <a href="art_decor_suspension.html" class="menu_link">подвески</a>
+                    <a href="art_decor_pendant.html" class="menu_link">подвески</a>
                     <a href="art_decor_earrings.html" class="menu_link">серьги</a>
                 </article>
             </div>
@@ -94,48 +94,50 @@
             </div>
         </div>
     </section>
-        <div class="content">
-            <div class="content_box">
-                <p>Отвлечь или развлечь ребенка и придумать вместе с ним историю о меленьком коробочном монстрике...</p>
-                <figure>
-                    <img src="img/км01.jpg" alt="#" class="monster_foto">
-                </figure>
-                <figure>
-                    <img src="img/км02.jpg" alt="#" class="monster_foto">
-                </figure>
-                <figure>
-                    <img src="img/км03.jpg" alt="#" class="monster_foto">
-                </figure>
-            </div>
-            <div id="scroll_up"></div>
+    <div class="content">
+        <div class="content_box">
+            <p>Отвлечь или развлечь ребенка и придумать вместе с ним историю о меленьком коробочном монстрике...</p>
+            <figure>
+                <img src="img/км01.jpg" alt="#" class="monster_foto">
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu</p>
+            <figure>
+                <img src="img/км02.jpg" alt="#" class="monster_foto">
+                <img src="img/км03.jpg" alt="#" class="monster_foto">
+            </figure>
         </div>
+        <div id="scroll_up"></div>
+    </div>
     <footer class="footer_panel">
         <div class="footer_home"><a href="art_home.html">Workshop Bo</a></div>
         <div class="footer_info">
             <div class="footer_info_f">+7-953-920-89-48</div>
             <div class="footer_info_e">n1talika@gmail.com</div>
-        <div class="footer_info_i"><a href="https://www.instagram.com/boryatinskaya_hm/" target="_blank">
-            <img src="img/icons_inst%20100x100.png" class="foto_icons" alt="#"></a></div>
+            <div class="footer_info_i"><a href="https://www.instagram.com/boryatinskaya_hm/" target="_blank">
+                <img src="img/icons_inst%20100x100.png" class="foto_icons" alt="#"></a></div>
         </div>
     </footer>
 </div>
 </body>
 <script>
-    $(function (){
-        $('#burger').click(function (event){
+    $(function () {
+        $('#burger').click(function (event) {
             $('#accordion').toggleClass('menu_brg')
         });
     });
-    $(function (){
-        $(window).scroll(function (){
+    $(function () {
+        $(window).scroll(function () {
             if ($(window).scrollTop() > 100) {
                 $('#scroll_up').show();
             } else {
                 $('#scroll_up').hide();
             }
         });
-        $('#scroll_up').click(function(){
-            $('html, body').animate({scrollTop: 0}, 600);
+        $('#scroll_up').click(function () {
+            $('html, body').animate({scrollTop: 0}, 500);
             return false;
         });
     });

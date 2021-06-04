@@ -1,6 +1,6 @@
 *{/*margin: 0;*/
     padding: 0;
-    font-family: 'arial', 'Arial Black';}
+    font-family: Serif, serif, "Noto Serif", "Noto Serif Light", "Noto Sans";}
 html, body{}
 
 .container {height: 100vh;
@@ -11,11 +11,10 @@ html, body{}
                    "vm cnt cnt cnt"
                    "ftr ftr ftr ftr";
     grid-template-columns: /*repeat(4, 1fr)*/ 0.8fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 100px;
-
+    grid-template-rows: 0.4fr 1fr 100px;
 }
 
-.gallery, .website{width: 650px;
+/*.gallery, .website{width: 650px;
     height: 480px;
     border-radius: 6px;
     border: solid 1px #c5c5c5;
@@ -24,8 +23,8 @@ html, body{}
     margin-top: 240px;
     margin-left: 45px;
     text-align: center;
-}
-                                                                             /* шапка */
+}*/
+                                                                                                            /* шапка */
 header{height: 180px;
     border-radius: 3px;
     border: solid 1px #c5c5c5;
@@ -47,11 +46,11 @@ header{height: 180px;
     -1px 1px white, 1px -1px white,
     -3px -3px 4px rgba(255, 226, 212, 2), -3px 3px 4px rgba(0,0,0,.5), 3px 3px 4px rgba(255, 226, 212, 2), 3px -3px 4px rgba(255, 226, 212, 2);
 }
-                                                          /* бургер НЕ УДАЛЯТЬ!*/
+.header_name a:hover{text-decoration: none;}
+
+                                                                                                           /* бургер */
 #burger{line-height: 30px;
     font-size: 15px;
-    /*justify-content: right;
-    align-items: center;*/
     margin-top: -10px;
     float: right;
     display: none;
@@ -84,8 +83,8 @@ header{height: 180px;
     transform: translateY(10px);
 }
 
-                                                          /* боковое меню */
-section{margin: 16px 0 18px 0;
+                                                                                                      /* боковое меню */
+section{margin: 16px 16px 18px 0;
 }
 #accordion{}
 
@@ -109,7 +108,7 @@ section{margin: 16px 0 18px 0;
     cursor: pointer;
     color: black;
     line-height: 24px;
-    font-size: 15px;
+    /*font-size: 15px;*/
 }
 .vertical_menu input:checked{
     content: '';
@@ -150,7 +149,7 @@ article a:before{
     height: max-content;
 }
 
-                                                                      /* контент */
+                                                                                                          /* контент */
 .content{margin-top: 18px;
     float: right;
     border-radius: 3px;
@@ -160,111 +159,71 @@ article a:before{
 }
 .content_box{margin-left: 26px;
 }
-.content_box p{margin: 0}
-figure{text-align: center;
-    margin: 10px 0 0 0;
-    display: inline-block;
+.content_box p{margin: 0;
 }
-.home_foto{margin: 16px;
-    width: 350px;
-    height: 350px;
-    border-radius: 3px;
+.thematic_text{margin: 0 0 22px 0;
+}
+
+figure{text-align: center;
+    /*display: inline-block;*/
+}
+figure img{margin-right: 20px;
+    text-align: center;
 }
 span{color: blue}
 
-.box{width: 265px;
-    height: 265px;
-    /*margin: 0 0 20px 20px;*/
+.box{width: 18%;
+    height: auto;
     display: inline-block;
     position: relative;
     overflow: hidden;
     border-radius: 4px;
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
+    padding: 9px;
 }
-.imageSizeUp{margin-left: 22px;
 
-}
 .imag_txt{
-    margin: 0 9px 15px 20px;
+    margin: 3px 0 6px 0;
     font-size: 12px;
 }
-/*.scale{display: inline-block;
-    overflow: hidden;
-    width: 220px;
-    height: 220px;
-    border-radius: 4px;
-    margin-left: 15px;
-    transition: 1s;
-    cursor: crosshair;
-}
-.scale img{
-    transition: 1s;
-}
-.scale img:hover{
-    transform: scale(1.7);
-}*/
-
-/*.box:after, .box:before{box-sizing: border-box;
-    position: absolute;
+                                                                                       /* класс для img с пояснениями */
+.brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic,
+.magnets, .felt, .decorated{
     width: 100%;
-    padding: 10px;
-    color: #ffffff;
-    transition: transform .6s ease-out;
-}
-.box:after{content: attr(data-title);
-    top: -3%;
-    height: 15%;
-    background: rgba(41, 41, 43, 0.4);
-    font-size: 18px;
-    text-align: center;
-    transform: translateY(-100%) scale(.5);
-}
-.box:before{content: attr(data-description)"";
-    top: 65%;
-    height: 60%;
-    background: rgba(41, 41, 43, 0.5);
-    font-size: 14px;
-    transform: translateY(100%) scale(.5);
-}
-.box:hover:after, .box:hover:before{transform: translateY(0%) scale(1);}*/
-
-                                                                              /* класс для img с пояснениями */
-.brooch, .ring, .earring, .suspension, .bracelet, .clip, .elastic, .rim, .ethnic,
-.magnets, .felt, .decorated, .event, .random {
-    width: 220px;
-    height: 220px;
+    height: auto;
     border-radius: 4px;
 }
 
-                                                                           /* класс для img 350x350 с текстом */
-.hunters_foto, .panel_foto, .pen_foto, .bag_foto, .monster_foto, .process_amber_foto,
-.process_felt_foto, .process_pen_foto, .process_clip_foto, .inspir_foto, .material_foto, .tools_foto, .want_foto,
-.doll_foto, .gnom_foto, .bender_foto{
+.process_amber_foto, .process_felt_foto, .process_pen_foto, .process_clip_foto{
+    width: 300px;
+    height: 300px;
+    border-radius: 3px;
+}
+
+                                                                                   /* класс для img 350x350 с текстом */
+.doll_foto, .gnom_foto, .bender_foto, .pen_foto, .bag_foto, .monster_foto,
+.material_foto, .tools_foto, .home_foto, .event, .random{
     width: 350px;
     height: 350px;
-    margin: 18px;
+    margin: 0 18px;
     border-radius: 3px;
-    overflow: auto;
+    /*object-fit: cover;*/
 }
-                                                                            /* класс для img 310x350 без пояснений */
-/*.doll_foto, .gnom_foto, .bender_foto{
-    width: 300px;
-    height: 350px;
-    margin: 0 18px 18px 12px;
-    border-radius: 3px;
-}*/
-                                                                 /* кнопка наверх */
+
+
+                                                                                                    /* кнопка наверх */
 #scroll_up{
     display: none;
     position: fixed;
     right: 14px;
     bottom: 120px;
-    width: 40px;
+    width: 41px;
     height: 40px;
     z-index: 1000;
-    border-radius: 50px;
-    background: #ffe2d4;
-    /*box-shadow: 0 0 3px 3px rgba(255, 226, 212, 1);*/
+    border-radius: 6px;
+    border: solid lightgray 0.5px;
+    background: white;
+    box-shadow:3px 3px 3px 3px rgba(211, 211, 211, 1);
 }
 #scroll_up:before{
     position: fixed;
@@ -272,12 +231,13 @@ span{color: blue}
     margin-top: -1px;
     margin-left: 14px;
     font-size: 30px;
+    text-align: center;
 }
 #scroll_up:hover{
     opacity: 1;
 }
 
-                                                                   /* подвал */
+                                                                                                            /* подвал */
 .footer_panel{background: #ffad88;
     width: 100%;           /*! не соответсвует ширине контейнера*/
     border-radius: 3px;
@@ -318,7 +278,7 @@ footer .footer_home:before{content: ' \00A9';
     height: 40px;
 }
 
-                                                                /* общие теги */
+                                                                                                       /* общие теги */
 a{text-decoration: none;
     color: black;
     /*margin: 0 4px;*/
@@ -326,7 +286,8 @@ a{text-decoration: none;
 a:hover{text-decoration: underline;}
 ul li{list-style: none;}
 
-                                                               /* МЕДИА ЗАПРОСЫ */
+                                                                                                     /* МЕДИА ЗАПРОСЫ */
+                                                                                    /* 320 / 575 */
 @media all and (min-width: 320px) and (max-width: 575.98px) {
     .container{grid-template-areas:
                 "hd"
@@ -348,8 +309,7 @@ ul li{list-style: none;}
     .header_name h1{width: 220px;
         padding-left: 0;
     }
-    /* */
-
+                                                      /* */
     #burger{display: block;
         position: relative;
         width: 30px;
@@ -358,12 +318,14 @@ ul li{list-style: none;}
         margin-top: -45px;
         margin-right: 18px;
     }
+    figure img{margin-bottom: 16px;
+    }
     #burger span{
         position: absolute;
         background-color: black;
         left: 0;
         width: 100%;
-        height: 2px;
+        height: 3px;
         top: 9px;
         box-shadow: 0 0 2px 2px rgba(255, 226, 212, 1);
     }
@@ -372,7 +334,7 @@ ul li{list-style: none;}
         background-color: black;
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 3px;
         left: 0;
     }
     #burger:before{
@@ -383,40 +345,49 @@ ul li{list-style: none;}
         bottom: 0;
         box-shadow: 0 0 2px 2px rgba(255, 226, 212, 1);
     }
-
-    /* */
+                                                       /* */
     section{margin: 0 0 10px 0;}
     .vertical_menu{/*margin-top: 20px;*/
         margin-bottom: 10px;
         width: auto;
     }
+    .vertical_menu label{text-align: center;
+    }
     .menu_brg{display: none;}
 
-    .content{margin: 0 6px 8px 6px;}
-    .content_box{margin-left: 0}
-    p{padding: 8px}
+    .content{margin: 0 6px 8px 6px;
+        display: inline-block;
+    }
+    .content_box{margin-left: 0;
+    }
+    figure{margin: 8px 20px;
+    }
+    p{padding-bottom: 8px;
+    }
     .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .inspir_foto
-    {width: 80%;
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .tools_foto, .material_foto, .event, .random{
+        width: 100%;
         height: auto;
         margin: 0 0 16px 0;
     }
-    .box{width: 100%;
-        height: auto;
-        margin: 16px 0;
+    .thematic_text{font-size: 14px;
+        margin-bottom: 6px;
     }
-    .imageSizeUp{
+    .box{width: 43%;
+        height: auto;
+        margin: 8px 0;
+        padding: 0 8px;
+    }
+    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt{
+        width: 100%;
+        height: auto;
         margin-left: 0;
     }
-    /*.scale{width: 90%;
-        height: auto;
-        margin-left: 15px;
-    }*/
-    .box p{margin-left: 15px;
-        padding: 0 0 8px 0;
+    .box p{margin: 0;
+        padding: 0;
+        text-align: center;
     }
-    .bracelet, .brooch, .earring, .ring, .suspension, .clip, .rim, .elastic, .ethnic, .decorated, .felt{width: 100%;
-        height: auto;
+    .imag_txt{font-size: 11px;
     }
     #scroll_up{width: 35px;
         height: 35px;
@@ -431,14 +402,13 @@ ul li{list-style: none;}
         font-size: 17px;
     }
     .footer_info{padding-top: 0;
-        /*padding: 20px 10px 22px 0;*/
         margin: 20px 10px 22px 0;
     }
     .footer_info_f, .footer_info_e, .footer_info_i{margin: 0 10px 0 0;
         padding: 0;
     }
 }
-
+                                                                                           /* 576 / 767 */
 @media all and (min-width: 576px) and (max-width: 767.98px){
     .container {grid-template-areas:
                 "hd"
@@ -457,7 +427,7 @@ ul li{list-style: none;}
     .header_name h1{width: 300px;
         padding: 14px 0 18px 0;
     }
-
+                                               /* */
     #burger{display: block;
         position: relative;
         width: 30px;
@@ -471,7 +441,7 @@ ul li{list-style: none;}
         background-color: black;
         left: 0;
         width: 100%;
-        height: 2px;
+        height: 3px;
         top: 9px;
         box-shadow: 0 0 2px 2px rgba(255, 226, 212, 1);
     }
@@ -480,7 +450,7 @@ ul li{list-style: none;}
         background-color: black;
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 3px;
         left: 0;
     }
     #burger:before{
@@ -491,24 +461,44 @@ ul li{list-style: none;}
         bottom: 0;
         box-shadow: 0 0 2px 2px rgba(255, 226, 212, 1);
     }
+                                                        /* */
     section{margin: 0}
     .vertical_menu{/*margin-top: 16px;*/}
+    .vertical_menu label{text-align: center;
+    }
     .menu_brg{display: none;}
 
-    .content{margin-top: 0}
-    .content, .content_box, .home_foto{margin-left: 0}
-    .content_box{margin-top: 10px}
+    .content{margin-top: 0;
+    }
+    .content, .content_box, .home_foto{margin-left: 0;
+    }
+    .content_box{margin-top: 10px;
+    }
     p{padding: 8px}
     .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .inspir_foto{width: 80%;
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .tools_foto, .material_foto, .event, .random{
+        width: 100%;
         height: auto;
-        margin: 0 0 16px 0;}
-    .box{width: 100%;
-        height: auto;
-        margin: 16px 0;
+        margin: 0 0 16px 0;
     }
-    .bracelet{width: 100%;
+    .thematic_text{font-size: 14px;
+        margin-bottom: 6px;
+        padding-top: 0;
+    }
+    .box{width: 30%;
         height: auto;
+        margin: 6px 0 4px 10px;
+        padding: 0;
+    }
+    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt{
+        width: 100%;
+        height: auto;
+        margin-left: 1px;
+    }
+    .box p{padding: 0;
+        text-align: center;
+    }
+    .imag_txt{margin: 0 0 4px 4px;
     }
     .footer_home{margin: 25px 0 0 12px;
         padding: 0;
@@ -521,7 +511,7 @@ ul li{list-style: none;}
     }
     .footer_info_i{margin: -8px 8px 8px 8px;}
 }
-
+                                                                                          /* 768 / 991 */
 @media all and (min-width: 768px) and (max-width: 991.98px) {
     .container {grid-template-areas:
                 "hd hd"
@@ -534,22 +524,52 @@ ul li{list-style: none;}
     header{
         height: 130px}
     .header_name{
-        margin: 75px 0 0 30px;}
+        margin: 75px 0 0 30px;
+    }
+                                               /* */
+    section{margin-top: 14px;
+    }
     .vertical_menu{
-        margin: 9px 12px 0 0;}
+       /* margin: 9px 12px 0 0;*/
+    }
     .menu_brg{
         width: 210px}
     .accord{
         margin-top: 4px;
     }
-    .content{
-        margin-top: 0}
-    .content, .content_box, .home_foto{margin-left: 0;}
-    .content_box{margin: 10px 0 0 26px;}
-    .home_foto, .bender_foto, .inspir_foto{width: 80%;
+                                                /* */
+    .content{/*margin: 9px 0 0 0;*/
+    }
+    .content, .content_box, .home_foto{margin-left: 0;
+    }
+    .content_box{margin: 10px 0 0 26px;
+    }
+    figure{margin: 10px 0;
+    }
+    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .tools_foto, .material_foto, .event, .random{
+        width: 80%;
         height: auto;
-        margin: 0 0 16px 0;}
-    .box{margin: 16px 0 16px 34px;}
+        margin: 0 0 16px 0;
+    }
+    .box{width: 29%;
+        height: auto;
+        margin: 0 0 0 16px;
+        padding: 0;
+    }
+    .thematic_text{font-size: 16px;
+        padding: 0 12px;
+    }
+    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    .box p{padding: 0;
+        text-align: center;
+    }
+    .imag_txt{margin: 0 0 4px 4px;
+    }
     .footer_home{margin: 25px 0 0 12px;
         padding: 0;
         width: auto;
@@ -557,32 +577,62 @@ ul li{list-style: none;}
     .footer_info{margin: 22px 0 20px 0;
         padding: 3px 0 0 0;
     }
-    .footer_info_f, .footer_info_e, .footer_info_i{
-        padding: 0;
+    .footer_info_f, .footer_info_e, .footer_info_i{padding: 0;
     }
     .footer_info_i{margin: -8px 8px 8px 8px;}
 }
-
+                                                                                                 /* 992 / 1199 */
 @media all and (min-width: 992px) and (max-width: 1199.98px){
     .container {grid-template-areas:
                 "hd hd hd"
                 "vm cnt cnt"
                 "ftr ftr ftr";
         grid-template-columns: 0.5fr 1fr 1fr;
-        grid-template-rows: 0.5fr 2fr 0.5fr;
+        grid-template-rows: 0.3fr 2fr 0.2fr;
         width: 100%;
     }
-    header{height: 130px}
+    header{height: 130px;
+    }
     .header_name{margin: 75px 0 0 30px;
     }
-    .vertical_menu{margin: 17px 12px 0 0}
-    .content, .content_box{margin-left: 0}
+    .vertical_menu{margin: 17px 12px 0 0;
+    }
+    .content{margin: 18px 8px;
+    }
+    .content_box{margin-left: 0;
+    }
     .home_foto{width: 450px;
         height: 450px;
     }
-    .content_box{margin: 0 0 0 26px}
-    .box{margin: 16px 0 16px 24px;}
+    .content_box{margin: 0 0 0 26px;
+    }
+    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .tools_foto, .material_foto, .event, .random{
+        width: 80%;
+        height: auto;
+        margin: 0 0 16px 0;
+    }
+    .box{width: 23%;
+        /*margin: 0 0 0 4px;*/
+        margin: 6px 0 6px 10px;
+        padding: 0;
+    }
+    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    .box p{padding: 0;
+        text-align: center;
+    }
+    .thematic_text{font-size: 16px;
+        margin: 0 0 18px 8px;
+    }
+    .imag_txt{margin: 0 0 4px 4px;
+    }
 
+    .footer_panel{
+    }
     .footer_home{margin: 25px 0 0 12px;
         padding: 0;
         /*padding: 20px 0 0 10px;*/

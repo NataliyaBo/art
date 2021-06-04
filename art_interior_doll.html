@@ -26,7 +26,7 @@
                     <a href="art_decor_bracelet.html" class="menu_link">браслеты</a>
                     <a href="art_decor_brooch.html" class="menu_link">броши</a>
                     <a href="art_decor_ring.html" class="menu_link">кольца</a>
-                    <a href="art_decor_suspension.html" class="menu_link">подвески</a>
+                    <a href="art_decor_pendant.html" class="menu_link">подвески</a>
                     <a href="art_decor_earrings.html" class="menu_link">серьги</a>
                 </article>
             </div>
@@ -99,14 +99,11 @@
             <p>Наряды для куклы из фетра с декором из кружева, пайеток, бисера и стежков цветными нитками.</p>
             <figure>
                 <img src="img/кл02_.jpg" alt="#" class="doll_foto">
-            </figure>
-            <figure>
                 <img src="img/кл03_.jpg" alt="#" class="doll_foto">
             </figure>
+            <p>Наряды для куклы из фетра с декором из кружева, пайеток, бисера и стежков цветными нитками.</p>
             <figure>
                 <img src="img/кл04_.jpg" alt="#" class="doll_foto">
-            </figure>
-            <figure>
                 <img src="img/кл02_.jpg" alt="#" class="doll_foto">
             </figure>
         </div>
@@ -124,23 +121,23 @@
 </div>
 </body>
 <script>
-   $(function (){
-       $('#burger').click(function (event){
-           $('#accordion').toggleClass('menu_brg')
-       });
-   });
-   $(function (){
-       $(window).scroll(function (){
-           if ($(window).scrollTop() > 100) {
-               $('#scroll_up').show();
-           } else {
-               $('#scroll_up').hide();
-           }
-       });
-       $('#scroll_up').click(function(){
-           $('html, body').animate({scrollTop: 0}, 600);
-           return false;
-       });
-   });
+    $(function () {
+        $('#burger').click(function (event) {
+            $('#accordion').toggleClass('menu_brg')
+        });
+    });
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 100) {
+                $('#scroll_up').show();
+            } else {
+                $('#scroll_up').hide();
+            }
+        });
+        $('#scroll_up').click(function () {
+            $('html, body').animate({scrollTop: 0}, 500);
+            return false;
+        });
+    });
 </script>
 </html>
