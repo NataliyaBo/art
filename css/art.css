@@ -1,6 +1,6 @@
 *{/*margin: 0;*/
     padding: 0;
-    font-family: Serif, serif, "Noto Serif", "Noto Serif Light", "Noto Sans";}
+    font-family: Caladea;}
 html, body{}
 
 .container {height: 100vh;
@@ -186,6 +186,11 @@ span{color: blue}
     margin: 3px 0 6px 0;
     font-size: 12px;
 }
+.home_foto{width: 300px;
+    height: 300px;
+    \margin: 0 18px;
+    border-radius: 3px;
+}
                                                                                        /* класс для img с пояснениями */
 .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic,
 .magnets, .felt, .decorated{
@@ -202,7 +207,7 @@ span{color: blue}
 
                                                                                    /* класс для img 350x350 с текстом */
 .doll_foto, .gnom_foto, .bender_foto, .pen_foto, .bag_foto, .monster_foto,
-.material_foto, .tools_foto, .home_foto, .event, .random{
+.material_foto, .tools_foto, .event, .random{
     width: 350px;
     height: 350px;
     margin: 0 18px;
@@ -279,6 +284,9 @@ footer .footer_home:before{content: ' \00A9';
 }
 
                                                                                                        /* общие теги */
+h3{margin-top: 2px}
+p{font-size:17px;
+}
 a{text-decoration: none;
     color: black;
     /*margin: 0 4px;*/
@@ -363,6 +371,7 @@ ul li{list-style: none;}
     figure{margin: 8px 20px;
     }
     p{padding-bottom: 8px;
+        font-size: 16px;
     }
     .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
     .process_amber_foto, .process_felt_foto, .process_pen_foto, .tools_foto, .material_foto, .event, .random{
@@ -474,8 +483,13 @@ ul li{list-style: none;}
     }
     .content_box{margin-top: 10px;
     }
-    p{padding: 8px}
-    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
+    p{padding: 8px;
+        font-size: 16px;
+    }
+    .home_foto{width: 270px;
+        height: auto;
+    }
+    .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
     .process_amber_foto, .process_felt_foto, .process_pen_foto, .tools_foto, .material_foto, .event, .random{
         width: 100%;
         height: auto;
@@ -568,6 +582,7 @@ ul li{list-style: none;}
     .box p{padding: 0;
         text-align: center;
     }
+    p{font-size: 16px;}
     .imag_txt{margin: 0 0 4px 4px;
     }
     .footer_home{margin: 25px 0 0 12px;
@@ -625,6 +640,7 @@ ul li{list-style: none;}
     .box p{padding: 0;
         text-align: center;
     }
+    p{font-size: 16px;}
     .thematic_text{font-size: 16px;
         margin: 0 0 18px 8px;
     }
