@@ -320,6 +320,7 @@ a{text-decoration: none;
 }
 a:hover{text-decoration: underline;
 }
+label:hover{text-decoration:underline;}
 ul li{list-style: none;
 }
 h4{margin-bottom: 6px;
