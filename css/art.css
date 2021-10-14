@@ -160,6 +160,7 @@ article a:before{
     margin-left: 20px;
     margin-bottom: 18px;
     grid-area: cnt;
+    min-height: 664px;
 }
 .content_box{margin-left: 16px;
 }
