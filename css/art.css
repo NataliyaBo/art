@@ -4,6 +4,7 @@
 html, body{
     height: 100%;
     line-height: 1.4;
+    background: #fdf5f0;
 }
 
 .container {height: auto;
@@ -21,26 +22,41 @@ html, body{
                                                                                                             /* шапка */
 header{height: 180px;
     border-radius: 3px;
-    border: solid 0.5px #c5c5c5;
-    background-image: url("../img/шапка.jpg");
+    background-image: url("../img/шапка_2.jpg");
+
+    /*background: white;*/
     grid-area: hd;
     margin-bottom: 20px;
 }
-.header_name{width: 360px;
-    margin: 110px 0 0 30px;
+
+.header_name{width: 380px;
+    margin: 85px 0 0 30px;
     /*height: 0;*/
+
 }
 .header_name h1{margin: 0;
     padding-left: 10px;
-    color: black;
     font-size: calc(24px + 16 * (100vw / 1440));
     font-weight: 900;
-    text-shadow: 1px 1px white, 1.5px 1.5px white,
+    text-shadow:/*2px 2px white, 1.5px 1.5px white,
     -1px -1px white, -1.5px -1.5px white, -1px 1px white, 1px -1px white,
     -1px 1px white, 1px -1px white,
-    -3px -3px 4px rgba(255, 226, 212, 2), -3px 3px 4px rgba(0,0,0,.5), 3px 3px 4px rgba(255, 226, 212, 2), 3px -3px 4px rgba(255, 226, 212, 2);
+    -13px -13px 14px rgba(255, 226, 212, 3), -13px 13px 14px rgba(255, 226 ,212, 3), 13px 13px 14px rgba(255, 226, 212, 3), 13px -13px 14px rgba(255, 226, 212, 3);*/
+            1.5px 1.5px 5px white, 1.5px -2px 5px white,
+            -2px -2px 5px white, -2px 1.5px 5px white;
 }
 .header_name a:hover{text-decoration: none;}
+.header_name h2{/*margin: 0;*/
+    margin-top: -8px;
+    padding-left: 12px;
+    font-size: calc(12px + 8 * (100vw / 1440));
+    text-shadow: /*1px 1px white, 1.5px 1.5px white,
+    -1px -1px white, -1.5px -1.5px white, -1px 1px white, 1px -1px white,
+    -1px 1px white, 1px -1px white,
+    -3px -3px 4px rgb(255, 226, 212), -3px 3px 4px rgba(0, 0, 0, .2), 3px 3px 4px rgba(255, 226, 212, 2), 3px -3px 4px rgba(255, 226, 212, 2);*/
+            1.5px 1.5px 5px white, 1.5px -2px 5px white,
+            -2px -2px 5px white, -2px 1px 5px white;
+}
 
                                                                                                            /* бургер */
 #burger{line-height: 30px;
@@ -158,7 +174,9 @@ article a:before{
 }*/
 .thematic_text{margin: 0 0 14px 0;
 }
+.link_in_txt{color: green;
 
+}
 figure{text-align: center;
     /*display: inline-block;*/
 }
@@ -173,7 +191,7 @@ span{color: blue}
     position: relative;
     overflow: hidden;
     border-radius: 4px;
-    padding: 9px;
+    padding: 9px 9px 0 9px;
     margin-top: 8px;
 }
 
@@ -181,6 +199,7 @@ span{color: blue}
     margin: 3px 0 10px 0;
     font-size: 12px;
     height: 36px;
+
 }
 
                                                                                        /* класс для img с пояснениями */
@@ -329,16 +348,19 @@ h4{margin-bottom: 6px;
         /*grid-template-rows: 0.6fr 0.8fr 1fr 0.4fr;*/
        width: 100%;
     }
-    header{background-image: url("../img/head01_sm_.jpg");
+    header{background-image: url("../img/шапка_2_sm.jpg");
         height: 100px;
         margin-bottom: 8px;
     }
     .header_name{width: 220px;
-        margin: 60px 0 0 10px;
+        margin: 38px 0 0 10px;
 
     }
     .header_name h1{width: 220px;
-        padding-left: 0;
+        padding-left: 2px;
+    }
+    .header_name h2{margin-top: -4px;
+        padding-left: 2px;
     }
                                                       /* */
     #burger{display: block;
@@ -437,6 +459,30 @@ h4{margin-bottom: 6px;
         padding: 0;
     }
 }
+                                                                                           /* 501 / 575 */
+@media all and (min-width: 501px) and (max-width: 575.98px) {
+    .container {grid-template-areas:
+                "hd"
+                "vm"
+                "cnt"
+                "ftr";
+        grid-template-columns: 1fr;
+        /*grid-template-rows: 0.5fr 0.8fr 1fr 0.5fr;*/
+        width: 100%;
+    }
+    header{background-image: url("../img/шапка_2_sm.jpg");
+        height: 100px;
+    }
+.header_name{width: 230px;
+    margin: 36px 0 0 6px;
+}
+}
+.header_name h1{width: 300px;
+    padding-left: 4px;
+}
+.header_name h2{padding-left: 4px;
+}
+
                                                                                            /* 576 / 767 */
 @media all and (min-width: 576px) and (max-width: 767.98px) {
     .container {grid-template-areas:
@@ -448,13 +494,15 @@ h4{margin-bottom: 6px;
         /*grid-template-rows: 0.5fr 0.8fr 1fr 0.5fr;*/
         width: 100%;
     }
-    header{background-image: url("../img/head01_sm_.jpg");
+    header{background-image: url("../img/шапка_2_sm.jpg");
         height: 100px;
     }
-    .header_name{margin: 40px 0 0 30px;
+    .header_name{margin: 36px 0 0 6px;
     }
     .header_name h1{width: 300px;
-        padding: 14px 0 18px 0;
+        padding-left: 4px;
+    }
+    .header_name h2{padding-left: 4px;
     }
                                                /* */
     #burger{display: block;
@@ -560,10 +608,9 @@ h4{margin-bottom: 6px;
         /*grid-template-rows: 0.5fr 2fr 0.5fr;*/
         width: 100%;
     }
-    header{
-        height: 130px}
+    header{height: 130px}
     .header_name{
-        margin: 75px 0 0 30px;
+        margin: 55px 0 0 30px;
     }
                                                /* */
     section{margin-top: 14px;
@@ -639,7 +686,7 @@ h4{margin-bottom: 6px;
     }
     header{height: 130px;
     }
-    .header_name{margin: 75px 0 0 30px;
+    .header_name{margin: 50px 0 0 30px;
     }
     .vertical_menu{margin: 17px 12px 0 0;
     }
