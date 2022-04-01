@@ -13,22 +13,75 @@
 </head>
 <body>
 <div class="container">
-    <header>
+    <header class="header">
+        <div class="header_text"></div>
         <div class="header_name"><a href="art_home.html"><h1>Workshop Bo</h1></a>
             <h2>hand-made витрина-мастерская</h2></div>
+        <nav class="drop_menu">
+            <ul>
+                <li class="dd_menu"><a href="#">Украшения</a>
+                    <ul class="sub_dd_menu">
+                        <li><a href="art_decor_bracelet.html">браслеты</a></li>
+                        <li><a href="art_decor_brooch.html">броши</a></li>
+                        <li><a href="art_decor_earrings.html">серьги</a></li>
+                        <li><a href="art_decor_pendant.html">подвески и кулоны</a></li>
+                    </ul>
+                </li>
+                <li class="dd_menu"><a href="#">Для волос</a>
+                    <ul class="sub_dd_menu">
+                        <li><a href="art_hair_clip.html">заколки</a></li>
+                        <li><a href="art_hair_rim.html">ободки</a></li>
+                        <li><a href="art_hair_elastic.html">резинки</a></li>
+                    </ul>
+                </li>
+                <li class="dd_menu"><a href="art_magnets_felt.html">Магниты</a></li>
+                <li class="dd_menu"><a href="art_ethnic.html">Этно</a></li>
+                <li class="dd_menu"><a href="#">Разное</a>
+                    <ul class="sub_dd_menu">
+                        <li><a href="art_interior_dolls.html">кукла</a></li>
+                        <li><a href="art_small_things.html">всякие мелочи</a></li>
+                        <li><a href="art_bag.html">сумки</a></li>
+                    </ul>
+                </li>
+                <li class="dd_menu"><a href="#">Подсмотреть</a>
+                    <ul class="sub_dd_menu">
+                        <li><a href="art_for_you.html">Это тебе!</a></li>
+                        <li><a href="art_process_clip.html">заколка</a></li>
+                        <li><a href="art_process_amber.html">брошь</a></li>
+                        <li><a href="art_process_ethnic.html">этно</a></li>
+                        <li><a href="art_process_felt.html">магнит</a></li>
+                        <li><a href="art_process_pen.html">ручка</a></li>
+                        <li><a href="art_process_more.html">еще</a></li>
+                    </ul>
+                </li>
+                <li class="dd_menu"><a href="#">Мастерская</a>
+                    <ul class="sub_dd_menu">
+                        <li><a href="art_materials.html">о материалах</a></li>
+                        <li><a href="art_tools.html">об инструментах</a></li>
+                    </ul>
+                </li>
+                <li class="dd_menu"><a href="#">События</a>
+                    <ul class="sub_dd_menu">
+                        <li><a href="art_event.html">выставки, ярмарки</a></li>
+                        <li><a href="art_random.html">мимопроходимое</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
+
     <section class="vertical_menu">
         <div id="burger">
             <span></span>
         </div>
-        <div id="accordion" class="menu_brg">
+        <!--div-- id="accordion" class="menu_brg">
             <div class="accord">
                 <input id="ac-1" name="accordion-1" type="checkbox">
                 <label for="ac-1">Украшения</label>
                 <article class="ac_small-1">
                     <a href="art_decor_bracelet.html" class="menu_link">браслеты</a>
                     <a href="art_decor_brooch.html" class="menu_link">броши</a>
-                    <!--a href="art_decor_ring.html" class="menu_link">кольца</a-->
+                    <a href="art_decor_ring.html" class="menu_link">кольца</a>
                     <a href="art_decor_pendant.html" class="menu_link">подвески и кулоны</a>
                     <a href="art_decor_earrings.html" class="menu_link">серьги</a>
                 </article>
@@ -44,7 +97,7 @@
             </div>
             <div class="accord">
                 <input id="ac-3" name="accordion-3" type="checkbox">
-                <label for="ac-3"><a href="art_ethnic.html" class="menu_link">В стиле этно</a></label>
+                <label for="ac-3"><a href="art_ethnic.html" class="menu-link">В стиле этно</a></label>
                 <article class="ac_small-3">
                 </article>
             </div>
@@ -52,7 +105,7 @@
                 <input id="ac-4" name="accordion-4" type="checkbox">
                 <label for="ac-4">Интерьерное и всякое</label>
                 <article class="ac_small-4">
-                    <a href="art_interior_dolls.html" class="menu_link">кукла</a>
+                    <a href="art_interior_dolls.html" class="menu_link">куклы</a>
                     <a href="art_small_things.html" class="menu_link">всякие мелочи</a>
                     <a href="art_bag.html" class="menu_link">сумки</a>
                 </article>
@@ -92,6 +145,14 @@
                     <a href="art_random.html" class="menu_link">мимо проходила</a>
                 </article>
             </div>
+        </div-->
+        <div class=afisha>
+            <img src="img/news100x100.png" class="foto_icons" alt="#">
+            <a href="https://vk.com/vremyachudesshow"><img src="img/yarmarka.jpg" alt="#" class="af_foto"></a>
+        </div>
+        <div class="afisha">
+            <img src="img/ads100x100.png" class="foto_icons" alt="#">
+            <img src="img/afisha_1.jpg" alt="#" class="af_foto">
         </div>
     </section>
     <div class="content">
@@ -103,12 +164,13 @@
                 если нужно пополнить запасы или для изготовления необходим большой объем материалов, то я иду в
                 интернет-магазины.</p>
             <p>Думаю, что добрая часть рукодельниц использует такой прием, как сходить в магазин пощупать и оценить, а
-                потом купить онлайн с хорошей экономией.</p>
+                потом купить онлайн с хорошей экономией.</p><br>
             <figure>
                 <img src="img/material_form.jpg" alt="#" class="material_foto">
                 <img src="img/material_glass.jpg" alt="#" class="material_foto">
                 <img src="img/material_lock.jpg" alt="#" class="material_foto">
             </figure>
+            <br>
             <h3>Бисер</h3>
             <p>Он многогранен во всех смыслах.</p>
             <p>На данный момент существует минимум два десятка вида. Производится в основном из стекла.</p>
@@ -131,37 +193,13 @@
             <p>Бисер ZLATKA - тот самый китайский, который я держу в закромах на всякий случай. Им можно смело
                 декорировать обычную сумку шоппер и серый мешок с ручками может превратится в любимую сумку. А самую
                 простую офисную рубашку освежить россыпью крупного бисера пастельных тонов на уголках воротника и
-                манжетах. Так же отлично подходит для вышивки брошей.</p>
+                манжетах. Так же отлично подходит для вышивки брошей.</p><br>
             <figure>
                 <img src="img/material_beads_colored.jpg" alt="#" class="material_foto">
                 <img src="img/material_toho_gold.jpg" alt="#" class="material_foto">
                 <img src="img/material_beads_colored2.jpg" alt="#" class="material_foto">
             </figure>
-            <!--div class="box">
-                <a href="img/material_beads_colored.jpg" class="lightzoom">
-                    <img src="img/material_beads_colored_sm.jpg" class="material" alt="#" title="PRECIOSA"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_beads_colored1.jpg" class="lightzoom">
-                    <img src="img/material_beads_colored1_sm.jpg" class="material" alt="#" title="Микс из остатков"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_beads_colored2.jpg" class="lightzoom">
-                    <img src="img/material_beads_colored2_sm.jpg" class="material" alt="#" title="ZLATKA"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_toho_gold.jpg" class="lightzoom">
-                    <img src="img/material_toho_gold_sm.jpg" class="material" alt="#" title="TOHO"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_toho_green.jpg" class="lightzoom">
-                    <img src="img/material_toho_green_sm.jpg" class="material" alt="#" title="TOHO"></a>
-                <p class="imag_txt"></p>
-            </div-->
+            <br>
             <h3>Бусы и пуговицы</h3>
             <p>Что же такого в этих нехитрых материалах? С их помощью мы становимся индивидуальными.</p>
             <p>Бусы — украшение на шею в одну или несколько нитей. Изготавливаются из огромного количества
@@ -177,38 +215,13 @@
             <p>С помощью бусинок и плоских прозрачных пуговиц можно сделать декоративные пуговицы на свой вкус, брошь,
                 аксессуар для волос и многое другое, что вам подскажет фантазия.</p>
             <p>Кстати, коллекционирование и изучение простых и форменных пуговиц, а так же их внешнего вида, надписей,
-                изображений, материала, времени и места изготовления называется филобутонистика.</p>
+                изображений, материала, времени и места изготовления называется филобутонистика.</p><br>
             <figure>
                 <img src="img/material_big_beads2.jpg" alt="#" class="material_foto">
                 <img src="img/material_beads0.jpg" alt="#" class="material_foto">
                 <img src="img/material_buttons.jpg" alt="#" class="material_foto">
             </figure>
-            <!--div class="box">
-                <a href="img/material_beads0.jpg" class="lightzoom">
-                    <img src="img/material_beads0_sm.jpg" class="material" alt="#" title="дерево"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_big_beads2.jpg" class="lightzoom">
-                    <img src="img/material_big_beads2_sm.jpg" class="material" alt="#" title="стекло"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_buttons.jpg" class="lightzoom">
-                    <img src="img/material_buttons_sm.jpg" class="material" alt="#" title="пластик"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_pearl.jpg" class="lightzoom">
-                    <img src="img/material_pearl_sm.jpg" class="material" alt="#"
-                         title="жемчуг речной культивированный"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_glass.jpg" class="lightzoom">
-                    <img src="img/material_glass_sm.jpg" class="material" alt="#" title="стекло и горный хрусталь"></a>
-                <p class="imag_txt"></p>
-            </div-->
+            <br>
             <h3>Янтарь</h3>
             <p>Его делят на три вида: настоящий, прессованный и имитация.</p>
             <p>Настоящий янтарь — это невзрачный, различной формы и размера, с гладкой, шероховатой, ребристой или
@@ -217,37 +230,13 @@
                 вкрапления, пусть даже фрагменты почвы или растений, пузырьки с жидкостью (и такое попадалось). Иногда
                 оказывается чуть ли не бесцветным, как стеклышко или же насыщенного чайного цвета, прозрачным желтым и
                 с дымкой внутри, полностью непрозрачным, но с рисунком. Всего и не перечислить. Каждый раз это что-то
-                новое. Вообще существует около 400 оттенков для янтаря.</p>
+                новое. Вообще существует около 400 оттенков для янтаря.</p><br>
             <figure>
                 <img src="img/material_amber9.jpg" alt="#" class="material_foto">
                 <img src="img/material_amber10.jpg" alt="#" class="material_foto">
                 <img src="img/material_amber11.jpg" alt="#" class="material_foto">
             </figure>
-            <!--div class="box">
-                <a href="img/material_amber7.jpg" class="lightzoom">
-                    <img src="img/material_amber7_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber8.jpg" class="lightzoom">
-                    <img src="img/material_amber8_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber9.jpg" class="lightzoom">
-                    <img src="img/material_amber9_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber10.jpg" class="lightzoom">
-                    <img src="img/material_amber10_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber11.jpg" class="lightzoom">
-                    <img src="img/material_amber11_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div-->
+            <br>
             <p>Прессованный янтарь — это амброид. Он тоже натуральный, но уже с измененной химической структурой.
                 Берутся отходы от обработки: обрезки, осколки, обломки, в том числе и опилки, плюс материал, который
                 не пригоден к обработке по размеру или цвету и все перемалывается в порошок. Под воздействием высокой
@@ -264,37 +253,13 @@
                 синтетический или же крашеный бакелит, производство которого некий предприимчивый доктор Траун из
                 Гамбурга в начале 20 века превратил в доходный бизнес.</p>
             <p>Остальные участники списка имитаций, это синтетические материалы и некоторые из них полученны на основе
-                натурального сырья.</p>
+                натурального сырья.</p><br>
             <figure>
                 <img src="img/material_amber1.jpg" alt="#" class="material_foto">
                 <img src="img/material_amber3.jpg" alt="#" class="material_foto">
                 <img src="img/material_amber4.jpg" alt="#" class="material_foto">
             </figure>
-            <!--div class="box">
-                <a href="img/material_amber1.jpg" class="lightzoom">
-                    <img src="img/material_amber1_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber3.jpg" class="lightzoom">
-                    <img src="img/material_amber3_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber4.jpg" class="lightzoom">
-                    <img src="img/material_amber4_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber6.jpg" class="lightzoom">
-                    <img src="img/material_amber6_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_amber5.jpg" class="lightzoom">
-                    <img src="img/material_amber5_sm.jpg" class="material" alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div-->
+            <br>
             <h3>Ленты</h3>
             <p>Если бы не моя маленькая племянница с роскошной длинной шевелюрой, то я б и не обратила внимание на
                 заколочки и резиночки из лент.</p>
@@ -313,39 +278,13 @@
             <p>Репсовая лента просто находка для бантиков. Она хорошо держит форму и не так сильно мнется, как атласная.
                 А еще эта лента хорошо держит объем в складках.</p>
             <p>Кстати, репс и атлас очень хорошо смотрятся вместе. Сложные лепесточки из репсовой ленты дают
-                дополнительный эффект объема.</p>
+                дополнительный эффект объема.</p><br>
             <figure>
                 <img src="img/material_tape2.jpg" alt="#" class="material_foto">
                 <img src="img/material_tape4.jpg" alt="#" class="material_foto">
                 <img src="img/material_tape5.jpg" alt="#" class="material_foto">
             </figure>
-            <!--div class="box">
-                <a href="img/material_tape1.jpg" class="lightzoom">
-                    <img src="img/material_tape1_sm.jpg" class="material" alt="#" title="репс, атлас"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_tape3.jpg" class="lightzoom">
-                    <img src="img/material_tape3_sm.jpg" class="material" alt="#" title="репс"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_tape2.jpg" class="lightzoom">
-                    <img src="img/material_tape2_sm.jpg" class="material" alt="#"
-                         title="не каждый рисунок подойдет для бантика"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_tape4.jpg" class="lightzoom">
-                    <img src="img/material_tape4_sm.jpg" class="material" alt="#" title="атлас"></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_tape5.jpg" class="lightzoom">
-                    <img src="img/material_tape5_sm.jpg" class="material" alt="#"
-                         title="с декором бантики особенно эффектны"></a>
-                <p class="imag_txt"></p>
-            </div-->
+            <br>
             <h3>Фетр</h3>
             <p>Это нетканый, многофункциональный и практичный материал.</p>
             <p>Существует несколько видов фетра. Есть чистошерстяной, полушерстяной (60% шерсть, 40% вискоза или
@@ -354,37 +293,13 @@
                 материала.</p>
             <p>Из фетра можно сделать игрушки, мобили и книжки-развивалки для детишек, головные уборы, сумочки, чехлы
                 для телефонов и нетбуков, всевозможные сувениры, украшения, аксессуары и многое другое.</p>
-            <p>Его удобно раскраивать и не осыпаются края, что позволяет делать тонкий петельный шов.</p>
+            <p>Его удобно раскраивать и не осыпаются края, что позволяет делать тонкий петельный шов.</p><br>
             <figure>
                 <img src="img/material_felt1.jpg" alt="#" class="material_foto">
                 <img src="img/material_felt3.jpg" alt="#" class="material_foto">
                 <img src="img/material_felt4.jpg" alt="#" class="material_foto">
             </figure>
-            <!--div class="box">
-                <a href="img/material_felt5.jpg" class="lightzoom"><img src="img/material_felt5_sm.jpg" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_felt1.jpg" class="lightzoom"><img src="img/material_felt1_sm.jpg" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_felt2.jpg" class="lightzoom"><img src="img/material_felt2_sm.jpg" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_felt3.jpg" class="lightzoom"><img src="img/material_felt3_sm.jpg" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/material_felt4.jpg" class="lightzoom"><img src="img/material_felt4_sm.jpg" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div-->
+            <br>
             <h3>Канитель</h3>
             <p>Весьма занятное и не простое дело вышивать канителью.</p>
             <p>Это тонкая проволока из золота, позолоченного или чистого серебра скрученная в плотную спираль. Вышивку
@@ -399,12 +314,13 @@
             <p>С конца 19 века о канители и золотом шитье забыли. Но со второй половины 20 века канительную вышивку
                 стали использовать военные на воротниках и манжетах мундиров, погонах, фуражках.</p>
             <p>В наше время канитель по прежнему производят из золота и позолоченного серебра, а так же из меди и во
-                всевозможных цветах и размерах.</p>
+                всевозможных цветах и размерах.</p><br>
             <figure>
                 <img src="img/material_canitel3.jpg" alt="#" class="material_foto">
                 <img src="img/material_canitel1.jpg" alt="#" class="material_foto">
                 <img src="img/material_canitel2.jpg" alt="#" class="material_foto">
             </figure>
+            <br>
             <p>Жесткая, мягкая, гладкая, фигурная, трунцал. У всех разные характеристика и способ вышивания ею. В
                 сочетании они дают невероятную красоту.</p>
             <p>Жесткая канитель — в основном используется для контура деталей, хорошо держит форму. Пришивается
@@ -419,32 +335,7 @@
             <p>Трунцал — особенность не только в плоском сечении, но способе производства. Проволока наматывается
                 на четырех, пяти и более угольную форму. То есть получаются резкие изгибы на углах. За счет этого она
                 весьма эффектно играет на свету. Имеет очень хорошую гибкость.</p>
-            <!--div class="box">
-                <a href="img/" class="lightzoom"><img src="img/" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/" class="lightzoom"><img src="img/" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/" class="lightzoom"><img src="img/" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/" class="lightzoom"><img src="img/" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div>
-            <div class="box">
-                <a href="img/" class="lightzoom"><img src="img" class="material"
-                                                                        alt="#" title=""></a>
-                <p class="imag_txt"></p>
-            </div-->
-        </div>
+        </div><br>
         <div id="scroll_up"></div>
     </div>
     <footer class="footer_panel">
@@ -452,8 +343,8 @@
         <div class="footer_info">
             <div class="footer_info_f">+7-953-920-89-48</div>
             <div class="footer_info_e">n1talika@gmail.com</div>
-            <div class="footer_info_i"><a href="https://www.instagram.com/boryatinskaya_hm/" target="_blank">
-                <img src="img/icons_inst%20100x100.png" class="foto_icons" alt="#"></a></div>
+            <div class="footer_info_i"><a href="http://www.vk.com/natasha_boryatinskaya/" target="_blank">
+                <img src="img/icons_vk%20100x100.png" class="foto_icons" alt="#"></a></div>
         </div>
     </footer>
 </div>
