@@ -1,8 +1,9 @@
 *{ margin: 0;
     padding: 0;
-    font-family: Calade;}
+    font-family: /*Calade,*/ Roboto, "Roboto Light", "Roboto Thin";}
 html, body{
-    height: 100%;
+    /*height: 100%;*/
+    height: auto;
     line-height: 1.4;
     /*background: #fcfcfc;*/
 }
@@ -66,9 +67,9 @@ html, body{
                                                                                                       /* меню */
 .drop_menu{margin: 60px 10px 0 519px;
     position: absolute;
+    background: #fcfcfc
 }
 .d_menu{position: relative;
-
 }
 .dd_menu{display: inline-block;
     padding: 8px 10px;
@@ -79,16 +80,17 @@ html, body{
 
 }
 .sub_dd_menu{display: none;
-    background: white;
+    background: #fcfcfc;
     border: 1px solid #c5c5c5;
     border-radius: 3px;
     margin-left: -19px;
     margin-top: 9px;
+    box-shadow: 0 10px 20px rgb(250, 209, 182);
 }
-.sub_dd_menu li{padding: 8px;
+.sub_dd_menu li{padding: 6px 0;
 
 }
-.sub_dd_menu li a{padding: 4px 14px 4px 14px;
+.sub_dd_menu li a{padding: 4px 10px;
 }
 .drop_menu ul li a{
 }
@@ -96,7 +98,6 @@ html, body{
 }
 .drop_menu ul li:hover ul{display: block;
 }
-
 
                                                                                                            /* бургер */
 /*#burger{line-height: 30px;
@@ -197,7 +198,7 @@ article a:before{margin-right: 2px;
     height: max-content;
 }*/
 
-.afisha{margin: 64px 0 0 2px;
+.afisha, .ads{margin: 64px 0 0 2px;
     background-image: url("../img/background_7_sm.jpg");
     border-radius: 3px;
     width: 190px;
@@ -207,6 +208,9 @@ article a:before{margin-right: 2px;
     height: 160px;
     padding: 0 0 0 15px;
     margin: -2px 0 0 0;
+}
+.foto_icons{width: 40px;
+    height: 40px;
 }
                                                                                                           /* контент */
 .content{float: right;
@@ -229,6 +233,7 @@ figure{text-align: center;
 figure img{margin-right: 20px;
     text-align: center;
 }
+
 span{color: blue}
 
 .box{width: 18%;
@@ -240,14 +245,11 @@ span{color: blue}
     padding: 9px 9px 0 9px;
     margin-top: 8px;
 }
-
 .imag_txt{
     margin: 3px 0 10px 0;
     font-size: 12px;
     height: 36px;
-
 }
-
                                                                                        /* класс для img zoom */
 .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic,
 .magnets, .felt, .decorated, .material, .tools, .process_clip_foto, .process_felt_foto,
@@ -260,8 +262,8 @@ span{color: blue}
                                                                                    /* класс для img 300x280 с текстом */
 .home_foto, .doll_foto, .gnom_foto, .bender_foto, .pen_foto, .bag_foto, .monster_foto,
 .material_foto, .tools_foto, .event, .random, .process_amber_foto, .your_foto, .process_ethnic_foto{
-    width: 300px;
-    height: 280px;
+    width: 230px;
+    height: 230px;
     border-radius: 3px;
     /*margin: 0 18px;*/
     /*object-fit: cover;*/
@@ -349,29 +351,20 @@ span{color: blue}
 footer .footer_home:before{content: ' \00A9';
     margin-right: 4px;
 }
-.footer_info{width: 50%;
-    margin-top: 36px;
+.footer_info{width: max-content;
+    margin-top: 32px;
     float: right;
-    text-align: end;
 }
-.footer_info_f, .footer_info_e, .footer_info_i{height: 28px;
-    margin: 0 22px 0 0;
-    text-align: right;
+.footer_info_tlg, .footer_info_mail, .footer_info_vk{
+    margin: 0 18px 0 0;
     display: inline-block;
-    padding-top: 4px;
-    font-size: 15px;
-    font-variant-numeric: ordinal;
 }
-.footer_info_i{float: right;
-    margin: -8px 8px 8px 8px;
-    padding: 0;
-}
-.foto_icons {width: 40px;
+.footer_icons {width: 40px;
     height: 40px;
 }
 
                                                                                                        /* общие теги */
-h3{margin-top: 2px;
+h3{margin-bottom: 8px;
 }
 p{font-size:17px;
     margin: 0 0 4px 0;
@@ -473,11 +466,11 @@ h4{margin-bottom: 6px;
 }*/
 
                                                                 /**************** 1280 ***********************/
-@media screen {
-}
+/*@media screen {
+}*/
 
                                                              /****************** 768/991 ***********************/
-@media screen and  (min-width: 768px) and (max-width: 991px) {
+/*@media screen and  (min-width: 768px) and (max-width: 991px) {
     .container {
         grid-template-areas:
                 "hd hd"
@@ -507,16 +500,19 @@ h4{margin-bottom: 6px;
     .txt_4{float: right;
         margin: -72px 78px 0 356px;
     }
-    .drop_menu{display: none;
+    .drop_menu {
+        display: none;
         background: #fcfcfc;
         border-radius: 3px;
         margin: 138px 0 0 4px;
         box-shadow: 0 10px 20px rgb(250, 209, 182);
-       }
-    /*.d_menu{margin-left: 0;
-    }*/
-    .dd_menu{margin: 0 40px 0 10px;
     }
+    .dd_menu{margin: 8px 110px;
+    }
+    .sub_dd_menu{margin: 0 0 0 -38px;
+        padding: 0 6px;
+    }
+    .sub_dd_menu li a{padding: 4px 40px}
     #burger {
         display: block;
         position: absolute;
@@ -550,9 +546,7 @@ h4{margin-bottom: 6px;
         box-shadow: 0 0 2px 2px rgb(255, 255, 255);
     }
     .menu_brg {display: none;
-        margin: 97px 0 0 553px;
-        /*position: absolute;*/
-        /*width: max-content;*/
+        margin: 97px 0 0 240px;
     }
     .vertical_section{margin: 102px 0 0 12px;
     }
@@ -569,10 +563,9 @@ h4{margin-bottom: 6px;
     .af_foto {height: 120px;
         width: 120px;
     }
-    .content {margin-top: 0;
+    .content {
     }
     .content, .content_box, .home_foto {
-        margin-left: 0;
     }
     .content_box {
         margin: 10px 0 0 26px;
@@ -601,18 +594,14 @@ h4{margin-bottom: 6px;
         height: auto;
         margin-left: 0;
     }
-    .box p {
-        padding: 0;
+    .box p {padding: 0;
         text-align: center;
     }
-    p {
-        font-size: 16px;
-    }
-    .imag_txt {
-        font-size: 12px;
-    }
-    #scroll_up {
-        width: 35px;
+    p {font-size: 16px;}
+
+    .imag_txt {font-size: 12px;}
+
+    #scroll_up {width: 35px;
         height: 35px;
         background: url("../img/icon-mobile.jpg");
     }
@@ -632,9 +621,9 @@ h4{margin-bottom: 6px;
     .footer_info_i {
         margin: -8px 12px 8px 8px;
     }
-}
+}*/
                                                               /********************** 575 / 767 *********************/
-@media screen and (min-width: 575px) and (max-width: 767px){
+/*@media screen and (min-width: 575px) and (max-width: 767px){
     .container {grid-template-areas:
                 "hd hd"
                 "ls cnt"
@@ -643,8 +632,8 @@ h4{margin-bottom: 6px;
         grid-template-columns: 0.3fr 1fr;
         width: 100%;
     }
-    /*.header {height: 100px;
-    }*/
+    .header {;
+    }
     .header_name {width: 162px;
         margin: 39px 0 0 16px;
     }
@@ -664,8 +653,12 @@ h4{margin-bottom: 6px;
         margin: 138px 0 0 4px;
         box-shadow: 0 10px 20px rgb(250, 209, 182);
     }
-    .dd_menu{margin: 0 32px 0 6px;
+    .dd_menu{margin: 02px 72px;
     }
+    .sub_dd_menu{margin: 0 0 0 -38px;
+        padding: 0 6px;
+    }
+    .sub_dd_menu li a{padding: 4px 32px}
     #burger {display: block;
         position: relative;
         width: 36px;
@@ -675,7 +668,6 @@ h4{margin-bottom: 6px;
     }
     #burger span {position: absolute;
         background-color: black;
-        /*left: 0;*/
         width: 100%;
         height: 3px;
         top: 9px;
@@ -690,10 +682,9 @@ h4{margin-bottom: 6px;
     #burger:before {top: 0;}
     #burger:after {bottom: 0;}
     .menu_brg {display: none;
-        margin: 99px 0 0 428px;
-        position: absolute;
-        width: min-content;
+        margin: 99px 0 0 164px;
     }
+    section{}
     .vertical_section{margin: 101px 8px 0 12px;}
     .afisha{background-image: url("../img/background_7_sm.jpg");
         margin: 30px 0 0 0;
@@ -710,18 +701,20 @@ h4{margin-bottom: 6px;
         width: 94px;
         padding: 0 0 0 8px;
     }
-    .content{/*margin-top: 0*/;
-        margin: 0 8px 0 18px;
+    .content{margin: 10px 8px 0 18px;
     }
     .content_box{padding: 0 8px 0 14px;
         margin: 0;
     }
-    .content p{font-size: 16px;}
+    .content p{}
     #scroll_up{background-image: url("../img/icon_575.jpg");
         width: 30px;
         height: 30px;
         margin-right: -10px;
     }
+    p{font-size: 15px}
+    .imag_txt {font-size: 11px;}
+
     .footer_panel {width: auto;
      position: sticky;
     }
@@ -739,7 +732,7 @@ h4{margin-bottom: 6px;
     .footer_info_i {
         margin: -3px 18px 0 0;
     }
-}
+}*/
                                                                    /*************** 425 / 574.99 *****************/
 @media screen and (min-width: 425px) and (max-width: 574px) {
     .container {grid-template-areas:
@@ -748,20 +741,18 @@ h4{margin-bottom: 6px;
                 "cnt"
                 "ftr";
         grid-template-columns: 1fr;
-        grid-template-rows: /*80px 130px 1fr 100px*/ auto;
+        grid-template-rows: auto;
         width: auto;
     }
-    .header {height: 60px;
-
-    }
-    .header_name {width: 110px;
-        margin: 24px 0 0 14px;
+    .header{height: 78px;}
+    .header_name {width: 120px;
+        margin: 38px 0 0 10px;
     }
     .header_name h1 {font-size: 18px;}
 
-    .txt_1 {margin: -44px 8px 0 50px;
+    .txt_1 {margin: -51px 8px 0 24px;
     }
-    .txt_3{margin: -20px 98px 0 0;
+    .txt_3{margin: -20px 88px 0 0;
     }
     .h_txt{font-size: 12px;}
     .txt_2, .txt_4{display: none;}
@@ -771,13 +762,18 @@ h4{margin-bottom: 6px;
         margin-top: 72px;
         box-shadow: 0 10px 20px rgb(250, 209, 182);
     }
-    .dd_menu{margin: 0 26px 0 6px}
+    .dd_menu{margin: 8px 76px;
+    }
+    .sub_dd_menu{margin: 0 0 0 -38px;
+        padding: 0 6px;
+    }
+    .sub_dd_menu li a{padding: 4px 32px;}
     #burger {display: block;
         position: absolute;
         width: 30px;
         height: 20px;
-        margin-top: 33px;
-        margin-left: 384px;
+        margin-top: 46px;
+        margin-left: 380px;
     }
     #burger span {position: absolute;
         background-color: black;
@@ -797,35 +793,32 @@ h4{margin-bottom: 6px;
 
     #burger:after {bottom: 0;}
     .menu_brg {display: none;
-        margin: 60px 0 0 284px;
-        position: absolute;
-        width: min-content;
+        margin: 60px 0 0 0;
+        /*position: absolute;*/
+        /*width: min-content;*/
     }
     section {
       }
-    .vertical_section {margin: 10px 4px 10px 4px;
+    .vertical_section {margin: 12px 0 0 0;
         position: static;
     }
-    /*article a {text-align: center;}*/
-
     .afisha {display: inline-block;
-        height: 110px;
-        width: 150px;
-        /*position: relative;*/
-        margin: 0 6px 0 34px ;
+        height: 100px;
+        width: 110px;
+        margin: 0 6px 0 12px ;
     }
-    .foto_icons{height: 28px;
-        width: 28px;
+    .foto_icons{height: 26px;
+        width: 26px;
         margin-bottom: 77px;
     }
-    .af_foto {height: 100px;
-        width: 100px;
-        padding-left: 12px;
-        margin-top: 6px;
+    .af_foto {height: 80px;
+        width: 80px;
+        margin: 17px 0 0 -14px;
+        position: absolute;
     }
     .content {margin: 0 8px 0 18px;}
-    .content_box {margin: 0;
-        padding: 0 8px 0 14px;
+    .content_box {margin-top: 6px;
+        padding: 10px 8px 0 14px;
     }
 
     figure {margin: 8px 20px;}
@@ -876,8 +869,152 @@ h4{margin-bottom: 6px;
         font-size: 14px;
     }
 }
-                                                                    /**************** 375 / 424.99 *******************/
-@media screen and (min-width: 375px) and (max-width: 424px){
+                                                                 /***************** 412 / 424 ****************/
+@media screen and (min-width: 410px) and (max-width: 424px){
+    .container {grid-template-areas:
+                "hd"
+                "ls"
+                "cnt"
+                "ftr";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: auto;
+    }
+    .header{height: 78px;}
+    .header_name {width: 120px;
+        margin: 38px 0 0 10px;
+    }
+    .header_name h1 {font-size: 18px;}
+
+    .txt_1 {margin: -51px 8px 0 24px;
+    }
+    .txt_3{margin: -20px 88px 0 0;
+    }
+    .h_txt{font-size: 12px;}
+    .txt_2, .txt_4{display: none;}
+    .drop_menu{display: none;
+        background: #fcfcfc;
+        border-radius: 3px;
+        margin-top: 72px;
+        box-shadow: 0 10px 20px rgb(250, 209, 182);
+    }
+    .dd_menu{margin: 8px 72px;
+    }
+    .sub_dd_menu{margin: 0 0 0 -32px;
+        padding: 0 1px;
+    }
+    .sub_dd_menu li a{padding: 4px 32px;}
+    #burger {/*display: block;*/
+        position: absolute;
+        width: 28px;
+        height: 19px;
+        margin-top: 48px;
+        margin-left: 363px;
+    }
+    #burger span {position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 3px;
+        top: 8px;
+        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    }
+    #burger:before, #burger:after {content: "";
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+    }
+    #burger:before {top: 0;}
+    #burger:after {bottom: 0;}
+    .menu_brg {display: none;
+        margin: 78px 0 0 0;
+        /*position: absolute;*/
+        /*width: min-content;*/
+    }
+    section {/*margin: 100px 0 10px 0;*/
+    }
+    .vertical_section {margin: 0;
+        position: static;
+        text-align: center;
+    }
+    .afisha{/*display: none;*/
+    }
+    .afisha {display: inline-block;
+        height: 120px;
+        width: 130px;
+        margin-top: 12px;
+        /*margin: 6px 6px 6px 44px ;*/
+    }
+    .foto_icons{height: 28px;
+        width: 28px;
+    }
+    .af_foto {height: 90px;
+        width: 90px;
+        padding: 0 0 0 16px;
+        margin: -11px 0 0 16px;
+    }
+    .content {display: inline-block;
+        margin: 4px 10px 0 10px;
+    }
+    .content_box {margin-left: 0;
+        padding: 10px 10px 10px 10px;
+    }
+    figure {margin: 0 22px;
+        padding: 0 10px;
+    }
+    /*figure img {margin-bottom: 16px;
+    }*/
+    p {padding-bottom: 8px;
+        font-size: 15px;
+    }
+    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
+    .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
+    .random, .process_ethnic_foto {
+        width: 80%;
+        height: auto;
+        margin: 0 0 15px 0;
+    }
+    .thematic_text {margin-bottom: 6px;
+    }
+    .box {width: 43%;
+        height: 194px;
+        /*margin: 8px 0;*/
+        padding: 0 8px;
+    }
+    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    .box p {margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .imag_txt {font-size: 11px;
+    }
+    #scroll_up {background: url("../img/icon_575.jpg");
+        width: 30px;
+        height: 30px;
+        margin-right: -10px;
+    }
+    .footer_panel{width: auto;
+        height: auto;
+    }
+    .footer_home {margin: 12px 2px 0 6px;
+        width: auto;
+        font-size: 18px;
+    }
+    .footer_info {width: auto;
+        margin: 0px 0 0 0;
+    }
+    .footer_info_f, .footer_info_e, .footer_info_i {/*margin: -7px 10px 0 0;*/
+        /*margin-right: 8px;*/
+        padding: 0;
+        font-size: 14px;
+    }
+}
+                                                                    /**************** 375 / 410 *******************/
+@media screen and (min-width: 375px) and (max-width: 410px){
     .container {grid-template-areas:
                 "hd"
                 "ls"
@@ -909,8 +1046,12 @@ h4{margin-bottom: 6px;
         margin-top: 72px;
         box-shadow: 0 10px 20px rgb(250, 209, 182);
     }
-    .dd_menu{margin: 0 22px 0 4px;
+    .dd_menu{margin: 8px 64px;
     }
+    .sub_dd_menu{margin: 0 0 0 -32px;
+       padding: 0 1px;
+    }
+    .sub_dd_menu li a{padding: 4px 32px;}
     #burger {display: block;
         position: absolute;
         width: 24px;
@@ -934,60 +1075,61 @@ h4{margin-bottom: 6px;
     #burger:before {top: 0;}
     #burger:after {bottom: 0;}
     .menu_brg {display: none;
-        margin: 68px 0 0 240px;
-        position: absolute;
-        width: min-content;
+        margin: 68px 0 0 0;
     }
-    section {margin: 100px 0 10px 0;
+    section{position: static;}
+    .vertical_section {margin: 4px 0;
+        border: blue 1px;
 
     }
-    .vertical_section {
-        margin: 0;
-        position: static;
+    #afisha, #ads{display: inline-block;
+        width: 38px;
+        height: 38px;
+        margin: 0 12px 0 20px;
+        float: left;
+        border-radius: 3px;
+        /*border: 1px solid #fad1b6;*/
     }
-    /*article a {text-align: center;
-    }*/
-    .afisha{display: none;
+    #afisha{background-image: url("../img/novosti_38x38.png");}
+    #ads{background-image: url("../img/obyava_38x38.png");}
+    .afisha, .ads{display: none;
+        width: auto;
+        height: auto;
+        margin: 40px 0 0 0;
+        background: none;
     }
-    .afisha {display: inline-block;
-        height: 120px;
-        width: 130px;
-        margin: 6px 6px 6px 44px ;
-    }
-    .foto_icons{height: 28px;
+    .foto_icons{display: none;
+        height: 28px;
         width: 28px;
     }
-    .af_foto {height: 90px;
-        width: 90px;
-        padding: 0 0 0 16px;
-        margin: -11px 0 0 16px;
+    .af_foto {position: absolute;
+        height: auto;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        border-radius: 3px;
+        border: 1px solid #fad1b6;
     }
     .content {display: inline-block;
-        margin: 4px 10px 0 10px;
+        margin: 4px 10px 6px 10px;
     }
     .content_box {margin-left: 0;
-        padding: 6px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
     }
-    figure {margin: 0 22px;
-        padding: 0 10px;
-    }
-    /*figure img {margin-bottom: 16px;
-    }*/
+    figure {}
     p {padding-bottom: 8px;
         font-size: 15px;
     }
     .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
     .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
     .random, .process_ethnic_foto {
-        width: 80%;
-        height: auto;
-        margin: 0 0 15px 0;
+        width: auto;
+        margin: 0 0 10px 0;
     }
     .thematic_text {margin-bottom: 6px;
     }
     .box {width: 43%;
-        height: 210px;
-        margin: 8px 0;
+        height: 194px;
         padding: 0 8px;
     }
     .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {
@@ -1007,18 +1149,20 @@ h4{margin-bottom: 6px;
         margin-right: -10px;
     }
     .footer_panel{width: auto;
+        height: 50px;
     }
     .footer_home {margin: 12px 2px 0 6px;
         width: auto;
         font-size: 18px;
     }
     .footer_info {width: max-content;
-        margin: 10px 0 0 0;
+        margin-top: 5px;
     }
-    .footer_info_f, .footer_info_e, .footer_info_i {margin: -7px 10px 0 0;
-        padding: 0;
-        font-size: 14px;
+    .footer_info_tlg, .footer_info_mail, .footer_info_vk {
+        margin: 5px 10px 0 0;
     }
+    .footer_icons{width: 30px;
+        height: 30px;}
 }
                                                                /***************** 320 / 374.99 *********************/
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -1054,6 +1198,12 @@ h4{margin-bottom: 6px;
         margin-top: 72px;
         box-shadow: 0 10px 20px rgb(250, 209, 182);
     }
+    .dd_menu{margin: 8px 52px;
+    }
+    /*.sub_dd_menu{margin: 0 0 0 -29px;
+        padding: 0 0;
+    }*/
+    .sub_dd_menu li a{padding: 4px 30px;}
     #burger {display: block;
         position: absolute;
         width: 24px;
@@ -1077,9 +1227,9 @@ h4{margin-bottom: 6px;
     #burger:before {top: 0;}
     #burger:after {bottom: 0;}
     .menu_brg {display: none;
-        margin: 50px 0 0 195px;
+        margin: 50px 0 0 0px;
         position: absolute;
-        width: min-content;
+        width: auto;
     }
     section {margin: 0 0 10px 0;
     }
@@ -1108,8 +1258,8 @@ h4{margin-bottom: 6px;
     }
     .thematic_text {margin-bottom: 6px;}
     .box {width: 43%;
-        height: 210px;
-        margin: 8px 0;
+        height: 188px;
+        /*margin: 8px 0;*/
         padding: 0 8px;
     }
     .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {

@@ -19,7 +19,10 @@
         <div class="header_text txt_2"><h6 class="h_txt"><i>Семь раз отмерь, один раз отреж.</i></h6></div>
         <div class="header_text txt_3"><h6 class="h_txt"><i>Глаза страшаться, а руки делают.</i></h6></div>
         <div class="header_text txt_4"><h6 class="h_txt"><i>Не игла шьёт, а руки.</i></h6></div>
-        <nav id="accordion" class="drop_menu menu_brg">
+        <div id="burger">
+            <span></span>
+        </div>
+        <nav class="drop_menu menu_brg">
             <ul>
                 <li class="dd_menu"><a href="#">Украшения</a>
                     <ul class="sub_dd_menu">
@@ -71,34 +74,36 @@
             </ul>
         </nav>
     </header>
-
     <section class="vertical_section">
-        <div id="burger">
-            <span></span>
+        <div id="afisha">
+            <div class=afisha>
+                <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
+                <a href="" target="_blank"><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a>
+            </div>
         </div>
-        <div class=afisha>
-            <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
-            <a href="https://vk.com/vremyachudesshow" target="_blank"><img src="img/yarmarka.jpg" alt="#" class="af_foto"></a>
+        <div id="ads">
+            <div class="ads">
+                <img src="img/obyava_64x64.png" class="foto_icons" alt="#">
+                <a href="#" target="_blank"><img src="img/afisha_1.jpg" alt="#" class="af_foto"></a>
+            </div>
         </div>
-        <!--div class="afisha">
-            <img src="img/ads100x100.png" class="foto_icons" alt="#">
-            <a href="#" target="_blank"></a><img src="img/afisha_1.jpg" alt="#" class="af_foto">
-        </div-->
     </section>
     <div class="content">
         <div class="content_box">
+            <h3>Социальный статус, семейное положение и самовыражение</h3>
             <p class="thematic_text">В древние времена наличие в ухе серьги было демонстрацией достатка и положения в
                 обществе или принадлежности к высокому роду. В средние века в Европе это украшение то входило в моду,
                 то было под запретом из-за сильного влияния церкви на общество. Новый виток популярности сережек
-                пришелся на эпоху Возрождения. В моду вошел жемчуг.</p>
+                пришелся на эпоху Возрождения. Тогда в моду вошел жемчуг.</p>
             <p>У каждого народа, а то и у отдельных групп общества серьги имели свои символические значения. У казака
                 серьга в левом ухе указывала, что он единственный сын в семье. Женщины в Индии до сих пор носят нат
                 (сережка в носу), как символ замужества.</p>
-            <p>Сегодня серьги доступны абсолютно всем и изготавливаются из всевозможных материалов. Платина с
-                бриллиантами, золото с изумрудами,  жемчуг, серебро с чернением, серьги-кольца с алмазной гранью,
-                всевозможные гвоздики, серьги из природных материалов — ракушек, перышек, дерева, бисера и т.д.</p>
-                <p>Также популярны серьги — копии археологических находок. Они совершенно непохожи на современные
-                    украшения - сложные, объемные, со множеством мелких деталей, узоров и даже с целыми сюжетами.</p>
+            <p>Сегодня серьги разнообразных видов и размеров доступны абсолютно всем и изготавливаются из всевозможных
+                материалов. Платина с бриллиантами, золото с изумрудами,  жемчуг, серебро с чернением, филигрань,
+                серьги-кольца с алмазной гранью, серьги из природных материалов — ракушек, пёрьев, дерева, костей, смолы
+                и т.д.</p>
+            <p>Также популярны серьги — копии археологических находок. Они совершенно непохожи на современные
+                украшения - сложные, объемные, со множеством мелких деталей, узоров и даже с целыми сюжетами.</p>
             <div class="box">
                 <a href="img/earn1_big.jpg" class="lightzoom"><img src="img/earn1_sm.jpg" class="earring" alt="#"
                                                                    title="высота со швензой 4,8 см"></a>
@@ -165,10 +170,21 @@
     <footer class="footer_panel">
         <div class="footer_home"><a href="art_home.html">Кукуся ART</a></div>
         <div class="footer_info">
-            <div class="footer_info_f">+7-953-920-89-48</div>
-            <div class="footer_info_e">n1talika@yandex.ru</div>
-            <div class="footer_info_i"><a href="http://www.vk.com/natasha_boryatinskaya/" target="_blank">
-                <img src="img/icons_vk%20100x100.png" class="foto_icons" alt="#"></a></div>
+            <div class="footer_info_tlg">
+                <a href="https://t.me/Bo_Nataliia">
+                    <img src="img/icons_telegram_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
+            <div class="footer_info_mail">
+                <a href="mailto:n1talika@yandex.ru">
+                    <img src="img/icons_e-mail_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
+            <div class="footer_info_vk">
+                <a href="http://www.vk.com/natasha_boryatinskaya/" target="_blank">
+                    <img src="img/icons_vk_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
         </div>
     </footer>
 </div>
@@ -180,9 +196,20 @@
         });
     });
 
+    $(function (){
+        $('#afisha').click(function (event){
+            $('.afisha').toggle();
+        });
+    });
+    $(function (){
+        $('#ads').click(function (event){
+            $('.ads').toggle();
+        });
+    });
+
     $(function () {
         $(window).scroll(function () {
-            if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 550) {
                 $('#scroll_up').show();
             } else {
                 $('#scroll_up').hide();

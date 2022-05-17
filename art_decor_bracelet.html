@@ -22,7 +22,7 @@
         <div id="burger">
             <span></span>
         </div>
-        <nav id="accordion" class="drop_menu menu_brg">
+        <nav class="drop_menu menu_brg">
             <ul>
                 <li class="dd_menu"><a href="#">Украшения</a>
                     <ul class="sub_dd_menu">
@@ -75,28 +75,35 @@
         </nav>
     </header>
     <section class="vertical_section">
-        <div class=afisha>
-            <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
-            <a href="https://vk.com/vremyachudesshow" target="_blank"><img src="img/yarmarka.jpg" alt="#" class="af_foto"></a>
+        <div id="afisha">
+            <div class=afisha>
+                <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
+                <a href="" target="_blank"><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a>
+            </div>
         </div>
-        <!--div class="afisha">
-            <img src="img/ads100x100.png" class="foto_icons" alt="#">
-            <a href="#" target="_blank"></a><img src="img/afisha_1.jpg" alt="#" class="af_foto">
-        </div-->
+        <div id="ads">
+            <div class="ads">
+                <img src="img/obyava_64x64.png" class="foto_icons" alt="#">
+                <a href="#" target="_blank"><img src="img/afisha_1.jpg" alt="#" class="af_foto"></a>
+            </div>
+        </div>
     </section>
     <div class="content">
         <div class="content_box">
+            <h3>Оберег, защита, украшение</h3>
             <p class="thematic_text">Самый древний браслет возрастом около 40 тысяч лет найден на Алтае в Денисовой
                 пещере. Он не замкнут и сделан из цельного куска минерала.</p>
-            <p>Первыми материалами для браслета могли служить кости, зубы и жилы животных. И такое украшение скорее
-                служило оберегом.</p>
+            <p>Первыми материалами для браслета могли служить кости, зубы, когти и жилы животных. И такое украшение
+                скорее имело ритуальный характер. Возможно так появились обереги.</p>
             <p>Человечество развивалось и осваивало новые материалы: бронза, железо, медь, драгметаллы. Стали
-                появляться браслеты разных видов: жесткие, мягкие, замкнутые и разъемные.</p>
-            <p>Их носят на руках, предплечьях и лодыжках. Самый простой мог состоять из кожаного шнурка с
-                нанизанными на него незатейливыми бусинками: золотыми, серебряными, стеклянными, железными,
-                деревянными или каменными.</p>
-            <p>Мы носим браслеты как дополнение к образу, в память о ком-то или о каком-то важном событии. А есть
-                просто любители браслетов. У них на любой случай есть такой аксессуар.</p>
+                появляться браслеты разных видов: жесткие, мягкие, замкнутые и разъемные. Их носят на запястьях,
+                предплечьях и лодыжках.</p>
+            <p> Самый простой мог состоять из кожаного шнурка с нанизанными на него незатейливыми бусинками: золотыми,
+                серебряными, стеклянными, железными, деревянными или каменными. А вот браслеты воинов могли быть
+                кожаными или железными и достаточно широкими, что бы защищать от режущих ударов или зубов животных на
+                охоте.</p>
+            <p>Мы носим браслеты как дополнение к образу, в память о ком-то дорогом или о каком-либо интересном событии.
+                А есть просто любители браслетов. У них на любой случай есть такой аксессуар.</p>
             <p>Изготовить такое украшение можно из чего угодно. К примеру, взять палочки от мороженого и
                 сутажный шнур. Проводим пару манипуляций с горячей водой, чтобы придать деревяшкам изогнутый
                 вид. А теперь только ваша фантазия и летний оригинальный аксессуар, возможно даже в этно-стиле,
@@ -125,17 +132,28 @@
                 <a href="img/bracelet03_big.jpg" class="lightzoom"><img src="img/bracelet03_sm.jpg" class=" bracelet"
                                                                         alt="#" title="длина-17см, ширина-2,5см"></a>
                 <p class="imag_txt">Зебра. Ткачество, бисер PRECIOSA, магнитный замок.</p>
-            </div>
+            </div><br>
             <div id="scroll_up"></div>
         </div>
     </div>
     <footer class="footer_panel">
-        <div class="footer_home"><a href="art_home.html">КукусяART</a></div>
+        <div class="footer_home"><a href="art_home.html">Кукуся ART</a></div>
         <div class="footer_info">
-            <div class="footer_info_f">+7-953-920-89-48</div>
-            <div class="footer_info_e">n1talika@yandex.ru</div>
-            <div class="footer_info_i"><a href="http://www.vk.com/natasha_boryatinskaya/" target="_blank">
-                <img src="img/icons_vk%20100x100.png" class="foto_icons" alt="#"></a></div>
+            <div class="footer_info_tlg">
+                <a href="https://t.me/Bo_Nataliia">
+                    <img src="img/icons_telegram_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
+            <div class="footer_info_mail">
+                <a href="mailto:n1talika@yandex.ru">
+                    <img src="img/icons_e-mail_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
+            <div class="footer_info_vk">
+                <a href="http://www.vk.com/natasha_boryatinskaya/" target="_blank">
+                    <img src="img/icons_vk_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
         </div>
     </footer>
 </div>
@@ -147,9 +165,20 @@
         });
     });
 
+    $(function (){
+        $('#afisha').click(function (event){
+            $('.afisha').toggle();
+        });
+    });
+    $(function (){
+        $('#ads').click(function (event){
+            $('.ads').toggle();
+        });
+    });
+
     $(function () {
         $(window).scroll(function () {
-            if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 550) {
                 $('#scroll_up').show();
             } else {
                 $('#scroll_up').hide();

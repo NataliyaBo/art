@@ -19,7 +19,10 @@
         <div class="header_text txt_2"><h6 class="h_txt"><i>Семь раз отмерь, один раз отреж.</i></h6></div>
         <div class="header_text txt_3"><h6 class="h_txt"><i>Глаза страшаться, а руки делают.</i></h6></div>
         <div class="header_text txt_4"><h6 class="h_txt"><i>Не игла шьёт, а руки.</i></h6></div>
-        <nav id="accordion" class="drop_menu menu_brg">
+        <div id="burger">
+            <span></span>
+        </div>
+        <nav class="drop_menu menu_brg">
             <ul>
                 <li class="dd_menu"><a href="#">Украшения</a>
                     <ul class="sub_dd_menu">
@@ -72,19 +75,21 @@
         </nav>
     </header>
     <section class="vertical_section">
-        <div id="burger">
-            <span></span>
+        <div id="afisha">
+            <div class=afisha>
+                <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
+                <a href="" target="_blank"><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a>
+            </div>
         </div>
-        <div class=afisha>
-            <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
-            <a href="https://vk.com/vremyachudesshow" target="_blank"><img src="img/yarmarka.jpg" alt="#" class="af_foto"></a>
+        <div id="ads">
+            <div class="ads">
+                <img src="img/obyava_64x64.png" class="foto_icons" alt="#">
+                <a href="#" target="_blank"><img src="img/afisha_1.jpg" alt="#" class="af_foto"></a>
+            </div>
         </div>
-        <!--div class="afisha">
-            <img src="img/ads100x100.png" class="foto_icons" alt="#">
-            <a href="#" target="_blank"></a><img src="img/afisha_1.jpg" alt="#" class="af_foto">
-        </div-->
     </section>
     <div class="content">
+        <h3>Бантики или цветы</h3>
         <p class="thematic_text">Заколка не просто держит волосы в заданном положении, а также служит украшением.</p>
         <p>Ею может быть даже обычная тонкая деревянная палочка, например для суши. Широкую часть можно украсить
             резьбой, обмотать цветным тонким сутажным шнурочком или ленточкой и привязать несколько бусинок. Теперь в
@@ -186,10 +191,21 @@
     <footer class="footer_panel">
         <div class="footer_home"><a href="art_home.html">Кукуся ART</a></div>
         <div class="footer_info">
-            <div class="footer_info_f">+7-953-920-89-48</div>
-            <div class="footer_info_e">n1talika@yandex.ru</div>
-            <div class="footer_info_i"><a href="http://www.vk.com/natasha_boryatinskaya/" target="_blank">
-                <img src="img/icons_vk%20100x100.png" class="foto_icons" alt="#"></a></div>
+            <div class="footer_info_tlg">
+                <a href="https://t.me/Bo_Nataliia">
+                    <img src="img/icons_telegram_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
+            <div class="footer_info_mail">
+                <a href="mailto:n1talika@yandex.ru">
+                    <img src="img/icons_e-mail_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
+            <div class="footer_info_vk">
+                <a href="http://www.vk.com/natasha_boryatinskaya/" target="_blank">
+                    <img src="img/icons_vk_100x100.png" class="footer_icons" alt="#">
+                </a>
+            </div>
         </div>
     </footer>
 </div>
@@ -201,9 +217,20 @@
         });
     });
 
+    $(function (){
+        $('#afisha').click(function (event){
+            $('.afisha').toggle();
+        });
+    });
+    $(function (){
+        $('#ads').click(function (event){
+            $('.ads').toggle();
+        });
+    });
+
     $(function () {
         $(window).scroll(function () {
-            if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 550) {
                 $('#scroll_up').show();
             } else {
                 $('#scroll_up').hide();
