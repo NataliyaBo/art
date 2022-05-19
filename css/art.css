@@ -65,7 +65,7 @@ html, body{
     margin: -18px -23px 0 356px;
 }
                                                                                                       /* меню */
-.drop_menu{margin: 60px 10px 0 519px;
+.drop_menu{margin: 60px 10px 0 710px;
     position: absolute;
     background: #fcfcfc
 }
@@ -228,12 +228,11 @@ article a:before{margin-right: 2px;
 .link_in_txt{color: darkorange;
 
 }
+.cnt_foto{}
 figure{text-align: center;
 }
-figure img{margin-right: 20px;
-    text-align: center;
+figure img{margin: 8px 8px 0 8px;
 }
-
 span{color: blue}
 
 .box{width: 18%;
@@ -251,24 +250,22 @@ span{color: blue}
     height: 36px;
 }
                                                                                        /* класс для img zoom */
-.brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic,
-.magnets, .felt, .decorated, .material, .tools, .process_clip_foto, .process_felt_foto,
-.process_pen_foto, .process_more{
+.brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic, .magnets, .felt,
+.decorated, .material, .tools, .process_clip_foto, .process_felt_foto, .process_pen_foto, .process_more,
+.event, .doll_foto, .gnom_foto, .process_amber_foto, .process_ethnic_foto, .random, .bag_foto, .pen_foto, .monster_foto{
     width: 100%;
     height: auto;
     border-radius: 3px;
 }
 
                                                                                    /* класс для img 300x280 с текстом */
-.home_foto, .doll_foto, .gnom_foto, .bender_foto, .pen_foto, .bag_foto, .monster_foto,
-.material_foto, .tools_foto, .event, .random, .process_amber_foto, .your_foto, .process_ethnic_foto{
+.home_foto, .bender_foto, .material_foto, .tools_foto, .your_foto {
     width: 230px;
     height: 230px;
     border-radius: 3px;
     /*margin: 0 18px;*/
     /*object-fit: cover;*/
 }
-
 
                                                                                                     /* кнопка наверх */
 #scroll_up{
@@ -286,46 +283,6 @@ span{color: blue}
     box-shadow:2px 2px 2px 2px rgb(228, 228, 228);
 }
 
-                                                                                                        /* статьи */
-/*.content_event{
-    text-align: center;
-}
-.event_article{display: inline-block;
-    width: 241px;
-    height: 241px;
-    margin: 0 20px 30px 20px;
-    border-radius: 3px;
-    position: relative;
-}
-.event_article a{padding: 0;
-    margin: 0;
-}
-.article_foto{
-    width: 240px;
-    height: 240px;
-    opacity: 0.8;
-    border-radius: 3px;
-    border: 0.5px solid #c5c5c5;
-}
-.name_article{
-    width: 240px;
-    height: 110px;
-    position: absolute;
-    margin-top: -115px;
-    margin-left: 1px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
-}
-.name_article h3{
-    margin: 0 0 4px 0;
-    padding-top: 56px;
-}
-.name_article h3{
-    color: white;
-}
-.name_article p{
-    margin: 6px 0 6px 0;
-    color: white;
-}*/
                                                                                                             /* подвал */
 .footer_panel{background: #f5f5f5;
     width: 100%;          /*! не соответсвует ширине контейнера*/
@@ -1120,9 +1077,7 @@ h4{margin-bottom: 6px;
     p {padding-bottom: 8px;
         font-size: 15px;
     }
-    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
-    .random, .process_ethnic_foto {
+    .home_foto, .bender_foto, .your_foto, .tools_foto, .material_foto{
         width: auto;
         margin: 0 0 10px 0;
     }
@@ -1132,7 +1087,9 @@ h4{margin-bottom: 6px;
         height: 194px;
         padding: 0 8px;
     }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {
+    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt, .event
+    .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto, .process_amber_foto,
+    .process_felt_foto, .process_pen_foto, .random, .process_ethnic_foto {
         width: 100%;
         height: auto;
         margin-left: 0;
