@@ -1,15 +1,25 @@
+@font-face {
+    font-family: Roboto;
+    src: url(font/Roboto-Regular.ttf) format("truetype"),
+    /*url(font/Roboto-Bold.ttf) format("truetype"),*/
+    url(font/Roboto-ThinItalic.ttf) format("truetype"),
+    url(font/Roboto-BoldItalic.ttf) format("truetype"),
+    url(font/Roboto-BlackItalic.ttf) format("truetype"),
+    url(font/Roboto-Italic.ttf) format("truetype");
+}
+@font-face {
+    font-family: Parabola;
+    src: url(font/Parabola.ttf) format("truetype");
+}
 *{ margin: 0;
     padding: 0;
-    font-family: /*Calade,*/ Roboto, "Roboto Light", "Roboto Thin";}
-html, body{
-    /*height: 100%;*/
-    height: auto;
-    line-height: 1.4;
-    /*background: #fcfcfc;*/
+    font-family: Roboto, Parabola;
+}
+html, body{height: auto;
+    line-height: 1.3;
 }
 
 .container {height: auto;
-    /*min-height: 100%;*/
     width: 75%;
     margin: 0 auto;
     display: grid;
@@ -23,10 +33,8 @@ html, body{
                                                                                                             /* шапка */
 .header{grid-area: hd;
     height: auto;
-    /*width: 1427px;*/
     width: auto;
     border-radius: 3px;
-    /*background-image: url("../img/background_1d1.png");*/
     background: #fcfcfc;
     position: sticky;
     top: 0;
@@ -34,50 +42,40 @@ html, body{
     box-shadow: 0 10px 20px rgb(250, 209, 182);
 }
 .header_name{float: left;
-    width: 220px;
-    margin: 38px 0 0 22px;
+    width: 317px;
+    margin: 14px 0 0 46px;
 }
 .header_name h1{margin: 0;
-    padding-left: 10px;
-    font-size: calc(24px + 10 * (100vw / 1430));
+    font-size: calc(36px + 10 * (100vw / 1430));
     font-weight: 900;
+    font-style: italic;
     color: #ff8c00;
     text-shadow: 0 0 4px black, 0 0 4px black,
             0 0 4px black, 0 0 4px black;
 }
 .header_name a:hover{text-decoration: none;}
 .header_text{}
-.h_txt{font-size: 18px;
+.txt_1{margin: 18px 0 0 360px;
+    width: 600px;
+}
+.h_txt{font: 26px Parabola;
     color: black;
-    /*text-shadow: 1px 1px 1px lightgray;*/
-    text-shadow: 0 0 1px darkorange;;
-}
-.txt_1{float: left;
-    margin: 14px 0 0 -148px;
-}
-.txt_2{float: left;
-    margin: 9px 0 0 26px;
-}
-.txt_3{float: right;
-    margin: 15px 42px 0 48px;
-}
-.txt_4{float: right;
-    margin: -18px -23px 0 356px;
+    text-shadow: 0 0 .5px darkorange;
+
 }
                                                                                                       /* меню */
-.drop_menu{margin: 60px 10px 0 710px;
+.drop_menu{margin: 17px 0 0 643px;
     position: absolute;
-    background: #fcfcfc
+    background: #fcfcfc;
 }
 .d_menu{position: relative;
+    font-size: 14px;
 }
 .dd_menu{display: inline-block;
     padding: 8px 10px;
     margin: 0 8px;
 }
 .dd_menu a{text-shadow: 1px 1px 1px lightgray;
-    /*text-shadow: 0 0 1px darkorange;*/
-
 }
 .sub_dd_menu{display: none;
     background: #fcfcfc;
@@ -87,8 +85,7 @@ html, body{
     margin-top: 9px;
     box-shadow: 0 10px 20px rgb(250, 209, 182);
 }
-.sub_dd_menu li{padding: 6px 0;
-
+.sub_dd_menu li{padding: 8px 0;
 }
 .sub_dd_menu li a{padding: 4px 10px;
 }
@@ -98,42 +95,7 @@ html, body{
 }
 .drop_menu ul li:hover ul{display: block;
 }
-
-                                                                                                           /* бургер */
-/*#burger{line-height: 30px;
-    font-size: 15px;
-    margin-top: -10px;
-    float: right;
-    display: none;
-}
-.burger_btn{display: block;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-}
-.brg_line, .brg_line::before, .brg_line::after {
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    left: 50%;
-    margin-left: -11px;
-    width: 22px;
-    height: 3px;
-    background-color: black;
-    box-shadow: 0 0 2px 2px rgba(255, 226, 212, 2);
-}
-.brg_line::before, .brg_line::after{
-    content: '';
-    display: block;
-}
-.brg_line::before{
-    transform: translateY(-10px);
-}
-.brg_line::after{
-    transform: translateY(10px);
-}*/
-
+.yarm, .go{margin-left: 5px}
 
                                                                                       /* боковое меню/ боковая секция */
 section{grid-area: ls;
@@ -144,60 +106,6 @@ section{grid-area: ls;
 .vertical_section{float: left;
     margin: 102px 16px 18px 44px;
 }
-/*.accord{line-height: 24px;
-}
-.accord{
-    background: #ffe2d4;
-    border-radius: 3px;
-    border: 1px solid #c5c5c5;
-    margin-top: 3px;
-}
-.vertical_menu label{
-    padding: 5px 20px;
-    position: relative;
-    display: block;
-    height: max-content;
-    cursor: pointer;
-    color: black;
-    line-height: 24px;
-}
-.vertical_menu input:checked{
-    content: '';
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    right: 10px;
-    top: 5px;
-}
-.vertical_menu input {
-    display: none;
-}
-article a{
-    display: block;
-    margin: 4px 0 4px 0;
-    padding-left: 18px;
-    font-size: 15px;
-}
-article a:before{margin-right: 2px;
-}
-.vertical_menu article{
-    background: white;
-    overflow: hidden;
-    height: 0;
-    position: relative;
-}
-
-.vertical_menu input:checked ~ article.ac_small-1,
-.vertical_menu input:checked ~ article.ac_small-2,
-.vertical_menu input:checked ~ article.ac_small-3,
-.vertical_menu input:checked ~ article.ac_small-4,
-.vertical_menu input:checked ~ article.ac_small-5,
-.vertical_menu input:checked ~ article.ac_small-6,
-.vertical_menu input:checked ~ article.ac_small-7,
-.vertical_menu input:checked ~ article.ac_small-8{
-    height: max-content;
-}*/
-
 .afisha, .ads{margin: 64px 0 0 2px;
     background-image: url("../img/background_7_sm.jpg");
     border-radius: 3px;
@@ -211,6 +119,27 @@ article a:before{margin-right: 2px;
 }
 .foto_icons{width: 40px;
     height: 40px;
+}
+                                                                                             /* ротация картинок */
+.cartoon {position: relative;
+    width: auto;
+}
+.cartoon a{position: absolute;
+    opacity: 0;
+    animation-name: cartoon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.cartoon a:nth-child(1) {animation-delay: 0s;}
+.cartoon a:nth-child(2) {animation-delay: 4s;}
+.cartoon a:nth-child(3) {animation-delay: 6s;}
+
+@keyframes cartoon {
+    0%{opacity: 0;}
+    25%{opacity: 1;}
+    50%{opacity: 1;}
+    75%{opacity: 0;}
+    100%{opacity: 0;}
 }
                                                                                                           /* контент */
 .content{float: right;
@@ -244,12 +173,18 @@ span{color: blue}
     padding: 9px 9px 0 9px;
     margin-top: 8px;
 }
-.imag_txt{
-    margin: 3px 0 10px 0;
+.img_txt{margin: 3px 0 10px 0;
     font-size: 12px;
-    height: 36px;
+    height: 36px
 }
-                                                                                       /* класс для img zoom */
+.img_num{margin: 3px 0 10px 0;
+    font-size: 11px;
+    /*height: 36px*/
+}
+.txt_num{font-size: 12px;
+    margin: 3px 0 10px 0;
+}
+                                                                                              /* для img zoom */
 .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic, .magnets, .felt,
 .decorated, .material, .tools, .process_clip_foto, .process_felt_foto, .process_pen_foto, .process_more,
 .event, .doll_foto, .gnom_foto, .process_amber_foto, .process_ethnic_foto, .random, .bag_foto, .pen_foto, .monster_foto{
@@ -258,18 +193,15 @@ span{color: blue}
     border-radius: 3px;
 }
 
-                                                                                   /* класс для img 300x280 с текстом */
+                                                                                   /* для img */
 .home_foto, .bender_foto, .material_foto, .tools_foto, .your_foto {
     width: 230px;
     height: 230px;
     border-radius: 3px;
-    /*margin: 0 18px;*/
-    /*object-fit: cover;*/
 }
 
                                                                                                     /* кнопка наверх */
-#scroll_up{
-    display: none;
+#scroll_up{display: none;
     position: fixed;
     right: 24px;
     bottom: 120px;
@@ -277,7 +209,6 @@ span{color: blue}
     height: 47px;
     z-index: 1000;
     border-radius: 50px;
-    /*border: solid #bebebe 1px;*/
     background: url("../img/icon-4b.jpg");
     overflow: auto;
     box-shadow:2px 2px 2px 2px rgb(228, 228, 228);
@@ -322,8 +253,9 @@ footer .footer_home:before{content: ' \00A9';
 
                                                                                                        /* общие теги */
 h3{margin-bottom: 8px;
+
 }
-p{font-size:17px;
+p{font-size:15px;
     margin: 0 0 4px 0;
 }
 a{text-decoration: none;
@@ -807,7 +739,7 @@ h4{margin-bottom: 6px;
         padding: 0;
         text-align: center;
     }
-    .imag_txt {font-size: 11px;}
+    .img_txt {font-size: 11px;}
     #scroll_up{background-image: url("../img/icon_575.jpg");
         width: 30px;
         height: 30px;
@@ -947,7 +879,7 @@ h4{margin-bottom: 6px;
         padding: 0;
         text-align: center;
     }
-    .imag_txt {font-size: 11px;
+    .img_txt {font-size: 11px;
     }
     #scroll_up {background: url("../img/icon_575.jpg");
         width: 30px;
@@ -984,62 +916,34 @@ h4{margin-bottom: 6px;
     .header {height: 68px;
         position: sticky;
     }
-    .header_name {width: 120px;
-        margin: 28px 0 0 10px;
+    .header_name {width: 114px;
+        margin: 9px 0 0 16px;
     }
-    .header_name h1 {font-size: 20px;
-        padding-left: 4px;
+    .header_name h1 {font-size: 21px;
+        /*padding-left: 4px;*/
     }
-    .txt_1{margin: -42px 8px 0 36px;
+    .txt_1{margin: 42px 0 0 30px;
+        width: 294px;
     }
-    .txt_3{margin: -18px 56px 0 0;}
-    .h_txt{font-size: 11px;
-        padding: 0 6px 0 0;
+    .h_txt{font-size: 14px;
     }
-    .txt_2, .txt_4{display: none;}
     .drop_menu{display: none;
         background: #fcfcfc;
         border-radius: 3px;
         margin-top: 72px;
         box-shadow: 0 10px 20px rgb(250, 209, 182);
     }
-    .dd_menu{margin: 8px 64px;
+    .dd_menu{margin: 8px 74px;
     }
     .sub_dd_menu{margin: 0 0 0 -32px;
-       padding: 0 1px;
     }
+    .sub_dd_menu li{height: 26px;}
     .sub_dd_menu li a{padding: 4px 32px;}
-    #burger {display: block;
-        position: absolute;
-        width: 24px;
-        height: 19px;
-        margin-top: 40px;
-        margin-left: 344px;
-    }
-    #burger span {position: absolute;
-        background-color: black;
-        width: 100%;
-        height: 3px;
-        top: 8px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {content: "";
-        background-color: black;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-    }
-    #burger:before {top: 0;}
-    #burger:after {bottom: 0;}
-    .menu_brg {display: none;
-        margin: 68px 0 0 0;
-    }
     section{position: static;}
     .vertical_section {margin: 4px 0;
-        border: blue 1px;
-
+        /*border: blue 1px;*/
     }
-    #afisha, #ads{display: inline-block;
+    #afisha, #ads, #info_vk, #info_tlg {display: inline-block;
         width: 38px;
         height: 38px;
         margin: 0 12px 0 20px;
@@ -1067,27 +971,60 @@ h4{margin-bottom: 6px;
         border-radius: 3px;
         border: 1px solid #fad1b6;
     }
+    .menu_brg {display: none;
+        margin: 12px 0 0 0;
+    }
+    /*.mobile_burger{position: static;
+        width: 38px;
+        height: 38px;
+        margin-left: 200px;
+    }*/
+    #burger {display: inline-block;
+        position: absolute;
+        width: 34px;
+        height: 24px;
+        margin-top: -36px;
+        margin-left: 330px;
+        /*margin: 6px 12px 0 182px;*/
+    }
+    #burger span {position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 4px;
+        top: 10px;
+        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    }
+    #burger:before, #burger:after {content: "";
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 4px;
+    }
+    #burger:before {top: 0;}
+    #burger:after {bottom: 0;}
     .content {display: inline-block;
         margin: 4px 10px 6px 10px;
     }
     .content_box {margin-left: 0;
-        padding: 10px 10px 10px 10px;
+        padding: 14px 10px 10px 10px;
     }
     figure {}
     p {padding-bottom: 8px;
-        font-size: 15px;
+        font-size: 13px;
     }
     .home_foto, .bender_foto, .your_foto, .tools_foto, .material_foto{
         width: auto;
         margin: 0 0 10px 0;
     }
-    .thematic_text {margin-bottom: 6px;
+    h3{margin: 0 0 16px 0}
+    .thematic_text {margin: 16px 0 0 0;
     }
     .box {width: 43%;
-        height: 194px;
+        /*height: 200px;*/
         padding: 0 8px;
+        margin: 2px;
     }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt, .event
+    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt, .event,
     .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto, .process_amber_foto,
     .process_felt_foto, .process_pen_foto, .random, .process_ethnic_foto {
         width: 100%;
@@ -1098,7 +1035,7 @@ h4{margin-bottom: 6px;
         padding: 0;
         text-align: center;
     }
-    .imag_txt {font-size: 11px;
+    .img_txt {font-size: 11px;
     }
     #scroll_up {background: url("../img/icon_575.jpg");
         width: 30px;
@@ -1228,7 +1165,7 @@ h4{margin-bottom: 6px;
         padding: 0;
         text-align: center;
     }
-    .imag_txt {font-size: 11px;}
+    .img_txt {font-size: 11px;}
     #scroll_up {width: 33px;
         height: 33px;
         background: url("../img/icon-mobile.jpg");
