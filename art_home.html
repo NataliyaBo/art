@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>art_home</title>
+    <meta name="keywords" content="hand made, ручная работа, ручной работы, своими руками, кандзаси своими руками, канзаши своими руками,
+ заколки своими руками, украшения своими руками, брош своими руками, этноукрашения, этнические украшения своими руками
+ подарок своими руками, хендмейд подарки"/>
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/art.css" type="text/css">
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -14,6 +17,9 @@
     <header class="header">
         <div class="header_name"><a href="art_home.html"><h1>Кукуся ART</h1></a></div>
         <div class="header_text txt_1"><h6 class="h_txt">Творчетсво заразительно, распространяйте его. А. Эйнштейн</h6></div>
+        <div id="burger">
+            <span></span>
+        </div>
         <nav class="drop_menu menu_brg">
             <ul class="d_menu">
                 <li class="dd_menu"><a href="art_home.html">Главная</a></li>
@@ -60,32 +66,28 @@
                 </li>
             </ul>
         </nav>
-        <div id="burger">
-            <span></span>
-        </div>
+
     </header>
     <section class="vertical_section">
-        <!--div id="afisha">
-            <div class=afisha>
-                <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
-                <a href="" target="_blank"><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a>
-            </div>
-        </div-->
         <div id="afisha">
             <div class="afisha">
-                <img src="img/novosti2_48x48.png" class="foto_icons" alt="#">
-                <div class="cartoon">
-                    <!--a href="" target="_blank"><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a-->
-                    <a href="" target="_blank"><img src="img/img_1.jpg" alt="#" class="af_foto"/></a>
-                    <a href="" target="_blank"><img src="img/img_2.jpg" alt="#" class="af_foto"/></a>
-                    <a href="" target="_blank"><img src="img/img_3.jpg" alt="#" class="af_foto"/></a>
-                </div>
+                <img src="img/novosti2_48x48.png" class="foto_icons" alt="#"/>
+                    <div class="carousel-container">
+                        <div class="carousel">
+                <!--a href="" target=""><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a-->
+                    <div class="af-one"><a href="https://vk.com/tvoyapolka_msk" target="_blank"><img src="img/tvoyapolka.jpg" alt="#" class="af_foto"/></a></div>
+                    <div class="af-two"><a href="https://vk.com/localceramics" target="_blank"><img src="img/localceramicsfest.jpg" alt="#" class="af_foto"/></a></div>
+                    <div class="af-three"><a href="https://vk.com/artflectionevent" target="_blank"><img src="img/artflection.jpg" alt="#" class="af_foto"/></a></div>
+                        </div>
+                    </div>
             </div>
         </div>
         <div id="ads">
             <div class="ads">
                 <img src="img/obyava_48x48.png" class="foto_icons" alt="#">
-                <img src="img/afisha_1.jpg" alt="#" class="af_foto"/>
+                <div class="wrap">
+                    <a><img src="img/afisha_1.jpg" alt="#" class="af_foto"/></a>
+                </div>
             </div>
         </div>
     </section>

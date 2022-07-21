@@ -1,19 +1,19 @@
 @font-face {
     font-family: Roboto;
-    src: url(font/Roboto-Regular.ttf) format("truetype"),
-    /*url(font/Roboto-Bold.ttf) format("truetype"),*/
-    url(font/Roboto-ThinItalic.ttf) format("truetype"),
-    url(font/Roboto-BoldItalic.ttf) format("truetype"),
-    url(font/Roboto-BlackItalic.ttf) format("truetype"),
-    url(font/Roboto-Italic.ttf) format("truetype");
+    src: url(font/roboto-regular.ttf) format("truetype"),
+    url(font/roboto-bolditalic.ttf) format("truetype"),
+    url(font/roboto-blackitalic.ttf) format("truetype"),
+    url(font/roboto-medium.ttf) format("truetype"),
+    url(font/roboto-mediumitalic.ttf) format("truetype")
+;
 }
 @font-face {
     font-family: Parabola;
-    src: url(font/Parabola.ttf) format("truetype");
+    src: url(font/parabola.ttf) format("truetype");
 }
 *{ margin: 0;
     padding: 0;
-    font-family: Roboto, Parabola;
+    font-family: Roboto /*Parabola*/;
 }
 html, body{height: auto;
     line-height: 1.3;
@@ -101,12 +101,12 @@ html, body{height: auto;
 section{grid-area: ls;
     position: fixed;
 }
-#accordion{}
+/*#accordion{}*/
                                                                                              /* боковое меню */
 .vertical_section{float: left;
     margin: 102px 16px 18px 44px;
 }
-.afisha, .ads{margin: 64px 0 0 2px;
+.afisha, .ads{margin: 64px 0 0 0;
     background-image: url("../img/background_7_sm.jpg");
     border-radius: 3px;
     width: 190px;
@@ -114,40 +114,44 @@ section{grid-area: ls;
 }
 .af_foto{width: 160px;
     height: 160px;
-    padding: 0 0 0 15px;
-    margin: -2px 0 0 0;
+    border-radius: 3px;
 }
 .foto_icons{width: 40px;
     height: 40px;
 }
-                                                                                             /* ротация картинок */
-.cartoon {position: relative;
-    width: auto;
+.wrap{width: 160px;
+    height: 160px;
+    margin: 0 0 2px 15px;
 }
-.cartoon a{position: absolute;
-    opacity: 0;
-    animation-name: cartoon;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
-.cartoon a:nth-child(1) {animation-delay: 0s;}
-.cartoon a:nth-child(2) {animation-delay: 4s;}
-.cartoon a:nth-child(3) {animation-delay: 6s;}
 
-@keyframes cartoon {
-    0%{opacity: 0;}
-    25%{opacity: 1;}
-    50%{opacity: 1;}
-    75%{opacity: 0;}
-    100%{opacity: 0;}
+                                                                                             /* ротация картинок */
+.carousel-container{width: 160px;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 0 2px 15px;
+    border-radius: 2px;
+}
+.carousel{display: flex;
+    animation: sliding 12s infinite;
+}
+.af-one, .af-two, .af-three {width: 160px;
+    height: 160px;
+}
+@keyframes sliding {
+    30% {transform: translateX(0px);}
+    35% {transform: translateX(-140px);}
+    65% {transform: translateX(-160px);}
+    70% {transform: translateX(-295px);}
+    98% {transform: translateX(-320px);}
+    100% {transform: translateX(0);}
 }
                                                                                                           /* контент */
-.content{float: right;
+.content{grid-area: cnt;
+    float: right;
     border-radius: 3px;
     margin-top: 28px;
     margin-left: 20px;
     margin-bottom: 18px;
-    grid-area: cnt;
     min-height: 675px;  /* значение установлено, что бы не ползло верхнее меню при мин-контенте на странице */
 }
 .content_box{margin-left: 16px;
@@ -268,6 +272,7 @@ ul li{list-style: none;
 }
 h4{margin-bottom: 6px;
 }
+
 /**********************************************************************************************************************/
                                                                                                      /* МЕДИА ЗАПРОСЫ */
                                                                        /**************** 991 **************/
@@ -758,8 +763,8 @@ h4{margin-bottom: 6px;
         font-size: 14px;
     }
 }
-                                                                 /***************** 412 / 424 ****************/
-@media screen and (min-width: 410px) and (max-width: 424px){
+                                                                 /***************** 410 / 424 ****************/
+@media screen and (min-width: 410px) and (max-width: 424.90px){
     .container {grid-template-areas:
                 "hd"
                 "ls"
@@ -769,78 +774,91 @@ h4{margin-bottom: 6px;
         grid-template-rows: auto;
         width: auto;
     }
-    .header{height: 78px;}
-    .header_name {width: 120px;
-        margin: 38px 0 0 10px;
+    .header {height: 80px;
+        position: sticky;
     }
-    .header_name h1 {font-size: 18px;}
-
-    .txt_1 {margin: -51px 8px 0 24px;
+    .header_name {/*width: 114px;*/
+        margin: 2px 0 0 16px;
     }
-    .txt_3{margin: -20px 88px 0 0;
+    .header_name h1 {/*font-size: 21px;*/
+        /*padding-left: 4px;*/
     }
-    .h_txt{font-size: 12px;}
-    .txt_2, .txt_4{display: none;}
-    .drop_menu{display: none;
-        background: #fcfcfc;
-        border-radius: 3px;
-        margin-top: 72px;
-        box-shadow: 0 10px 20px rgb(250, 209, 182);
+    .txt_1{margin: 56px 0 0 18px;
+        width: 294px;
     }
-    .dd_menu{margin: 8px 72px;
-    }
-    .sub_dd_menu{margin: 0 0 0 -32px;
-        padding: 0 1px;
-    }
-    .sub_dd_menu li a{padding: 4px 32px;}
-    #burger {/*display: block;*/
-        position: absolute;
-        width: 28px;
-        height: 19px;
-        margin-top: 48px;
-        margin-left: 363px;
-    }
-    #burger span {position: absolute;
-        background-color: black;
-        width: 100%;
-        height: 3px;
-        top: 8px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {content: "";
-        background-color: black;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-    }
-    #burger:before {top: 0;}
-    #burger:after {bottom: 0;}
-    .menu_brg {display: none;
-        margin: 78px 0 0 0;
-        /*position: absolute;*/
-        /*width: min-content;*/
-    }
-    section {/*margin: 100px 0 10px 0;*/
-    }
-    .vertical_section {margin: 0;
-        position: static;
-        text-align: center;
-    }
-    .afisha{/*display: none;*/
-    }
-    .afisha {display: inline-block;
-        height: 120px;
-        width: 130px;
-        margin-top: 12px;
-        /*margin: 6px 6px 6px 44px ;*/
+    .h_txt{font-size: 14px;
     }
     .foto_icons{height: 28px;
         width: 28px;
     }
-    .af_foto {height: 90px;
-        width: 90px;
-        padding: 0 0 0 16px;
-        margin: -11px 0 0 16px;
+    .drop_menu{/*display: none;*/
+        /*background: #fcfcfc;*/
+        border-radius: 3px;
+        /*margin-top: 72px;*/
+        box-shadow: 0 10px 20px rgb(250, 209, 182);
+    }
+    .dd_menu{margin: 8px 74px;
+    }
+    .sub_dd_menu{margin: 0 0 0 -32px;
+    }
+    .sub_dd_menu li{height: 26px;}
+    .sub_dd_menu li a{padding: 4px 32px;}
+    .menu_brg {display: none;
+        margin: 8px 0 0 0;
+    }
+    #burger {display: inline-block;
+        position: relative;
+        width: 41px;
+        height: 25px;
+        float: right;
+        margin-top: -27px;
+        margin-right: 27px;
+    }
+    #burger span {position: absolute;
+        background-color: black;
+        width: 40px;
+        height: 4px;
+        top: 10px;
+        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    }
+    #burger:before, #burger:after {content: "";
+        position: absolute;
+        background-color: black;
+        width: 40px;
+        height: 4px;
+        top: 20px;
+    }
+    #burger:before {top: 0;}
+    #burger:after {bottom: 0;}
+    section {position: static;}
+    .vertical_section {margin: 4px 0;
+    }
+    #afisha, #ads, #info_vk, #info_tlg {display: inline-block;
+        width: 38px;
+        height: 38px;
+        margin: 0 16px 0 20px;
+        float: left;
+        /*border-radius: 3px;*/
+    }
+    #afisha{background-image: url("../img/novosti_38x38.png");}
+    #ads{background-image: url("../img/obyava_38x38.png");}
+    .afisha, .ads{display: none;
+        /*margin: 48px 0 0 0;*/
+        background: none;
+    }
+    .foto_icons{display: none;
+        height: 28px;
+        width: 28px;
+    }
+    .af_foto {position: relative;
+        width: 160px;
+        height: 160px;
+        /*margin: -0.4px;*/
+        border-radius: 3px;
+        /*border: 1.8px solid #fad1b6;*/
+    }
+    .carousel-container, .wrap{box-shadow: 0 10px 35px rgb(250, 209, 182);
+        margin: 0;
     }
     .content {display: inline-block;
         margin: 4px 10px 0 10px;
@@ -848,11 +866,9 @@ h4{margin-bottom: 6px;
     .content_box {margin-left: 0;
         padding: 10px 10px 10px 10px;
     }
-    figure {margin: 0 22px;
+    figure {/*margin: 0 22px;*/
         padding: 0 10px;
     }
-    /*figure img {margin-bottom: 16px;
-    }*/
     p {padding-bottom: 8px;
         font-size: 15px;
     }
@@ -894,7 +910,7 @@ h4{margin-bottom: 6px;
         font-size: 18px;
     }
     .footer_info {width: auto;
-        margin: 0px 0 0 0;
+        margin: 6px 0 0 0;
     }
     .footer_info_f, .footer_info_e, .footer_info_i {/*margin: -7px 10px 0 0;*/
         /*margin-right: 8px;*/
@@ -903,7 +919,7 @@ h4{margin-bottom: 6px;
     }
 }
                                                                     /**************** 375 / 410 *******************/
-@media screen and (min-width: 375px) and (max-width: 410px){
+@media screen and (min-width: 375px) and (max-width: 409.90px){
     .container {grid-template-areas:
                 "hd"
                 "ls"
@@ -913,24 +929,24 @@ h4{margin-bottom: 6px;
         grid-template-rows: auto;
         width: auto;
     }
-    .header {height: 68px;
+    .header {height: 80px;
         position: sticky;
     }
-    .header_name {width: 114px;
-        margin: 9px 0 0 16px;
+    .header_name {width: max-content;
+        margin: 2px 0 0 18px;
     }
-    .header_name h1 {font-size: 21px;
+    .header_name h1 {/*font-size: 21px;*/
         /*padding-left: 4px;*/
     }
-    .txt_1{margin: 42px 0 0 30px;
+    .txt_1{margin: 56px 0 0 18px;
         width: 294px;
     }
     .h_txt{font-size: 14px;
     }
-    .drop_menu{display: none;
-        background: #fcfcfc;
+    .drop_menu{/*display: none;*/
+        /*background: #fcfcfc;*/
         border-radius: 3px;
-        margin-top: 72px;
+        /*margin-top: 72px;*/
         box-shadow: 0 10px 20px rgb(250, 209, 182);
     }
     .dd_menu{margin: 8px 74px;
@@ -939,6 +955,33 @@ h4{margin-bottom: 6px;
     }
     .sub_dd_menu li{height: 26px;}
     .sub_dd_menu li a{padding: 4px 32px;}
+    .menu_brg {display: none;
+        margin: 8px 0 0 0;
+    }
+    #burger {display: inline-block;
+        position: relative;
+        width: 41px;
+        height: 25px;
+        float: right;
+        margin-top: -27px;
+        margin-right: 14px;
+    }
+    #burger span {position: absolute;
+        background-color: black;
+        width: 40px;
+        height: 4px;
+        top: 10px;
+        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    }
+    #burger:before, #burger:after {content: "";
+        position: absolute;
+        background-color: black;
+        width: 40px;
+        height: 4px;
+        top: 20px;
+    }
+    #burger:before {top: 0;}
+    #burger:after {bottom: 0;}
     section{position: static;}
     .vertical_section {margin: 4px 0;
         /*border: blue 1px;*/
@@ -946,7 +989,7 @@ h4{margin-bottom: 6px;
     #afisha, #ads, #info_vk, #info_tlg {display: inline-block;
         width: 38px;
         height: 38px;
-        margin: 0 12px 0 20px;
+        margin: 0 16px 0 20px;
         float: left;
         border-radius: 3px;
         /*border: 1px solid #fad1b6;*/
@@ -956,52 +999,23 @@ h4{margin-bottom: 6px;
     .afisha, .ads{display: none;
         width: auto;
         height: auto;
-        margin: 40px 0 0 0;
+        /*margin: 40px 0 0 0;*/
         background: none;
     }
     .foto_icons{display: none;
         height: 28px;
         width: 28px;
     }
-    .af_foto {position: absolute;
-        height: auto;
-        width: auto;
-        padding: 0;
-        margin: 0;
+    .af_foto {position: relative;
+        width: 160px;
+        height: 160px;
+        /*margin: -0.4px;*/
         border-radius: 3px;
-        border: 1px solid #fad1b6;
+        /*border: 1.8px solid #fad1b6;*/
     }
-    .menu_brg {display: none;
-        margin: 12px 0 0 0;
+    .carousel-container, .wrap{box-shadow: 0 10px 35px rgb(250, 209, 182);
+        margin: 0;
     }
-    /*.mobile_burger{position: static;
-        width: 38px;
-        height: 38px;
-        margin-left: 200px;
-    }*/
-    #burger {display: inline-block;
-        position: absolute;
-        width: 34px;
-        height: 24px;
-        margin-top: -36px;
-        margin-left: 330px;
-        /*margin: 6px 12px 0 182px;*/
-    }
-    #burger span {position: absolute;
-        background-color: black;
-        width: 100%;
-        height: 4px;
-        top: 10px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {content: "";
-        position: absolute;
-        background-color: black;
-        width: 100%;
-        height: 4px;
-    }
-    #burger:before {top: 0;}
-    #burger:after {bottom: 0;}
     .content {display: inline-block;
         margin: 4px 10px 6px 10px;
     }
