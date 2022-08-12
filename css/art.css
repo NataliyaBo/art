@@ -29,7 +29,6 @@ html, body{height: auto;
     grid-template-columns: 0.8fr 1fr 1fr 1fr;
     grid-template-rows: 120px 1fr 100px;
 }
-
                                                                                                             /* шапка */
 .header{grid-area: hd;
     height: auto;
@@ -54,18 +53,18 @@ html, body{height: auto;
             0 0 4px black, 0 0 4px black;
 }
 .header_name a:hover{text-decoration: none;}
-.header_text{}
 .txt_1{margin: 18px 0 0 360px;
-    width: 600px;
+    width: auto;
 }
 .h_txt{font: 26px Parabola;
     color: black;
     text-shadow: 0 0 .5px darkorange;
-
 }
                                                                                                       /* меню */
-.drop_menu{margin: 17px 0 0 643px;
-    position: absolute;
+.drop_menu{/*margin: 17px 0 0 643px;*/
+    /*position: absolute;*/
+    float: right;
+    margin-top: 14px;
     background: #fcfcfc;
 }
 .d_menu{position: relative;
@@ -79,7 +78,7 @@ html, body{height: auto;
 }
 .sub_dd_menu{display: none;
     background: #fcfcfc;
-    border: 1px solid #c5c5c5;
+    border: 1px solid #d7d7d7;
     border-radius: 3px;
     margin-left: -19px;
     margin-top: 9px;
@@ -89,62 +88,108 @@ html, body{height: auto;
 }
 .sub_dd_menu li a{padding: 4px 10px;
 }
-.drop_menu ul li a{
-}
 .drop_menu ul li ul{position: absolute;
 }
 .drop_menu ul li:hover ul{display: block;
 }
 .yarm, .go{margin-left: 5px}
 
-                                                                                      /* боковое меню/ боковая секция */
+                                                                                      /* левая секция */
 section{grid-area: ls;
     position: fixed;
 }
-/*#accordion{}*/
-                                                                                             /* боковое меню */
-.vertical_section{float: left;
-    margin: 102px 16px 18px 44px;
+.left_section{margin: 122px 48px;
 }
-.afisha, .ads{margin: 64px 0 0 0;
-    background-image: url("../img/background_7_sm.jpg");
-    border-radius: 3px;
-    width: 190px;
-    height: 210px;
-}
-.af_foto{width: 160px;
-    height: 160px;
-    border-radius: 3px;
-}
-.foto_icons{width: 40px;
-    height: 40px;
-}
-.wrap{width: 160px;
-    height: 160px;
-    margin: 0 0 2px 15px;
-}
-
-                                                                                             /* ротация картинок */
-.carousel-container{width: 160px;
-    height: 160px;
-    overflow: hidden;
-    margin: 0 0 2px 15px;
+.af_foto{width: 200px;
+    height: 200px;
     border-radius: 2px;
 }
-.carousel{display: flex;
-    animation: sliding 12s infinite;
+                                                                                       /* ротация картинок */
+.slider-container{background: #ffff;
+    border: 2px solid #eaeaea;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 10px 20px rgb(250, 209, 182);
+    margin: 40px auto 0;
+    border-radius: 2px;
 }
-.af-one, .af-two, .af-three {width: 160px;
-    height: 160px;
+.slider-content{width: 100%;
+    height: 200px;
 }
-@keyframes sliding {
-    30% {transform: translateX(0px);}
-    35% {transform: translateX(-140px);}
-    65% {transform: translateX(-160px);}
-    70% {transform: translateX(-295px);}
-    98% {transform: translateX(-320px);}
-    100% {transform: translateX(0);}
+.slider{background: #ffff;
+    height: 200px;
+    width: 200px;
+    overflow: visible;
+    position: relative;
 }
+.mask{overflow: hidden;
+    height: 200px;
+}
+.slider ul{margin: 0;
+    padding: 0;
+    position: relative;
+}
+.slider li{width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -200px;
+    list-style: none;
+}
+.slider li.firstanimation{animation: cycle 15s linear infinite;}
+.slider li.secondanimation{animation: cycletwo 15s linear infinite;}
+.slider li.thirdanimation{animation: cyclethree 15s linear infinite;}
+
+@keyframes cycle {
+    0% {top:0;}                                        /* фото стационарно */
+    7% {top: 0;}                                     /* старт */
+    28% {top: 0; opacity: 1; z-index: 0;}            /* 3 сек - фото видно */
+    35% {top: 160px; opacity: 0; z-index: 0;}         /* 1 сек - выход фото из видимости */
+    36% {top: -160px; opacity: 0; z-index: -1;}       /* 1% уход фото за маску */
+    86% {top: 160px; opacity: 0; z-index: 0;}         /* проход за маской */
+    93% {top: -160px; opacity:0;}                     /* 1с - вход в видимость */
+    100% {top: 0; opacity: 1;}                        /* нчало нового цикла */
+}
+@keyframes cycletwo {
+    0% {top: -160px; opacity: 0;}                      /* исодная позиция за маской */
+    28% {top: -160px; opacity: 0;}                     /* начало движения */
+    35% {top: 0; opacity: 1;}                         /* фото стационарно */
+    42% {top: 0; opacity: 1;}                        /* 1 сек - вход */
+    63% {top: 0; opacity: 1; z-index: 0;}            /* 3сек - фото видно */
+    70% {top: 160px; opacity: 0; z-index: 0}         /* 1сек - выход */
+    71% {top: -160px; opacity: 0; z-index: -1;}      /* 1% возврат за маску */
+    100% {top: -160px; opacity: 0; z-index: -1;}    /* проход за маской */
+}
+@keyframes cyclethree {
+    0% {top: -160px; opacity: 0;}                    /* исходная за маской */
+    63% {top: -160px; opacity: 0;}                    /* начало движения */
+    70% {top: 0; opacity: 1;}                       /* 1 сек - вход */
+    91% {top: 0; opacity: 1;}                        /* 3сек фото видно */
+    100% {top: 160px; opacity: 0; z-index: 0;}
+}
+.progress-bar{position: relative;
+    top: -5px;
+    width: 200px;
+    height: 5px;
+    background: #f6ad7b;
+    animation: fullexpand 15s ease-out infinite;
+}
+@keyframes fullexpand {
+    0%, 35%, 100% {width: 100%; opacity: 0;}  /* анимация стационарна*/
+    7%, 42%, 70% {width: 100%; opacity: 0.3;}         /* анимация оживает */
+    28%, 63%, 91% {width: 100%; opacity: 0.7;}       /* плавное заполнение */
+    29%, 64%, 92% {width: 100%; opacity: 0.3;}       /*индикатор завершает путь */
+    30%, 65%, 93% {width: 100%; opacity: 0;}         /* индикатор исчезает и начинает новый цикл */
+}
+.slider:hover li, .slider:hover .progress-bar{animation-play-state: paused;}
+.ads{background: #ffff;
+    border: 2px solid #eaeaea;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 10px 20px rgb(250, 209, 182);
+    margin: 40px auto 0;
+    border-radius: 2px;
+}
+.mobile-slider-container{display: none;}
                                                                                                           /* контент */
 .content{grid-area: cnt;
     float: right;
@@ -154,6 +199,8 @@ section{grid-area: ls;
     margin-bottom: 18px;
     min-height: 675px;  /* значение установлено, что бы не ползло верхнее меню при мин-контенте на странице */
 }
+.mob{display: none;}
+.section{display: none;}
 .content_box{margin-left: 16px;
 }
 .thematic_text{margin: 0 0 14px 0;
@@ -203,7 +250,6 @@ span{color: blue}
     height: 230px;
     border-radius: 3px;
 }
-
                                                                                                     /* кнопка наверх */
 #scroll_up{display: none;
     position: fixed;
@@ -217,7 +263,7 @@ span{color: blue}
     overflow: auto;
     box-shadow:2px 2px 2px 2px rgb(228, 228, 228);
 }
-
+.mobile-slider-container{display: none;}
                                                                                                             /* подвал */
 .footer_panel{background: #f5f5f5;
     width: 100%;          /*! не соответсвует ширине контейнера*/
@@ -275,514 +321,23 @@ h4{margin-bottom: 6px;
 
 /**********************************************************************************************************************/
                                                                                                      /* МЕДИА ЗАПРОСЫ */
-                                                                       /**************** 991 **************/
-/*@media all and (min-width: 991px) and (max-width: 1080px){
-    .container {grid-template-areas:
-                "hd hd hd"
-                "ls cnt cnt"
-                "ftr ftr ftr";
-        grid-template-columns: 0.5fr 1fr 1fr;
-        width: 100%;
-        font-size: 15px;
-    }
-    .header{height: auto;
-        width: auto;
-        position: fixed;
-        background-image: url("../img/background_1d1.png");
-    }
-    .header_name{margin: 50px 0 0 30px;
-    }
-    .drop_menu{margin: -36px 10px 0 280px;
-        width: max-content;
-    }
-    .vertical_menu{margin: 100px 0 0 48px;
-    }
-    .afisha {margin-top: 52px;
-        background-image: url("../img/background_7_sm.jpg");
-        border-radius: 3px;
-        height: 170px;
-        width: 160px;
-        position: sticky;
-    }
-    .af_foto {height: 130px;
-        width: 130px;
-        margin: -13px 0 0 7px;
-        padding: 6px 6px 4px 4px;
-    }
-    .content {margin-top: 128px;
-    }
-    .content_box {
-        margin: 0 0 0 16px;
-    }
-    .home_foto{width: 450px;
-        height: 450px;
-    }
-    figure{margin: 12px 0;
-    }
-    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
-    .random, .process_ethnic_foto{
-        width: 220px;
-        height: 220px;
-        margin: 0 14px 16px 0;
-    }
-    .box{width: 18%;
-        height: 210px;
-        margin: 6px 0 6px 10px;
-        padding: 0;
-    }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt{
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-    .box p{padding: 0;
-        text-align: center;
-    }
-    p{font-size: 16px;}
-}
-.imag_txt{font-size: 12px;
-}
-.footer_panel{
-}
-.footer_home{margin: 25px 0 0 12px;
-    padding: 0;
-    width: auto;
-}
-.footer_info{margin: 22px 0 20px 0;
-    padding: 3px 0 0 0;
-}
-.footer_info_f, .footer_info_e, .footer_info_i{margin: 0 10px 0 0;
-    padding: 0;
-}
-.footer_info_i{
-    margin: -8px 8px 8px 8px;
-}*/
-
-                                                                /**************** 1280 ***********************/
-/*@media screen {
-}*/
-
-                                                             /****************** 768/991 ***********************/
-/*@media screen and  (min-width: 768px) and (max-width: 991px) {
-    .container {
-        grid-template-areas:
-                "hd hd"
-                "ls cnt"
-                "ftr ftr";
-        grid-template-columns: 0.3fr 1fr;
-        width: 100%;
-    }
-    .header {height: auto;
-        width: 100%;
-        position: fixed;
-    }
-    .header_name {width: 210px;
-        margin: 38px 0 10px 10px;
-    }
-    .header_name h1{padding-bottom: 8px
-    }
-    .txt_1{float: left;
-        margin: 4px 0 0 -194px;
-    }
-    .txt_2{float: left;
-        margin: 4px 0 0 2px;
-    }
-    .txt_3{float: right;
-        margin: 4px 174px 0 12px;
-    }
-    .txt_4{float: right;
-        margin: -72px 78px 0 356px;
-    }
-    .drop_menu {
-        display: none;
-        background: #fcfcfc;
-        border-radius: 3px;
-        margin: 138px 0 0 4px;
-        box-shadow: 0 10px 20px rgb(250, 209, 182);
-    }
-    .dd_menu{margin: 8px 110px;
-    }
-    .sub_dd_menu{margin: 0 0 0 -38px;
-        padding: 0 6px;
-    }
-    .sub_dd_menu li a{padding: 4px 40px}
-    #burger {
-        display: block;
-        position: absolute;
-        width: 36px;
-        height: 26px;
-        margin-top: 62px;
-        margin-left: 710px;
-    }
-    *#burger span {
-        position: absolute;
-        background-color: black;
-        width: 100%;
-        height: 4px;
-        top: 8px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {
-        content: "";
-        background-color: black;
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        margin: -2px 0 4px 0;
-    }
-    #burger:before {
-        top: 0;
-        box-shadow: 0 0 2px 2px rgb(255, 255, 255);
-    }
-    #burger:after {
-        bottom: 0;
-        box-shadow: 0 0 2px 2px rgb(255, 255, 255);
-    }
-    .menu_brg {display: none;
-        margin: 97px 0 0 240px;
-    }
-    .vertical_section{margin: 102px 0 0 12px;
-    }
-    .afisha {margin-top: 60px;
-        background-image: url("../img/background_7_sm.jpg");
-        border-radius: 3px;
-        height: 160px;
-        width: 150px;
-        position: sticky;
-    }
-    .foto_icons{height: 30px;
-        width: 30px;
-    }
-    .af_foto {height: 120px;
-        width: 120px;
-    }
-    .content {
-    }
-    .content, .content_box, .home_foto {
-    }
-    .content_box {
-        margin: 10px 0 0 26px;
-    }
-    figure {
-        margin: 10px 0;
-    }
-    figure img {
-        margin-bottom: 16px;
-    }
-    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
-    .random, .process_ethnic_foto {
-        width: 150px;
-        height: 150px;
-        margin: 0 12px 16px 0;
-    }
-    .box {
-        width: 28%;
-        height: 210px;
-        margin: 10px 0 0 16px;
-        padding: 0;
-    }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-    .box p {padding: 0;
-        text-align: center;
-    }
-    p {font-size: 16px;}
-
-    .imag_txt {font-size: 12px;}
-
-    #scroll_up {width: 35px;
-        height: 35px;
-        background: url("../img/icon-mobile.jpg");
-    }
-    .footer_panel{width: auto;}
-    .footer_home {
-        margin: 25px 0 0 12px;
-        padding: 0;
-        width: auto;
-    }
-    .footer_info {
-        margin: 22px 0 20px 0;
-        padding: 3px 0 0 0;
-    }
-    .footer_info_f, .footer_info_e, .footer_info_i {
-        padding: 0;
-    }
-    .footer_info_i {
-        margin: -8px 12px 8px 8px;
-    }
-}*/
-                                                              /********************** 575 / 767 *********************/
-/*@media screen and (min-width: 575px) and (max-width: 767px){
-    .container {grid-template-areas:
-                "hd hd"
-                "ls cnt"
-                "cnt cnt"
-                "ftr ftr";
-        grid-template-columns: 0.3fr 1fr;
-        width: 100%;
-    }
-    .header {;
-    }
-    .header_name {width: 162px;
-        margin: 39px 0 0 16px;
-    }
-    .header_name h1 {width: 160px;
-        padding-left: 4px;
-    }
-    .txt_1 {margin: -68px 8px 0 30px;
-    }
-    .txt_2{margin: -10px 0 0 214px;}
-    .txt_3{margin: -50px 132px 0 0;
-    }
-    .h_txt{font-size: 16px;}
-    .txt_4{display: none;}
-    .drop_menu {display: none;
-        background: #fcfcfc;
-        border-radius: 3px;
-        margin: 138px 0 0 4px;
-        box-shadow: 0 10px 20px rgb(250, 209, 182);
-    }
-    .dd_menu{margin: 02px 72px;
-    }
-    .sub_dd_menu{margin: 0 0 0 -38px;
-        padding: 0 6px;
-    }
-    .sub_dd_menu li a{padding: 4px 32px}
-    #burger {display: block;
-        position: relative;
-        width: 36px;
-        height: 22px;
-        float: right;
-        margin: -28px 20px 0 0 ;
-    }
-    #burger span {position: absolute;
-        background-color: black;
-        width: 100%;
-        height: 3px;
-        top: 9px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {content: "";
-        background-color: black;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-    }
-    #burger:before {top: 0;}
-    #burger:after {bottom: 0;}
-    .menu_brg {display: none;
-        margin: 99px 0 0 164px;
-    }
-    section{}
-    .vertical_section{margin: 101px 8px 0 12px;}
-    .afisha{background-image: url("../img/background_7_sm.jpg");
-        margin: 30px 0 0 0;
-        padding: 6px 0;
-        border-radius: 3px;
-        height: 120px;
-        width: 110px;
-    }
-    .foto_icons{height: 30px;
-        width: 30px;
-        margin-top: -5px;
-    }
-    .af_foto {height: 94px;
-        width: 94px;
-        padding: 0 0 0 8px;
-    }
-    .content{margin: 10px 8px 0 18px;
-    }
-    .content_box{padding: 0 8px 0 14px;
-        margin: 0;
-    }
-    .content p{}
-    #scroll_up{background-image: url("../img/icon_575.jpg");
-        width: 30px;
-        height: 30px;
-        margin-right: -10px;
-    }
-    p{font-size: 15px}
-    .imag_txt {font-size: 11px;}
-
-    .footer_panel {width: auto;
-     position: sticky;
-    }
-    .footer_home {
-        margin: 38px 0 0 12px;
-        padding: 0;
-        width: auto;
-    }
-    .footer_info {width: auto;
-        margin: 39px 0 0 0;
-    }
-    .footer_info_f, .footer_info_e, .footer_info_i {
-        padding: 0;
-    }
-    .footer_info_i {
-        margin: -3px 18px 0 0;
-    }
-}*/
-                                                                   /*************** 425 / 574.99 *****************/
-@media screen and (min-width: 425px) and (max-width: 574px) {
+                                                               /***************** до 480px *********************/
+@media all and (max-width: 480px) {
     .container {grid-template-areas:
                 "hd"
-                "ls"
                 "cnt"
+                "ls"
                 "ftr";
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        width: auto;
-    }
-    .header{height: 78px;}
-    .header_name {width: 120px;
-        margin: 38px 0 0 10px;
-    }
-    .header_name h1 {font-size: 18px;}
-
-    .txt_1 {margin: -51px 8px 0 24px;
-    }
-    .txt_3{margin: -20px 88px 0 0;
-    }
-    .h_txt{font-size: 12px;}
-    .txt_2, .txt_4{display: none;}
-    .drop_menu {display: none;
-        background: #fcfcfc;
-        border-radius: 3px;
-        margin-top: 72px;
-        box-shadow: 0 10px 20px rgb(250, 209, 182);
-    }
-    .dd_menu{margin: 8px 76px;
-    }
-    .sub_dd_menu{margin: 0 0 0 -38px;
-        padding: 0 6px;
-    }
-    .sub_dd_menu li a{padding: 4px 32px;}
-    #burger {display: block;
-        position: absolute;
-        width: 30px;
-        height: 20px;
-        margin-top: 46px;
-        margin-left: 380px;
-    }
-    #burger span {position: absolute;
-        background-color: black;
-        /*left: 0;*/
         width: 100%;
-        height: 3px;
-        top: 8.4px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {content: "";
-        background-color: black;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-    }
-    #burger:before {top: 0;}
-
-    #burger:after {bottom: 0;}
-    .menu_brg {display: none;
-        margin: 60px 0 0 0;
-        /*position: absolute;*/
-        /*width: min-content;*/
-    }
-    section {
-      }
-    .vertical_section {margin: 12px 0 0 0;
-        position: static;
-    }
-    .afisha {display: inline-block;
-        height: 100px;
-        width: 110px;
-        margin: 0 6px 0 12px ;
-    }
-    .foto_icons{height: 26px;
-        width: 26px;
-        margin-bottom: 77px;
-    }
-    .af_foto {height: 80px;
-        width: 80px;
-        margin: 17px 0 0 -14px;
-        position: absolute;
-    }
-    .content {margin: 0 8px 0 18px;}
-    .content_box {margin-top: 6px;
-        padding: 10px 8px 0 14px;
-    }
-
-    figure {margin: 8px 20px;}
-    figure img {margin-bottom: 16px;
-    }
-
-    p {padding-bottom: 8px;
-        font-size: 15px;
-    }
-    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
-    .random, .process_ethnic_foto {
-        width: 90%;
-        height: auto;
-        margin: 0 0 16px 0;
-    }
-    .thematic_text {margin-bottom: 6px;}
-    .box {width: 43%;
-        height: 210px;
-        margin: 8px 0;
-        padding: 0 8px;
-    }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-    .box p {margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    .img_txt {font-size: 11px;}
-    #scroll_up{background-image: url("../img/icon_575.jpg");
-        width: 30px;
-        height: 30px;
-        margin-right: -10px;
-    }
-    .footer_panel {width: auto;
-    }
-    .footer_home {margin: 12px 2px 0 6px;
-        width: auto;
-        font-size: 18px;
-    }
-    .footer_info {width: max-content;
-        margin: 42px 0 0 0;}
-    .footer_info_f, .footer_info_e, .footer_info_i {margin: -7px 10px 0 0;
-        padding: 0;
-        font-size: 14px;
-    }
-}
-                                                                 /***************** 410 / 424 ****************/
-@media screen and (min-width: 410px) and (max-width: 424.90px){
-    .container {grid-template-areas:
-                "hd"
-                "ls"
-                "cnt"
-                "ftr";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: auto;
     }
     .header {height: 80px;
-        position: sticky;
+        z-index: 100;
     }
-    .header_name {/*width: 114px;*/
-        margin: 2px 0 0 16px;
+    .header_name {margin: 2px 0 0 16px;
     }
-    .header_name h1 {/*font-size: 21px;*/
-        /*padding-left: 4px;*/
-    }
+    .header_name h1 {}
     .txt_1{margin: 56px 0 0 18px;
         width: 294px;
     }
@@ -791,20 +346,227 @@ h4{margin-bottom: 6px;
     .foto_icons{height: 28px;
         width: 28px;
     }
-    .drop_menu{/*display: none;*/
-        /*background: #fcfcfc;*/
-        border-radius: 3px;
-        /*margin-top: 72px;*/
+    .drop_menu{border-radius: 3px;
         box-shadow: 0 10px 20px rgb(250, 209, 182);
     }
-    .dd_menu{margin: 8px 74px;
+    .dd_menu{margin: 8px 92px;
     }
     .sub_dd_menu{margin: 0 0 0 -32px;
     }
     .sub_dd_menu li{height: 26px;}
     .sub_dd_menu li a{padding: 4px 32px;}
     .menu_brg {display: none;
-        margin: 8px 0 0 0;
+        margin: 10px 10px 0 10px;
+        border: 1px solid #d7d7d7;
+        border-radius: 3px;
+    }
+    #burger {display: inline-block;
+        position: relative;
+        width: 34px;
+        height: 25px;
+        float: right;
+        margin-top: -27px;
+        margin-right: 27px;
+    }
+    #burger span {position: absolute;
+        background-color: black;
+        width: 34px;
+        height: 4px;
+        top: 10px;
+        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    }
+    #burger:before, #burger:after {content: "";
+        position: absolute;
+        background-color: black;
+        width: 34px;
+        height: 4px;
+        top: 20px;
+    }
+    #burger:before {top: 0;}
+    #burger:after {bottom: 0;}
+
+    .mobile-slider-container{display: block;
+        background: #f4f4f4;
+        width: 100%;
+        height: 225px;
+        margin: 10px auto 50px;
+    }
+    .mobile-slider{background: #ffff;
+        border: 2px solid #eaeaea;
+        /*box-shadow: 0 10px 20px rgb(250, 209, 182);*/
+        height: 200px;
+        width: 200px;
+        margin: 10px auto 26px;
+        overflow: visible;
+        position: relative;
+    }
+    .mobile-mask{overflow: hidden;
+        height: 200px;
+    }
+    .mobile-slider ul{margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    .mobile-slider li{width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -202px;
+        list-style: none;
+    }
+    .mobile-slider li.firstanimation{animation: cycle 20s linear infinite;}
+    .mobile-slider li.secondanimation{animation: cycletwo 20s linear infinite;}
+    .mobile-slider li.thirdanimation{animation: cyclethree 20s linear infinite;}
+    .mobile-slider li.fourthanimation{animation: cyclefour 20s linear infinite;}
+
+    @keyframes cycle {
+        0% {top:0;}                                        /* видимост фото при запуске слайдера */
+        5% {top: 0;}                                     /* старт */
+        20% {top: 0; opacity: 1; z-index: 0;}            /* 3 сек - фото видно */
+        25% {top: 200px; opacity: 0; z-index: 0;}         /* 1 сек - выход фото из видимости */
+        26% {top: -200px; opacity: 0; z-index: -1;}       /* уход фото за маску */
+        90% {top: 200px; opacity: 0; z-index: 0;}         /* проход за маской */
+        95% {top: -200px; opacity:0;}                     /* 1с - вход в видимость */
+        100% {top: 0; opacity: 1;}                        /* нчало нового цикла */
+    }
+    @keyframes cycletwo {
+        0% {top: -200px; opacity: 0;}                      /* исодная позиция за маской */
+        20% {top: -200px; opacity: 0;}                     /* начало движения */
+        25% {top: 0; opacity: 1;}                         /*  */
+        40% {top: 0; opacity: 1;}                        /* 1 сек - вход */
+        45% {top: 0; opacity: 1; z-index: 0;}            /* 3сек - фото видно */
+        50% {top: 200px; opacity: 0; z-index: 0}         /* 1сек - выход */
+        51% {top: -200px; opacity: 0; z-index: -1;}      /* возврат за маску */
+        100% {top: -200px; opacity: 0; z-index: -1;}    /* проход за маской */
+    }
+    @keyframes cyclethree {
+        0% {top: -200px; opacity: 0;}                      /* исодная за маской */
+        45% {top: -200px; opacity: 0;}                     /* начало движения */
+        50% {top: 0; opacity: 1;}                          /*  */
+        55% {top: 0; opacity: 1;}                         /* 1сек - вход */
+        70% {top: 0; opacity: 1;}                        /* 3сек - видимость фото */
+        75% {top: 200px; opacity: 0; z-index: 0;}         /* 1сек - выход */
+        76% {top: -200px; opacity: 0; z-index: -1;}        /* возврат за маску */
+        100% {top: -200px; opacity: 0; z-index: -1;}       /* проход за маской */
+    }
+    @keyframes cyclefour {
+        0% {top: -200px; opacity: 0;}                      /* исходная за маской */
+        70% {top: -200px; opacity: 0;}                  /*  */
+        75% {top: 0; opacity: 1;}                        /*  */
+        80% {top: 0; opacity: 1;}                        /*  */
+        95% {top: 0; opacity: 1; z-index:0;}            /* 3сек - видимость */
+        100% {top: 200px; opacity: 0; z-index: 0;}       /*  */
+    }
+    .mobile-progress-bar{position: relative;
+        top: -5px;
+        width: 200px;
+        height: 5px;
+        background: #f6ad7b;
+        animation: fullexpand 20s ease-out infinite;
+    }
+    @keyframes fullexpand {
+        0%, 25%, 50%, 75%, 100%{ width: 0; opacity: 0;} /* ключевые кадры, где анимация стационарна */
+        5%, 20%, 45%, 70% { width: 0; opacity: 0.3;}  /*ключевые кадры, где анимация оживает */
+        20%, 45%, 70%, 95% { width: 100%; opacity: 0.7;} /* плавное заполнение*/
+        21%, 46%, 71%, 96% { width: 100%; opacity: 0.3;} /* ключевые кадры, где индикатор выполнения завершает путь */
+        22%, 47%, 72%, 97% { width: 100%; opacity: 0;} /* ключевые кадры, где индикатор исчезает и вновь начивает цикл */
+    }
+    section {display: none}
+    .content {display: inline-block;
+        margin: 4px 10px 0 10px;
+    }
+    .content_box {margin-left: 0;
+        padding: 10px 10px 10px 10px;
+    }
+    figure {padding: inherit}
+    p {padding-bottom: 8px;
+        font-size: 15px;
+    }
+    .home_foto, .your_foto{
+        width: 100%;
+        height: auto;
+        margin: 0 0 15px 0;
+    }
+    .thematic_text {margin-bottom: 6px;
+    }
+    .box {width: 43%;
+        height: auto;
+        padding: 0 8px;
+    }
+    .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic, .magnets, .felt,
+    .decorated, .material, .tools, .process_clip_foto, .process_felt_foto, .process_pen_foto, .process_more,
+    .event, .doll_foto, .gnom_foto, .process_amber_foto, .process_ethnic_foto, .random, .bag_foto, .pen_foto, .monster_foto{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    .box p {margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .img_txt {font-size: 11px;
+    }
+    #scroll_up {background: url("../img/icon_575.jpg");
+        width: 30px;
+        height: 30px;
+        margin-right: -10px;
+    }
+    .footer_panel{width: auto;
+        height: auto;
+    }
+    .footer_home {margin: 12px 2px 0 6px;
+        width: auto;
+        font-size: 18px;
+    }
+    .footer_info {width: auto;
+        margin: 6px 0 0 0;
+    }
+    .footer_info_f, .footer_info_e, .footer_info_i {
+        padding: 0;
+        font-size: 14px;
+    }
+}
+                                                               /*************** 481px - 767px ****************/
+@media all and (min-width: 481px) and (max-width: 920px) {
+    .container {grid-template-areas:
+                "hd"
+                "ls"
+                "cnt"
+                "ftr";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .header {height: 100px;
+        position: sticky;
+    }
+    .header_name {margin: 4px 0 0 16px;
+    }
+    .header_name h1{}
+    .txt_1{margin: 66px 0 0 18px;
+        width: auto;
+    }
+    .h_txt{font-size: 18px;
+    }
+    .foto_icons{height: 28px;
+        width: 28px;
+    }
+    .drop_menu{border-radius: 3px;
+        box-shadow: 0 10px 20px rgb(250, 209, 182);
+    }
+    .d_menu{font-size: 15px;}
+    .dd_menu{margin: 8px 16px;
+    }
+    .sub_dd_menu{/*margin: 0 0 0 -226px;*/
+    }
+    .sub_dd_menu li{height: 28px;
+    }
+    .sub_dd_menu li a{/*padding: 4px 32px;*/
+    }
+    .menu_brg {display: none;
+        width: 192px;
+        margin-right: 4px;
+        border: 1px solid #d7d7d7;
+        border-radius: 3px;
     }
     #burger {display: inline-block;
         position: relative;
@@ -831,62 +593,30 @@ h4{margin-bottom: 6px;
     #burger:before {top: 0;}
     #burger:after {bottom: 0;}
     section {position: static;}
-    .vertical_section {margin: 4px 0;
-    }
-    #afisha, #ads, #info_vk, #info_tlg {display: inline-block;
-        width: 38px;
-        height: 38px;
-        margin: 0 16px 0 20px;
-        float: left;
-        /*border-radius: 3px;*/
-    }
-    #afisha{background-image: url("../img/novosti_38x38.png");}
-    #ads{background-image: url("../img/obyava_38x38.png");}
-    .afisha, .ads{display: none;
-        /*margin: 48px 0 0 0;*/
-        background: none;
-    }
-    .foto_icons{display: none;
-        height: 28px;
-        width: 28px;
-    }
-    .af_foto {position: relative;
-        width: 160px;
-        height: 160px;
-        /*margin: -0.4px;*/
-        border-radius: 3px;
-        /*border: 1.8px solid #fad1b6;*/
-    }
-    .carousel-container, .wrap{box-shadow: 0 10px 35px rgb(250, 209, 182);
-        margin: 0;
-    }
     .content {display: inline-block;
         margin: 4px 10px 0 10px;
     }
     .content_box {margin-left: 0;
         padding: 10px 10px 10px 10px;
     }
-    figure {/*margin: 0 22px;*/
-        padding: 0 10px;
-    }
     p {padding-bottom: 8px;
         font-size: 15px;
     }
-    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
-    .random, .process_ethnic_foto {
-        width: 80%;
+    figure {}
+    .home_foto, .your_foto{
+        width: 21%;
         height: auto;
-        margin: 0 0 15px 0;
+        margin: 0 6px 15px 6px;
     }
     .thematic_text {margin-bottom: 6px;
     }
-    .box {width: 43%;
-        height: 194px;
-        /*margin: 8px 0;*/
-        padding: 0 8px;
+    .box {width: 21%;
+        height: auto;
+        padding: 0 6px;
     }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {
+    .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic, .magnets, .felt,
+    .decorated, .material, .tools, .process_clip_foto, .process_felt_foto, .process_pen_foto, .process_more,
+    .event, .doll_foto, .gnom_foto, .process_amber_foto, .process_ethnic_foto, .random, .bag_foto, .pen_foto, .monster_foto{
         width: 100%;
         height: auto;
         margin-left: 0;
@@ -912,288 +642,7 @@ h4{margin-bottom: 6px;
     .footer_info {width: auto;
         margin: 6px 0 0 0;
     }
-    .footer_info_f, .footer_info_e, .footer_info_i {/*margin: -7px 10px 0 0;*/
-        /*margin-right: 8px;*/
-        padding: 0;
-        font-size: 14px;
-    }
-}
-                                                                    /**************** 375 / 410 *******************/
-@media screen and (min-width: 375px) and (max-width: 409.90px){
-    .container {grid-template-areas:
-                "hd"
-                "ls"
-                "cnt"
-                "ftr";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: auto;
-    }
-    .header {height: 80px;
-        position: sticky;
-    }
-    .header_name {width: max-content;
-        margin: 2px 0 0 18px;
-    }
-    .header_name h1 {/*font-size: 21px;*/
-        /*padding-left: 4px;*/
-    }
-    .txt_1{margin: 56px 0 0 18px;
-        width: 294px;
-    }
-    .h_txt{font-size: 14px;
-    }
-    .drop_menu{/*display: none;*/
-        /*background: #fcfcfc;*/
-        border-radius: 3px;
-        /*margin-top: 72px;*/
-        box-shadow: 0 10px 20px rgb(250, 209, 182);
-    }
-    .dd_menu{margin: 8px 74px;
-    }
-    .sub_dd_menu{margin: 0 0 0 -32px;
-    }
-    .sub_dd_menu li{height: 26px;}
-    .sub_dd_menu li a{padding: 4px 32px;}
-    .menu_brg {display: none;
-        margin: 8px 0 0 0;
-    }
-    #burger {display: inline-block;
-        position: relative;
-        width: 41px;
-        height: 25px;
-        float: right;
-        margin-top: -27px;
-        margin-right: 14px;
-    }
-    #burger span {position: absolute;
-        background-color: black;
-        width: 40px;
-        height: 4px;
-        top: 10px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {content: "";
-        position: absolute;
-        background-color: black;
-        width: 40px;
-        height: 4px;
-        top: 20px;
-    }
-    #burger:before {top: 0;}
-    #burger:after {bottom: 0;}
-    section{position: static;}
-    .vertical_section {margin: 4px 0;
-        /*border: blue 1px;*/
-    }
-    #afisha, #ads, #info_vk, #info_tlg {display: inline-block;
-        width: 38px;
-        height: 38px;
-        margin: 0 16px 0 20px;
-        float: left;
-        border-radius: 3px;
-        /*border: 1px solid #fad1b6;*/
-    }
-    #afisha{background-image: url("../img/novosti_38x38.png");}
-    #ads{background-image: url("../img/obyava_38x38.png");}
-    .afisha, .ads{display: none;
-        width: auto;
-        height: auto;
-        /*margin: 40px 0 0 0;*/
-        background: none;
-    }
-    .foto_icons{display: none;
-        height: 28px;
-        width: 28px;
-    }
-    .af_foto {position: relative;
-        width: 160px;
-        height: 160px;
-        /*margin: -0.4px;*/
-        border-radius: 3px;
-        /*border: 1.8px solid #fad1b6;*/
-    }
-    .carousel-container, .wrap{box-shadow: 0 10px 35px rgb(250, 209, 182);
-        margin: 0;
-    }
-    .content {display: inline-block;
-        margin: 4px 10px 6px 10px;
-    }
-    .content_box {margin-left: 0;
-        padding: 14px 10px 10px 10px;
-    }
-    figure {}
-    p {padding-bottom: 8px;
-        font-size: 13px;
-    }
-    .home_foto, .bender_foto, .your_foto, .tools_foto, .material_foto{
-        width: auto;
-        margin: 0 0 10px 0;
-    }
-    h3{margin: 0 0 16px 0}
-    .thematic_text {margin: 16px 0 0 0;
-    }
-    .box {width: 43%;
-        /*height: 200px;*/
-        padding: 0 8px;
-        margin: 2px;
-    }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt, .event,
-    .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto, .process_amber_foto,
-    .process_felt_foto, .process_pen_foto, .random, .process_ethnic_foto {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-    .box p {margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    .img_txt {font-size: 11px;
-    }
-    #scroll_up {background: url("../img/icon_575.jpg");
-        width: 30px;
-        height: 30px;
-        margin-right: -10px;
-    }
-    .footer_panel{width: auto;
-        height: 50px;
-    }
-    .footer_home {margin: 12px 2px 0 6px;
-        width: auto;
-        font-size: 18px;
-    }
-    .footer_info {width: max-content;
-        margin-top: 5px;
-    }
-    .footer_info_tlg, .footer_info_mail, .footer_info_vk {
-        margin: 5px 10px 0 0;
-    }
-    .footer_icons{width: 30px;
-        height: 30px;}
-}
-                                                               /***************** 320 / 374.99 *********************/
-@media screen and (min-width: 320px) and (max-width: 374px) {
-    .container {grid-template-areas:
-                "hd"
-                /*"ls"*/
-                "cnt"
-                "ftr";
-        grid-template-columns: 1fr;
-        /*grid-template-rows: 0.6fr 0.8fr 1fr 0.4fr;*/
-        width: auto;
-    }
-    .header {height: 50px;
-        position: sticky;
-    }
-    .header_name {width: 106px;
-        margin: 10px 0 0 14px;
-    }
-    .header_name h1 {width: 106px;
-        font-size: 18px;
-    }
-
-    .txt_1 {margin: -33px 12px 0 157px;
-    }
-    .h_txt {font-size: 11px;
-        padding: 0 6px 0 0;
-    }
-    .txt_2, .txt_3, .txt_4 {display: none;
-    }
-    .drop_menu {display: none;
-        background: #fcfcfc;
-        border-radius: 3px;
-        margin-top: 72px;
-        box-shadow: 0 10px 20px rgb(250, 209, 182);
-    }
-    .dd_menu{margin: 8px 52px;
-    }
-    /*.sub_dd_menu{margin: 0 0 0 -29px;
-        padding: 0 0;
-    }*/
-    .sub_dd_menu li a{padding: 4px 30px;}
-    #burger {display: block;
-        position: absolute;
-        width: 24px;
-        height: 19px;
-        margin-top: 24px;
-        margin-left: 292px;
-    }
-    #burger span {position: absolute;
-        background-color: black;
-        width: 100%;
-        height: 3px;
-        top: 8.4px;
-        box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-    }
-    #burger:before, #burger:after {content: "";
-        background-color: black;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-    }
-    #burger:before {top: 0;}
-    #burger:after {bottom: 0;}
-    .menu_brg {display: none;
-        margin: 50px 0 0 0px;
-        position: absolute;
-        width: auto;
-    }
-    section {margin: 0 0 10px 0;
-    }
-    /*.vertical_menu {margin-top: 120px;
-    }*/
-    article a {text-align: center;}
-    .afisha {display: none;}
-    .content {display: inline-block;
-        margin: -50px 10px 0 10px;
-    }
-    .content_box {margin-left: 0;
-        padding: 6px 10px 10px 10px;
-    }
-    figure {margin: 0px 20px;}
-    /*figure img {margin-bottom: 16px;
-    }*/
-    p {padding-bottom: 8px;
-        font-size: 14px;
-    }
-    .home_foto, .bender_foto, .gnom_foto, .doll_foto, .pen_foto, .monster_foto, .bag_foto, .process_clip_foto,
-    .process_amber_foto, .process_felt_foto, .process_pen_foto, .your_foto, .tools_foto, .material_foto, .event,
-    .random, .process_ethnic_foto {
-        width: 90%;
-        height: auto;
-        margin: 0 0 14px 0;
-    }
-    .thematic_text {margin-bottom: 6px;}
-    .box {width: 43%;
-        height: 188px;
-        /*margin: 8px 0;*/
-        padding: 0 8px;
-    }
-    .bracelet, .brooch, .earring, .ring, .pendant, .clip, .rim, .elastic, .ethnic, .decorated, .felt {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-    .box p {margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    .img_txt {font-size: 11px;}
-    #scroll_up {width: 33px;
-        height: 33px;
-        background: url("../img/icon-mobile.jpg");
-    }
-    .footer_panel {width: auto;
-    }
-    .footer_home {margin: 12px 2px 0 6px;
-        width: auto;
-        font-size: 18px;
-    }
-    .footer_info {margin: 10px 4px 0 0;
-        width: max-content;
-    }
-    .footer_info_f, .footer_info_e, .footer_info_i {margin: -7px 7px 0 0;
+    .footer_info_f, .footer_info_e, .footer_info_i {
         padding: 0;
         font-size: 14px;
     }

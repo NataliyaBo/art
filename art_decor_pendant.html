@@ -66,27 +66,25 @@
             </ul>
         </nav>
     </header>
-    <section class="vertical_section">
-        <div id="afisha">
-            <div class="afisha">
-                <img src="img/novosti2_48x48.png" class="foto_icons" alt="#"/>
-                <div class="carousel-container">
-                    <div class="carousel">
-                        <!--a href="" target=""><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a-->
-                        <div class="af-one"><a href="https://vk.com/tvoyapolka_msk" target="_blank"><img src="img/tvoyapolka.jpg" alt="#" class="af_foto"/></a></div>
-                        <div class="af-two"><a href="https://vk.com/localceramics" target="_blank"><img src="img/localceramicsfest.jpg" alt="#" class="af_foto"/></a></div>
-                        <div class="af-three"><a href="https://vk.com/artflectionevent" target="_blank"><img src="img/artflection.jpg" alt="#" class="af_foto"/></a></div>
+    <!-- desctop -->
+    <section class="left_section">
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider">
+                    <div class="mask">
+                        <ul>
+                            <!--a href="" target=""><img src="img/afisha_200x200.jpg" alt="#" class="af_foto"></a-->
+                            <li class="firstanimation"><a href="https://vk.com/tvoyapolka_msk" target="_blank"><img src="img/tvoyapolka.jpg" alt="#" class="af_foto"/></a></li>
+                            <li class="secondanimation"><a href="https://vk.com/localceramics" target="_blank"><img src="img/localceramicsfest.jpg" alt="#" class="af_foto"/></a></li>
+                            <li class="thirdanimation"><a href="https://vk.com/artflectionevent" target="_blank"><img src="img/artflection.jpg" alt="#" class="af_foto"/></a></li>
+                        </ul>
                     </div>
+                    <div class="progress-bar"></div>
                 </div>
             </div>
         </div>
-        <div id="ads">
-            <div class="ads">
-                <img src="img/obyava_48x48.png" class="foto_icons" alt="#">
-                <div class="wrap">
-                    <a><img src="img/afisha_1.jpg" alt="#" class="af_foto"/></a>
-                </div>
-            </div>
+        <div class="ads">
+            <a href="https://t.me/crazykrispy" target="_blank"><img src="img/ads_ks.jpg" alt="#" class="af_foto"/></a>
         </div>
     </section>
     <div class="content">
@@ -130,6 +128,22 @@
             <div id="scroll_up"></div>
         </div>
     </div>
+    <!-- mobile -->
+    <div class="mobile-slider-container">
+        <div class="mobile-slider-content">
+            <div class="mobile-slider">
+                <div class="mobile-mask">
+                    <ul>
+                        <li class="firstanimation"><a href="https://vk.com/tvoyapolka_msk" target="_blank"><img src="img/tvoyapolka.jpg" alt="#" class="af_foto"/></a></li>
+                        <li class="secondanimation"><a href="https://vk.com/localceramics" target="_blank"><img src="img/localceramicsfest.jpg" alt="#" class="af_foto"/></a></li>
+                        <li class="thirdanimation"><a href="https://vk.com/artflectionevent" target="_blank"><img src="img/artflection.jpg" alt="#" class="af_foto"/></a></li>
+                        <li class="fourthanimation"><a href="https://t.me/crazykrispy" target="_blank"><img src="img/ads_ks.jpg" alt="#" class="af_foto"/></a></li>
+                    </ul>
+                </div>
+                <div class="mobile-progress-bar"></div>
+            </div>
+        </div>
+    </div>
     <footer class="footer_panel">
         <div class="footer_home"><a href="art_home.html">Кукуся ART</a></div>
         <div class="footer_info">
@@ -154,22 +168,12 @@
 </body>
 <script>
     $(function () {
-        $('#burger').click(function (evert){
+        $('#burger').on('click', function () {
             $('.drop_menu').toggle();
         });
     });
 
-    $(function (){
-        $('#afisha').click(function (event){
-            $('.afisha').toggle();
-        });
-    });
-    $(function (){
-        $('#ads').click(function (event){
-            $('.ads').toggle();
-        });
-    });
-
+    /* arrow up */
     $(function () {
         $(window).scroll(function () {
             if ($(window).scrollTop() > 550) {
