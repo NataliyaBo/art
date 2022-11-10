@@ -58,6 +58,7 @@ html, body{height: auto;
 .h_txt{font: 26px Parabola;
     color: black;
     text-shadow: 0 0 .5px darkorange;
+    margin-bottom: 0;
 }
                                                                                                       /* меню */
 .drop_menu{/*margin: 17px 0 0 643px;*/
@@ -99,7 +100,7 @@ aside{grid-area: ls;
 }
 .left_side{margin: 0 40px;
 }
-.af_foto{width: 200px;
+.af_photo{width: 200px;
     height: 200px;
     border-radius: 2px;
 }
@@ -232,11 +233,12 @@ aside{grid-area: ls;
 /*.section{display: none;}*/
 .content_box{margin-left: 16px;
 }
+section h1{font-size: 32px}
 .thematic_text{margin: 0 0 14px 0;
 }
 .link_in_txt{color: darkorange;
 }
-.cnt_foto{}
+.cnt_photo{}
 figure{margin: 16px 0;
     text-align: center;
 }
@@ -268,15 +270,15 @@ span{color: blue}
 }
                                                                                               /* для img zoom */
 .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic, .magnets, .felt,
-.decorated, .material, .tools, .process_clip_foto, .process_felt_foto, .process_pen_foto, .process_more,
-.event, .doll_foto, .gnom_foto, .process_amber_foto, .process_ethnic_foto, .random, .bag_foto, .pen_foto, .monster_foto{
+.decorated, .material, .tools, .process_clip_photo, .process_felt_photo, .process_pen_photo, .process_more,
+.event, .doll_photo, .gnom_photo, .process_amber_photo, .process_ethnic_photo, .random, .bag_photo, .pen_photo, .monster_photo{
     width: 100%;
     height: auto;
     border-radius: 3px;
 }
 
                                                                                    /* для img */
-.home_foto, .bender_foto, .material_foto, .tools_foto, .your_foto {
+.home_photo, .bender_photo, .material_photo, .tools_photo, .your_photo {
     width: 230px;
     height: 230px;
     border-radius: 3px;
@@ -373,7 +375,7 @@ h4{margin-bottom: 6px;
     }
     .h_txt{font-size: 14px;
     }
-    .foto_icons{height: 28px;
+    .photo_icons{height: 28px;
         width: 28px;
     }
     .drop_menu{border-radius: 3px;
@@ -511,7 +513,7 @@ h4{margin-bottom: 6px;
     p {padding-bottom: 8px;
         font-size: 15px;
     }
-    .home_foto, .your_foto{
+    .home_photo, .your_photo{
         width: 100%;
         height: auto;
         margin: 0 0 15px 0;
@@ -523,8 +525,8 @@ h4{margin-bottom: 6px;
         padding: 0 8px;
     }
     .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic, .magnets, .felt,
-    .decorated, .material, .tools, .process_clip_foto, .process_felt_foto, .process_pen_foto, .process_more,
-    .event, .doll_foto, .gnom_foto, .process_amber_foto, .process_ethnic_foto, .random, .bag_foto, .pen_foto, .monster_foto{
+    .decorated, .material, .tools, .process_clip_photo, .process_felt_photo, .process_pen_photo, .process_more,
+    .event, .doll_photo, .gnom_photo, .process_amber_photo, .process_ethnic_photo, .random, .bag_photo, .pen_photo, .monster_photo{
         width: 100%;
         height: auto;
         margin-left: 0;
@@ -576,7 +578,7 @@ h4{margin-bottom: 6px;
     }
     .h_txt{font-size: 18px;
     }
-    .foto_icons{height: 28px;
+    .photo_icons{height: 28px;
         width: 28px;
     }
     .drop_menu{border-radius: 3px;
@@ -624,7 +626,7 @@ h4{margin-bottom: 6px;
     aside {}
     .left_side{margin: 0 33px;
         /*margin: 0*/}
-    .af_foto{width: 100%;
+    .af_photo{width: 100%;
         height: auto;
     }
     .slider-container{background: #ffff;
@@ -677,7 +679,7 @@ h4{margin-bottom: 6px;
         font-size: 15px;
     }
     figure {}
-    .home_foto, .your_foto{
+    .home_photo, .your_photo{
         width: 21%;
         height: auto;
         margin: 0 6px 15px 6px;
@@ -689,8 +691,8 @@ h4{margin-bottom: 6px;
         padding: 0 6px;
     }
     .brooch, .ring, .earring, .pendant, .bracelet, .clip, .elastic, .rim, .ethnic, .magnets, .felt,
-    .decorated, .material, .tools, .process_clip_foto, .process_felt_foto, .process_pen_foto, .process_more,
-    .event, .doll_foto, .gnom_foto, .process_amber_foto, .process_ethnic_foto, .random, .bag_foto, .pen_foto, .monster_foto{
+    .decorated, .material, .tools, .process_clip_photo, .process_felt_photo, .process_pen_photo, .process_more,
+    .event, .doll_photo, .gnom_photo, .process_amber_photo, .process_ethnic_photo, .random, .bag_photo, .pen_photo, .monster_photo{
         width: 100%;
         height: auto;
         margin-left: 0;
